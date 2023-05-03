@@ -1,0 +1,68 @@
+import requests
+from tabulate import tabulate
+
+def get_quarterly_financial_statements(api_key, symbol):
+    income_url = f'https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol={symbol}&apikey={api_key}'
+    cashflow_url = f'https://www.alphavantage.co/query?function=CASH_FLOW&symbol={symbol}&apikey={api_key}'
+
+    try:
+        income_response = requests.get(income_url)
+        cashflow_response = requests.get(cashflow_url)
+        income_data = income_response.json()
+        cashflow_data = cashflow_response.json()
+
+        income_statements = income_data['quarterlyReports'][:16]  # Get the latest 12 quarterly income statements
+        cashflow_statements = cashflow_data['quarterlyReports'][:16]  # Get the latest 12 quarterly cash flow statements
+
+        return income_statements, cashflow_statements
+    except requests.exceptions.RequestException as e:
+        print(f"Error: {e}")
+
+def format_financial_statements(income_statements, cashflow_statements):
+    formatted_data = []
+
+    # Format numbers with commas and convert to millions
+    def format_number(number):
+        return f"${int(number/1000000):,}M" if isinstance(number, (int, float)) else 'N/A'
+
+    headers = ['Quarter', 'Date', 'Revenue', 'Gross Profit', 'Operating Income', 'Free Cash Flow']
+    data_rows = []
+
+    for i in range(len(income_statements) - 1, -1, -1):
+        income_statement = income_statements[i]
+        cashflow_statement = cashflow_statements[i]
+
+        # Quarter and fiscal year
+        fiscal_date = income_statement.get('fiscalDateEnding', 'N/A')
+        quarter = f"Q{i+1}"
+        fiscal_year = fiscal_date[:4]
+
+        # Income statement
+        revenue = format_number(float(income_statement.get('totalRevenue', 0)))
+        gross_profit = format_number(float(income_statement.get('grossProfit', 0)))
+        operating_income = format_number(float(income_statement.get('operatingIncome', 0)))
+
+        # Cash flow statement
+        operating_cash_flow = float(cashflow_statement.get('operatingCashflow', 0))
+        capital_expenditures = float(cashflow_statement.get('capitalExpenditures', 0))
+
+        # Calculate free cash flow
+        free_cash_flow = format_number(operating_cash_flow - capital_expenditures)
+
+        # Add data to rows
+        data_rows.insert(0, [quarter, f"{fiscal_date}", revenue, gross_profit, operating_income, free_cash_flow])
+
+    formatted_data.append(headers)
+    formatted_data.extend(data_rows)
+
+    return formatted_data
+
+# Usage
+api_key = 'INSERT_YOUR_API_KEY'
+symbol = 'AMZN'  # Replace with the desired company symbol
+
+income_statements, cashflow_statements = get_quarterly_financial_statements(api_key, symbol)
+formatted_data = format_financial_statements(income_statements, cashflow_statements)
+
+# Display the formatted data
+print(tabulate(formatted_data, headers="firstrow", tablefmt="grid"))
