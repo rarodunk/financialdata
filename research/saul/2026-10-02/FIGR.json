@@ -1,0 +1,117 @@
+{
+  "ticker": "FIGR",
+  "company": "Figure Technology Solutions",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'24",
+      "revenue": 101.007
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 83.855
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 84.51
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 106.077
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 156.365
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 159.913
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 167.007
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 225.588
+    }
+  ],
+  "guidance_next_q_revenue": null,
+  "provides_guidance": false,
+  "gross_margin_pct": null,
+  "adj_operating_margin_pct": 54.6,
+  "gaap_operating_margin_pct": 34.5,
+  "fcf_margin_ttm_pct": null,
+  "capex_pct_revenue_ttm": 3.31,
+  "net_cash_musd": null,
+  "customer_concentration": null,
+  "revenue_model": "transactional",
+  "nrr_pct": null,
+  "founder_led": false,
+  "insider_pct": 21.41,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 28.53,
+  "ev_ntm_sales": 5.78,
+  "ttm_pe": 30.7,
+  "eps_growth_ttm_pct": null,
+  "market_cap_musd": 6400.0,
+  "theme": "fintech",
+  "red_flags": [],
+  "notes": "Price $28.53 close 2026-10-02. ONLY 8 QUARTERS: IPO Sept 2025; SEC XBRL/10-Q/10-K quarterly data exist from Q3'24 (FY23 209.5 and 9M'24 257.0 / H1'24 ~156.0 are disclosed only as annual/YTD totals, not quarters). Q4'24/Q4'25 derived FY minus 9M. Revenue = GAAP net revenue (fintech/lender; origination fees, gain on sale, servicing, interest, ecosystem/technology fees). Guidance is Consumer Loan Marketplace VOLUME only (Q3'26 $4.8-5.2B), no revenue guidance -> provides_guidance false (judgment). Gross margin null: lender, not meaningful. Adj. margin = Q2'26 adjusted EBITDA margin 54.6% (on adjusted net revenue $218.4M); GAAP operating margin = income from operations 77.7/225.6. FCF null: OCF TTM -$86.5M driven by loans held-for-sale originations (OCF - capitalized software = -$109.9M, -15.5%). Capex TTM 23.5 = capitalized software (H1'26 12.7 + FY25 20.6 - H1'25 9.9). Net cash null per lender rule: 6/30/26 cash 1,437.5 + marketable securities 356.2 vs long-term debt 963.0 (incl. warehouse/secured facilities). Customer concentration null: 10-K says no customer >10% of revenue; top 3 loan purchasers took 57% of 2025 loan-sale volume. TTM diluted EPS $0.93 = H1'26 0.53 + FY25 0.44 - H1'25 0.04 (FY25 spans pre-IPO capital structure); eps_growth null (no comparable prior-TTM; pre-IPO share structure, diluted shares +181% YoY). ev_ntm_sales = forward P/S (lender EV not meaningful). Founder-led false: CEO Michael Tannenbaum; co-founder Michael Cagney is a director with controlling Class B votes. 10-K/press release reference remediation of previously identified material weaknesses (not a listed flag).",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (Revenues) from 10-Q Q3'25, 10-K FY25, 10-Q Q1'26/Q2'26; Q4 = FY minus 9M",
+      "2026-08-14",
+      "https://www.sec.gov/Archives/edgar/data/2064124/000162828026057061/figr-20260630.htm"
+    ],
+    "provides_guidance": [
+      "Figure 8-K Ex.99.1 Q2'26 Operating Outlook (volume only)",
+      "2026-08-13",
+      "https://www.sec.gov/Archives/edgar/data/2064124/000206412426000031/ex991-pressrelease2q26.htm"
+    ],
+    "adj_operating_margin_pct": [
+      "Figure 8-K Ex.99.1 Q2'26",
+      "2026-08-13"
+    ],
+    "gaap_operating_margin_pct": [
+      "Figure 10-Q Q2'26 XBRL OperatingIncomeLoss / Revenues; calc",
+      "2026-08-14"
+    ],
+    "capex_pct_revenue_ttm": [
+      "Figure 10-K FY25, 10-Q Q2'26 XBRL PaymentsToDevelopSoftware; calc",
+      "2026-08-14"
+    ],
+    "customer_concentration": [
+      "Figure 10-K FY2025",
+      "2026-03-16",
+      "https://www.sec.gov/Archives/edgar/data/2064124/000206412426000009/figr-20251231.htm"
+    ],
+    "founder_led": [
+      "Figure 10-K FY2025 (Cagney co-founder/director; Tannenbaum CEO)",
+      "2026-03-16"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03",
+      "https://stockanalysis.com/stocks/figr/statistics/"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04); forward P/S used",
+      "2026-10-03"
+    ],
+    "ttm_pe": [
+      "price $28.53 / TTM diluted EPS (XBRL); calc",
+      "2026-10-03"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03"
+    ]
+  }
+}

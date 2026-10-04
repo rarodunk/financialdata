@@ -1,0 +1,160 @@
+{
+  "ticker": "SE",
+  "company": "Sea Limited",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'22",
+      "revenue": 3155.951
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 3451.584
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 3041.104
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 3095.66
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 3310.168
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 3616.628
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 3734.329
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 3806.868
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 4328.233
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 4950.436
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 4841.1
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 5259.477
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 5986.024
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 6851.868
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 7097.489
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 7787.779
+    }
+  ],
+  "guidance_next_q_revenue": null,
+  "provides_guidance": false,
+  "gross_margin_pct": 45.6,
+  "adj_operating_margin_pct": 11.8,
+  "gaap_operating_margin_pct": 8.4,
+  "fcf_margin_ttm_pct": 16.9,
+  "capex_pct_revenue_ttm": 2.29,
+  "net_cash_musd": 9634.4,
+  "customer_concentration": null,
+  "revenue_model": "transactional",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 13.96,
+  "domicile": "Singapore (incorporated Cayman Islands)",
+  "china_domiciled": false,
+  "fwd_pe": 22.37,
+  "ev_ntm_sales": 1.49,
+  "ttm_pe": 36.8,
+  "eps_growth_ttm_pct": 33.5,
+  "market_cap_musd": 58300.0,
+  "theme": "e-commerce SE Asia",
+  "red_flags": [],
+  "notes": "Price $95.19 close 2026-10-02. Currency USD (US GAAP). Revenue = total GAAP revenue from 6-K earnings releases; Q2/Q3 of some years derived from YTD (H1, 9M) totals: Q3'22 = 9M'22 8,998.1 - H1'22 5,842.2; Q2'23 = H1'23 - Q1'23; Q3'23 = 9M'23 - H1'23; Q2'24 = H1'24 - Q1'24; Q3'24 = 9M'24 - H1'24 (Q2'24 and Q3'24 agree with later prior-year columns); FY25 sum ties to 20-F 22,938.5. Revenue model transactional: Shopee marketplace/ads/logistics + Monee (consumer/SME credit, interest income) + Garena (digital entertainment, in-game items). No revenue guidance -> provides_guidance false. GM 45.6%; adj. margin = total adjusted EBITDA margin 11.8% (SE reports adjusted EBITDA, not adjusted op income); GAAP op margin 8.4%. FCF: TTM OCF 5,215.7 (H1'26 2,563.9 + FY25 5,024.5 - H1'25 2,372.7) less FY25 capex 524.5 (PP&E 513.8 + intangibles 10.7; 6-K releases do not disclose H1 capex, so FY25 used as proxy) on TTM revenue 27,723.2 = 16.9%; capex % uses FY25 capex/FY25 revenue. Net cash = cash 3,529.3 + ST investments 5,569.6 + LT investments 2,756.1 - borrowings 1,224.3 - convertible notes 996.3 at 6/30/26 = 9,634.3; excludes restricted cash 2,461.5 and leases; does NOT deduct SeaBank deposits payable 4,285.3 (Monee bank deposits) - deducting them gives ~5,349. Customer concentration null: no customer >10% of revenue (20-F FY25). China: not China-domiciled; exposure - Tencent is a shareholder (voting proxy granted to SE board in 2022) and some of Garena's most popular games are Tencent-owned/developed (20-F). TTM diluted EPS 2.59 = H1'26 1.37 + FY25 2.52 - H1'25 1.30; prior TTM 1.94 = H1'25 1.30 + FY24 0.74 - H1'24 0.10. Founder-led: Forrest Li, founder, Chairman & Group CEO.",
+  "sources": {
+    "quarterly_revenue": [
+      "Sea Ltd 6-K Ex.99.1 earnings releases Q2'23-Q2'26 (filed 2023-08-15 through 2026-08-11); 20-F FY25 XBRL",
+      "2026-08-11",
+      "https://www.sec.gov/Archives/edgar/data/1703399/000119312526344596/d120948dex991.htm"
+    ],
+    "gross_margin_pct": [
+      "Sea Ltd 6-K Ex.99.1 Q2'26",
+      "2026-08-11"
+    ],
+    "adj_operating_margin_pct": [
+      "Sea Ltd 6-K Ex.99.1 Q2'26 (total adjusted EBITDA)",
+      "2026-08-11"
+    ],
+    "gaap_operating_margin_pct": [
+      "Sea Ltd 6-K Ex.99.1 Q2'26",
+      "2026-08-11"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Sea Ltd 6-K Q2'26 & Q2'25 (H1 OCF), 20-F FY25 XBRL (OCF, capex); calc",
+      "2026-08-11"
+    ],
+    "capex_pct_revenue_ttm": [
+      "Sea Ltd 20-F FY2025 XBRL",
+      "2026-04-17",
+      "https://www.sec.gov/Archives/edgar/data/1703399/000114036126015366/ef20067274_20f.htm"
+    ],
+    "net_cash_musd": [
+      "Sea Ltd 6-K Ex.99.1 Q2'26 balance sheet",
+      "2026-08-11"
+    ],
+    "customer_concentration": [
+      "Sea Ltd 20-F FY2025",
+      "2026-04-17"
+    ],
+    "founder_led": [
+      "Sea Ltd 20-F FY2025",
+      "2026-04-17"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-04",
+      "https://stockanalysis.com/stocks/se/statistics/"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04); EV/(mcap/fwd P/S)",
+      "2026-10-04"
+    ],
+    "ttm_pe": [
+      "price $95.19 / TTM diluted EPS from 6-K/20-F; calc",
+      "2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "Sea Ltd 6-K Q2'25/Q2'26, 20-F FY24/FY25 diluted EPS; calc",
+      "2026-08-11"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-04"
+    ]
+  }
+}

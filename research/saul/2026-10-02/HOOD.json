@@ -1,0 +1,165 @@
+{
+  "ticker": "HOOD",
+  "company": "Robinhood Markets",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'22",
+      "revenue": 361.0
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 380.0
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 441.0
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 486.0
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 467.0
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 471.0
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 618.0
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 682.0
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 637.0
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 1014.0
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 927.0
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 989.0
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 1274.0
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 1283.0
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 1067.0
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 1308.0
+    }
+  ],
+  "guidance_next_q_revenue": null,
+  "provides_guidance": false,
+  "gross_margin_pct": null,
+  "adj_operating_margin_pct": 56.7,
+  "gaap_operating_margin_pct": 43.9,
+  "fcf_margin_ttm_pct": null,
+  "capex_pct_revenue_ttm": 1.36,
+  "net_cash_musd": 3192,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": 13.0,
+    "note": "FY25 10-K: Citadel Securities (market maker, PFOF counterparty) 13% of total net revenues; all market makers/exchanges ~55%. Not end-customers."
+  },
+  "revenue_model": "transactional",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 12.69,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 45.63,
+  "ev_ntm_sales": 16.62,
+  "ttm_pe": 49.9,
+  "eps_growth_ttm_pct": 14.7,
+  "market_cap_musd": 101360.0,
+  "theme": "fintech",
+  "red_flags": [],
+  "notes": "Price $112.74 close 2026-10-02. Revenue = total net revenues (incl. net interest revenues ~30% of Q2'26); Q4 values derived as FY (10-K) minus 9M; XBRL rounds to $M. Revenue model transactional: Q2'26 transaction-based $776M of $1,308M; NII $389M and Gold subscriptions/other $143M. No revenue guidance (only 2026 adjusted opex+SBC outlook $2.675-2.775B) -> provides_guidance false. Gross margin null: no cost-of-revenue line (broker). Adj. operating margin = Q2'26 Adjusted EBITDA margin (741/1,308 = 56.7%; company reports 57%); HOOD does not report adjusted operating income. GAAP operating margin = (revenue 1,308 - total opex 734)/revenue = 43.9%; pre-tax 709 includes ~$129M gain on RVI deconsolidation. FCF margin null: TTM OCF $245M (H1'26 2,758 + FY25 1,638 - H1'25 4,151) less capex $67M = $178M (3.6%) but brokerage OCF is dominated by customer/margin-book balance swings (margin book +127% YoY), so not comparable. Capex TTM 67 = PS&E 26 (H1'26 21 + FY25 15 - H1'25 10) + capitalized software 41. Net cash = corporate cash & equivalents 5,362 - convertible notes 2,170 (June 2026 issue) at 6/30/26; excludes segregated cash 12,023 and Credit Card Funding Trust borrowings (not separately disclosed in release; H1'26 net draws ~$357M) and leases. TTM diluted EPS $2.26 = H1'26 1.00 + FY25 2.05 - H1'25 0.79 (sum of reported EPS); includes $0.14 RVI gain in Q2'26. Prior TTM $1.97 includes Q4'24 ~$350M deferred tax benefit (FY24 tax -347), so EPS growth understates: TTM pre-tax income 2,415 vs 1,524 (+58%). EV/NTM sales = EV 100.38B / (mcap 101.36B / fwd P/S 16.78). Founder-led: Vlad Tenev co-founder, Chairman & CEO.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (Revenues) from 10-Q/10-K; Q4 = FY minus 9M",
+      "2026-07-30",
+      "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm"
+    ],
+    "provides_guidance": [
+      "Robinhood 8-K Ex.99.1 Q2'26 (Financial Outlook: expense outlook only)",
+      "2026-07-29",
+      "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000113/q22026robinhoodexhibit991.htm"
+    ],
+    "adj_operating_margin_pct": [
+      "Robinhood 8-K Ex.99.1 Q2'26 Adjusted EBITDA reconciliation",
+      "2026-07-29"
+    ],
+    "gaap_operating_margin_pct": [
+      "Robinhood 8-K Ex.99.1 Q2'26 income statement; calc",
+      "2026-07-29"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Robinhood 10-K FY25 and 8-K Q2'26 cash flow statements; calc (in notes)",
+      "2026-07-29"
+    ],
+    "capex_pct_revenue_ttm": [
+      "Robinhood 10-K FY25 (filed 2026-02-18) and 8-K Q2'26 cash flows; calc",
+      "2026-07-29"
+    ],
+    "net_cash_musd": [
+      "Robinhood 8-K Ex.99.1 Q2'26 balance sheet; XBRL ConvertibleDebtNoncurrent 10-Q",
+      "2026-07-30"
+    ],
+    "customer_concentration": [
+      "Robinhood 10-K FY2025, concentration note",
+      "2026-02-18",
+      "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000023/hood-20251231.htm"
+    ],
+    "founder_led": [
+      "Robinhood 8-K Ex.99.1 Q2'26 (Vlad Tenev, Chairman and CEO)",
+      "2026-07-29"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-04",
+      "https://stockanalysis.com/stocks/hood/statistics/"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04); EV/(mcap/fwd P/S)",
+      "2026-10-04"
+    ],
+    "ttm_pe": [
+      "price $112.74 (stockanalysis) / TTM diluted EPS from 10-K FY25 + 10-Q Q2'25/Q2'26 XBRL",
+      "2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "10-K FY24/FY25, 10-Q Q2'24/Q2'25/Q2'26 XBRL diluted EPS; calc",
+      "2026-07-30"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-04"
+    ]
+  }
+}

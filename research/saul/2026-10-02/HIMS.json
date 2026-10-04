@@ -1,0 +1,165 @@
+{
+  "ticker": "HIMS",
+  "company": "Hims & Hers Health",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'22",
+      "revenue": 144.836
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 167.203
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 190.77
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 207.912
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 226.699
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 246.619
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 278.171
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 315.648
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 401.556
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 481.139
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 586.01
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 544.833
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 598.976
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 617.818
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 608.104
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 753.214
+    }
+  ],
+  "guidance_next_q_revenue": 890.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 63.8,
+  "adj_operating_margin_pct": 8.0,
+  "gaap_operating_margin_pct": -12.9,
+  "fcf_margin_ttm_pct": 2.4,
+  "capex_pct_revenue_ttm": 7.83,
+  "net_cash_musd": -524.3,
+  "customer_concentration": null,
+  "revenue_model": "subscription",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 8.36,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 84.08,
+  "ev_ntm_sales": 2.03,
+  "ttm_pe": null,
+  "eps_growth_ttm_pct": null,
+  "market_cap_musd": 6770.0,
+  "theme": "consumer health",
+  "red_flags": [
+    "guidance_cut",
+    "litigation_overhang"
+  ],
+  "notes": "Price $29.00 close 2026-10-02. Revenue = total revenue; Q4 derived FY minus 9M. Q2'26 includes Eucalyptus (acquired June 2026; Rest of World revenue $131.4M vs $7.5M) - acquisition-boosted growth. Revenue model subscription: revenue is overwhelmingly recurring subscriptions to personalized treatment plans (2.89M subscribers, $92 monthly revenue per average subscriber in Q2'26). Q3'26 guide $880-900M (midpoint 890). GM GAAP 63.8% (vs 76% Q2'25; includes non-cash restructuring charges in cost of revenue). Adj. margin = adjusted EBITDA margin 8.0% (60.3/753.2); HIMS reports no adjusted operating income. GAAP operating margin -12.9%. FCF TTM = OCF 263.5 - capex 201.8 (PP&E/intangibles + website/internal-use software) = 61.7 on revenue 2,578.1. Net cash = cash 609.8 + ST investments 231.2 - convertible notes 1,365.3 (net) at 6/30/26; excludes deferred acquisition payables 703.0 and earn-outs 163.0 (Eucalyptus etc.) and leases - including them net debt would be ~-1,390. ttm_pe and eps_growth null: TTM diluted EPS -$0.64 (H1'26 -0.78 + FY25 0.51 - H1'25 0.37). Customer concentration null: no customer/partner >10% of revenue (FY25 10-K). Red flags: guidance_cut - FY26 adjusted EBITDA outlook cut from $300-375M (2026-02-23) to $275-350M (2026-05-11) to $275-325M (2026-08-10) while revenue outlook was raised; litigation_overhang - FDA named HIMS in Feb 2026 statement restricting compounded GLP-1 APIs and HHS referred HIMS to DOJ for investigation (10-Q Q2'26). Founder-led: Andrew Dudum, co-founder & CEO.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (RevenueFromContractWithCustomerExcludingAssessedTax) from 10-Q/10-K; Q4 = FY minus 9M",
+      "2026-08-10",
+      "https://www.sec.gov/Archives/edgar/data/1773751/000177375126000163/hims-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Hims & Hers 8-K Ex.99.1 Q2'26 Financial Outlook (Q3'26 $880-900M)",
+      "2026-08-10",
+      "https://www.sec.gov/Archives/edgar/data/1773751/000177375126000161/hims-20260630x8xkearningsr.htm"
+    ],
+    "gross_margin_pct": [
+      "Hims & Hers 8-K Ex.99.1 Q2'26",
+      "2026-08-10"
+    ],
+    "adj_operating_margin_pct": [
+      "Hims & Hers 8-K Ex.99.1 Q2'26 (adjusted EBITDA)",
+      "2026-08-10"
+    ],
+    "gaap_operating_margin_pct": [
+      "Hims & Hers 8-K Ex.99.1 Q2'26",
+      "2026-08-10"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Hims & Hers 10-K FY25, 8-K/10-Q Q2'25/Q2'26 cash flows; calc",
+      "2026-08-10"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same (H1'26 68.6 + FY25 242.6 - H1'25 109.4)",
+      "2026-08-10"
+    ],
+    "net_cash_musd": [
+      "Hims & Hers 8-K Ex.99.1 Q2'26 balance sheet",
+      "2026-08-10"
+    ],
+    "customer_concentration": [
+      "Hims & Hers 10-K FY2025",
+      "2026-02-23",
+      "https://www.sec.gov/Archives/edgar/data/1773751/000177375126000022/hims-20251231.htm"
+    ],
+    "red_flags": [
+      "guidance_cut: HIMS 8-K Ex.99.1 2026-02-23, 2026-05-11, 2026-08-10 (FY26 adj. EBITDA outlook); litigation_overhang: HIMS 10-Q Q2'26 (FDA statement and HHS DOJ referral, Feb 2026)",
+      "2026-08-10",
+      "https://www.sec.gov/Archives/edgar/data/0001773751/000177375126000163/hims-20260630.htm"
+    ],
+    "founder_led": [
+      "Hims & Hers 8-K Ex.99.1 Q2'26 (Andrew Dudum, co-founder and CEO)",
+      "2026-08-10"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03",
+      "https://stockanalysis.com/stocks/hims/statistics/"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04); EV/(mcap/fwd P/S)",
+      "2026-10-03"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03"
+    ]
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "ticker": "TMDX",
+  "company": "TransMedics Group",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'22",
+      "revenue": 25.683
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 31.375
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 41.554
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 52.465
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 66.43
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 81.174
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 96.85
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 114.305
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 108.761
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 121.624
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 143.537
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 157.37
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 143.823
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 160.764
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 173.933
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 189.948
+    }
+  ],
+  "guidance_next_q_revenue": null,
+  "provides_guidance": true,
+  "gross_margin_pct": 59.6,
+  "adj_operating_margin_pct": 13.6,
+  "gaap_operating_margin_pct": 12.5,
+  "fcf_margin_ttm_pct": 11.8,
+  "capex_pct_revenue_ttm": 10.01,
+  "net_cash_musd": -41.3,
+  "customer_concentration": null,
+  "revenue_model": "transactional",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 3.19,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 44.39,
+  "ev_ntm_sales": 3.91,
+  "ttm_pe": 20.7,
+  "eps_growth_ttm_pct": 100.0,
+  "market_cap_musd": 2770.0,
+  "theme": "healthcare",
+  "red_flags": [],
+  "notes": "Price $79.80 close 2026-10-02. Revenue = total revenue (product + service); Q4 derived FY minus 9M. Revenue model transactional: paid per transplant procedure - National OCS Program organ procurement/transport and aviation services (Q2'26 service $78.8M) plus single-use OCS disposable sets (product $111.2M); no recurring subscription. Guidance annual only (FY26 $737-757M, low end raised 2026-08-04) -> next-Q null, provides_guidance true. GM GAAP 59.6%. Adj. op margin 13.6%, GAAP 12.5% (Q2'26 release). FCF TTM = OCF 145.9 - capex 66.9 = 79.0 on revenue 668.5. Net cash = cash 472.7 - current debt 20.0 - convertible notes 454.3 (net carrying) - long-term debt 39.7 at 6/30/26; excludes restricted cash 18.4 and leases. Customer concentration null: 10-K says no customer >10% of revenue. TTM diluted EPS $3.86 = H1'26 0.61 + FY25 4.87 - H1'25 1.62; inflated by Q4'25 tax valuation-allowance release (FY25 tax benefit $82.8M; net income 190.3 vs pre-tax 107.5), so ttm_pe and +100% EPS growth are flattering; TTM pre-tax income 72.6 vs 74.1 (-2%). Q1'26 EPS missed consensus (investing.com transcript) and operating margin compressed YoY on Kidney/Gen 3.0/clinical spending. Founder-led: Waleed Hassanein, founder, President & CEO.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (Revenues) from 10-Q/10-K; Q4 = FY minus 9M",
+      "2026-08-04",
+      "https://www.sec.gov/Archives/edgar/data/1756262/000119312526332843/tmdx-20260630.htm"
+    ],
+    "provides_guidance": [
+      "TransMedics 8-K Ex.99.1 Q2'26 (2026 Financial Outlook)",
+      "2026-08-04",
+      "https://www.sec.gov/Archives/edgar/data/1756262/000119312526332767/tmdx-ex99_1.htm"
+    ],
+    "gross_margin_pct": [
+      "TransMedics 8-K Ex.99.1 Q2'26",
+      "2026-08-04"
+    ],
+    "adj_operating_margin_pct": [
+      "TransMedics 8-K Ex.99.1 Q2'26",
+      "2026-08-04"
+    ],
+    "gaap_operating_margin_pct": [
+      "TransMedics 8-K Ex.99.1 Q2'26",
+      "2026-08-04"
+    ],
+    "fcf_margin_ttm_pct": [
+      "TransMedics 10-K FY25, 10-Q Q2'25/Q2'26 XBRL cash flows; calc",
+      "2026-08-04"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; PaymentsToAcquirePropertyPlantAndEquipment (H1'26 43.7 + FY25 59.3 - H1'25 36.1)",
+      "2026-08-04"
+    ],
+    "net_cash_musd": [
+      "TransMedics 8-K Ex.99.1 Q2'26 balance sheet",
+      "2026-08-04"
+    ],
+    "customer_concentration": [
+      "TransMedics 10-K FY2025",
+      "2026-02-24",
+      "https://www.sec.gov/Archives/edgar/data/1756262/000119312526067032/tmdx-20251231.htm"
+    ],
+    "founder_led": [
+      "TransMedics 10-K FY2025 (Hassanein, founder, President and CEO)",
+      "2026-02-24"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03",
+      "https://stockanalysis.com/stocks/tmdx/statistics/"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04); EV/(mcap/fwd P/S)",
+      "2026-10-03"
+    ],
+    "ttm_pe": [
+      "price $79.80 / TTM diluted EPS (XBRL); calc",
+      "2026-10-03"
+    ],
+    "eps_growth_ttm_pct": [
+      "TransMedics 10-K FY24/FY25, 10-Q XBRL diluted EPS; calc",
+      "2026-08-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
+      "2026-10-03"
+    ]
+  }
+}
