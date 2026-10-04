@@ -106,9 +106,12 @@
   "china_domiciled": false,
   "fwd_pe": 56.9,
   "ev_ntm_sales": 16.9,
+  "ttm_pe": 99.0,
+  "eps_growth_ttm_pct": 113.7,
+  "market_cap_musd": 14200.0,
   "theme": "AI capex",
   "red_flags": [],
-  "notes": "Revenue series = 'Total net revenues' (product + royalty) as reported, which EXCLUDES the one-time $45.0M patent litigation settlement Vicor booked in Q2'25 on a separate line ('Total net revenues and patent litigation settlement' was 141.0 in Q2'25). This is separable directly in the 10-Q/10-K (XBRL RevenueFromContractWithCustomer excludes it; 'Revenues' includes it). Q3'25 from Q3'25 10-Q (the FY25 10-K XBRL mis-tags 407.7 to Q3 dates; ignored); Q4'25 = FY25 407.701 - 9M 300.437 = 107.264; Q2'26 from Q2'26 10-Q. Caveat: Q2'26 royalty revenue jumped to $30.4M (Q1'26 ~$15.0M, Q2'25 $10.4M) 'due to a new license agreement entered into during the quarter' (10-Q); any catch-up/lump-sum portion is not separable from filings, so it is left in. Ex-royalty product revenue Q2'26 112.9 vs 85.7 (+31.8% YoY). No revenue guidance given; backlog $380M at 6/30/26. TTM (Q3'25-Q2'26): OCF 84.4, capex 33.1 (incl. internal-use software), FCF 51.3 on revenue 474.0. Net cash = cash 453.6 + LT investment 2.5, no funded debt (leases excluded). Q1'26 OCF included a $28.6M litigation award payment by Vicor. GAAP op margin = 34.9/143.4. Founder Patrizio Vinciarelli controls 79.6% of votes.",
+  "notes": "Revenue series = 'Total net revenues' (product + royalty) as reported, which EXCLUDES the one-time $45.0M patent litigation settlement Vicor booked in Q2'25 on a separate line ('Total net revenues and patent litigation settlement' was 141.0 in Q2'25). This is separable directly in the 10-Q/10-K (XBRL RevenueFromContractWithCustomer excludes it; 'Revenues' includes it). Q3'25 from Q3'25 10-Q (the FY25 10-K XBRL mis-tags 407.7 to Q3 dates; ignored); Q4'25 = FY25 407.701 - 9M 300.437 = 107.264; Q2'26 from Q2'26 10-Q. Caveat: Q2'26 royalty revenue jumped to $30.4M (Q1'26 ~$15.0M, Q2'25 $10.4M) 'due to a new license agreement entered into during the quarter' (10-Q); any catch-up/lump-sum portion is not separable from filings, so it is left in. Ex-royalty product revenue Q2'26 112.9 vs 85.7 (+31.8% YoY). No revenue guidance given; backlog $380M at 6/30/26. TTM (Q3'25-Q2'26): OCF 84.4, capex 33.1 (incl. internal-use software), FCF 51.3 on revenue 474.0. Net cash = cash 453.6 + LT investment 2.5, no funded debt (leases excluded). Q1'26 OCF included a $28.6M litigation award payment by Vicor. GAAP op margin = 34.9/143.4. Founder Patrizio Vinciarelli controls 79.6% of votes. Vicor reports NO non-GAAP/adjusted EPS, so ttm_pe and eps_growth_ttm_pct use GAAP diluted EPS (its only EPS measure): TTM $3.12 (Q3'25 0.63 + Q4'25 1.01 + Q1'26 0.44 + Q2'26 1.04) vs prior TTM $1.46 (0.26 + 0.23 + 0.06 + 0.91). Distortions: TTM includes the $27.3M Q4'25 deferred-tax-asset benefit; prior TTM includes the $45.0M Q2'25 patent settlement. ttm_pe = $308.90 / $3.12 (SA GAAP trailing P/E 99.2x). market_cap_musd from SA $14.2B.",
   "sources": {
     "quarterly_revenue": [
       "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M; Q2'26 from Vicor 10-Q",
@@ -160,6 +163,21 @@
     "ev_ntm_sales": [
       "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); EV / (mcap / fwd P/S)",
       "2026-10-02"
+    ],
+    "ttm_pe": [
+      "Vicor 8-K Ex.99.1 GAAP diluted EPS Q3'25 $0.63, Q4'25 $1.01, Q1'26 $0.44, Q2'26 $1.04 (Q2'26/Q1'26/Q4'25/Q3'25 releases); price $308.90 at 2026-10-02 close (stockanalysis via fundamentals_2026-10.md); calc",
+      "2026-07-21",
+      "https://www.sec.gov/Archives/edgar/data/0000751978/000119312526309538/d115827dex991.htm"
+    ],
+    "eps_growth_ttm_pct": [
+      "Vicor 8-K Ex.99.1 releases Q3'25-Q2'26 (year-ago GAAP diluted EPS Q3'24 $0.26, Q4'24 $0.23, Q1'25 $0.06, Q2'25 $0.91); calc",
+      "2026-07-21",
+      "https://www.sec.gov/Archives/edgar/data/751978/000119312525245175/d93346dex991.htm"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); $14.2B",
+      "2026-10-03",
+      "https://stockanalysis.com/stocks/vicr/statistics/"
     ]
   }
 }

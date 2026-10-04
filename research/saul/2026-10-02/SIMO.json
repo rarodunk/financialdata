@@ -106,12 +106,15 @@
   "china_domiciled": false,
   "fwd_pe": 19.9,
   "ev_ntm_sales": 4.4,
+  "ttm_pe": 44.7,
+  "eps_growth_ttm_pct": 103.6,
+  "market_cap_musd": 9500.0,
   "theme": "AI capex",
   "red_flags": [
     "inventory_build",
     "litigation_overhang"
   ],
-  "notes": "Quarterly net sales from each quarter's 6-K earnings release income statement (US$ thousands /1000); FY25 sums to 885.627 as reported. Domicile: HQ Taipei, Taiwan (incorporated in Cayman Islands); not China-domiciled. Theme 'AI capex' is a judgment call: demand is AI/enterprise SSD controllers within a NAND upcycle (cyclical). TTM (Q3'25-Q2'26): OCF -66.6, capex 53.9, FCF -120.5 on revenue 1,313.6. Net cash 122.6 = cash, equivalents and restricted cash 181.8 - loans 59.2 at 6/30/26; excludes $127.4M long-term marketable equity investments. AFTER quarter-end SIMO issued $1.15B 0% convertible notes due 2031 (closed 2026-08-13, net proceeds ~$1,127M, conversion ~$380.50/ADS, partly to repay the credit facility); pro forma net cash roughly unchanged (~+$100M) but gross debt now ~$1.15B; potential dilution ~3.0M ADS. inventory_build: inventory $208.0M (6/30/25) -> $421.8M (12/31/25) -> $673.0M (6/30/26) with H1'26 OCF -$95.0M. litigation_overhang: SIAC arbitration vs MaxLinear (SIMO claims $160M termination fee + damages; MaxLinear counterclaim; hearings Oct 2025 and Mar 2026; award pending as of 2026-08-10 6-K). Note SIMO is the claimant, so the overhang is two-sided.",
+  "notes": "Quarterly net sales from each quarter's 6-K earnings release income statement (US$ thousands /1000); FY25 sums to 885.627 as reported. Domicile: HQ Taipei, Taiwan (incorporated in Cayman Islands); not China-domiciled. Theme 'AI capex' is a judgment call: demand is AI/enterprise SSD controllers within a NAND upcycle (cyclical). TTM (Q3'25-Q2'26): OCF -66.6, capex 53.9, FCF -120.5 on revenue 1,313.6. Net cash 122.6 = cash, equivalents and restricted cash 181.8 - loans 59.2 at 6/30/26; excludes $127.4M long-term marketable equity investments. AFTER quarter-end SIMO issued $1.15B 0% convertible notes due 2031 (closed 2026-08-13, net proceeds ~$1,127M, conversion ~$380.50/ADS, partly to repay the credit facility); pro forma net cash roughly unchanged (~+$100M) but gross debt now ~$1.15B; potential dilution ~3.0M ADS. inventory_build: inventory $208.0M (6/30/25) -> $421.8M (12/31/25) -> $673.0M (6/30/26) with H1'26 OCF -$95.0M. litigation_overhang: SIAC arbitration vs MaxLinear (SIMO claims $160M termination fee + damages; MaxLinear counterclaim; hearings Oct 2025 and Mar 2026; award pending as of 2026-08-10 6-K). Note SIMO is the claimant, so the overhang is two-sided. ttm_pe = $280.50 / TTM non-GAAP diluted EPS per ADS $6.27 (Q3'25 1.00 + Q4'25 1.26 + Q1'26 1.58 + Q2'26 2.43). GAAP TTM EPS is higher (Q2'26 GAAP $3.99 incl. non-operating gains). eps_growth_ttm_pct: $6.27 vs prior TTM $3.08 (Q3'24 0.92 + Q4'24 0.87 + Q1'25 0.60 + Q2'25 0.69). market_cap_musd from SA $9.5B.",
   "sources": {
     "quarterly_revenue": [
       "SIMO 6-K Ex.99.1 earnings releases 2022-11-02, 2023-02-08, 2023-05-05, 2023-07-28, 2023-11-02, 2024-02-07, 2024-05-03, 2024-08-02, 2024-10-31, 2025-02-06, 2025-04-30, 2025-07-31, 2025-10-31, 2026-02-04, 2026-04-29, 2026-07-30",
@@ -180,6 +183,21 @@
       "SIMO 6-K Ex.99.2 interim financial statements, Litigation note",
       "2026-08-10",
       "https://www.sec.gov/Archives/edgar/data/1329394/000119312526341199/d124768dex992.htm"
+    ],
+    "ttm_pe": [
+      "SIMO 6-K Ex.99.1 non-GAAP diluted EPS per ADS Q3'25 $1.00, Q4'25 $1.26, Q1'26 $1.58, Q2'26 $2.43 (four quarterly releases); price $280.50/ADS at 2026-10-02 close (stockanalysis via fundamentals_2026-10.md); calc",
+      "2026-07-30",
+      "https://www.sec.gov/Archives/edgar/data/0001329394/000119312526324391/d114913dex991.htm"
+    ],
+    "eps_growth_ttm_pct": [
+      "SIMO 6-K Ex.99.1 releases Q3'25 (https://www.sec.gov/Archives/edgar/data/1329394/000119312525259296/d51890dex991.htm), Q4'25 (https://www.sec.gov/Archives/edgar/data/1329394/000119312526036180/d10809dex991.htm), Q1'26, Q2'26: year-ago non-GAAP EPS/ADS Q3'24 $0.92, Q4'24 $0.87, Q1'25 $0.60, Q2'25 $0.69; calc",
+      "2026-07-30",
+      "https://www.sec.gov/Archives/edgar/data/1329394/000119312526036180/d10809dex991.htm"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); $9.5B",
+      "2026-10-03",
+      "https://stockanalysis.com/stocks/simo/statistics/"
     ]
   }
 }
