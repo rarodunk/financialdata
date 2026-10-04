@@ -205,6 +205,7 @@ What this shows, and how the scorer encodes it:
   - Path A, a profitable fast grower bought on **1YPEG** = TTM P/E ÷ TTM EPS growth ("It has the major disadvantage of looking backward, but has the advantage of using a real number" [KB3]). PASS ≤1.0, FLAG ≤2.0, FAIL above that.
   - Path B, recurring-revenue hypergrowth bought despite losses: growth ≥40% (FAIL otherwise), SaaS gross margin PASS ≥65% / FLAG ≥55%, FCF margin PASS ≥ −10% / FAIL < −30%.
   - Anything that fits neither path FAILs.
+- **Emerging markets.** PR-X2: a company with `em_operations` FAILs. "I won't touch ANY Chinese company… I probably wouldn't invest in companies in other emerging markets either." [KB1] He first bought NU in 2024, in Era 3.
 - **Growth.** PR-G1: PASS ≥30%, FLAG 20–30%, FAIL <20%, STOP <10%. Banks and Amazon at 20–29% were held, but never as the biggest bets.
 - **Cyclicals and concentration were tolerated.** A homebuilder was his largest position, and he owned Skyworks (Apple-dependent) and NVDA. In prime mode, commodity products, concentration and missing guidance only FLAG. This is the main difference from Era 3, which FAILs durability and concentration.
 - **Runway.** PR-W1: market cap ≤$100B PASS, ≤$500B FLAG, >$500B FAIL. "Can you imagine Nike doubling and doubling again? It's impossible." [KB1] Amazon (~$360B in 2016) was the exception. Calibration: the dollar lines are mine, scaled up for 2026 market caps.
@@ -214,8 +215,9 @@ What this shows, and how the scorer encodes it:
   - 14–16 positions; an average position of ~6%.
   - Top positions 12–23%.
   - Try-outs of 1–2% to "put it on the radar"; UBNT started at 2%.
+- **Gross margin.** PR-M1: on Path A, a gross margin under 30% FLAGs. Calibration: LGI Homes (~26%) would have flagged too.
 - **Prime tiers.**
-  - CORE: 0 FAIL and ≤2 FLAG.
+  - CORE: 0 FAIL, ≤2 FLAG, and no deceleration flag (PR-G3). He wanted "rapidly improving metrics" [PICK].
   - FULL: 0 FAIL and ≤4 FLAG, or 1 FAIL and ≤2 FLAG.
   - STARTER: ≤1 FAIL.
   - RADAR: 2 FAIL.

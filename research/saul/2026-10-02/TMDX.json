@@ -87,11 +87,11 @@
   "fwd_pe": 44.39,
   "ev_ntm_sales": 3.91,
   "ttm_pe": 20.7,
-  "eps_growth_ttm_pct": 100.0,
+  "eps_growth_ttm_pct": -2.0,
   "market_cap_musd": 2770.0,
   "theme": "healthcare",
   "red_flags": [],
-  "notes": "Price $79.80 close 2026-10-02. Revenue = total revenue (product + service); Q4 derived FY minus 9M. Revenue model transactional: paid per transplant procedure - National OCS Program organ procurement/transport and aviation services (Q2'26 service $78.8M) plus single-use OCS disposable sets (product $111.2M); no recurring subscription. Guidance annual only (FY26 $737-757M, low end raised 2026-08-04) -> next-Q null, provides_guidance true. GM GAAP 59.6%. Adj. op margin 13.6%, GAAP 12.5% (Q2'26 release). FCF TTM = OCF 145.9 - capex 66.9 = 79.0 on revenue 668.5. Net cash = cash 472.7 - current debt 20.0 - convertible notes 454.3 (net carrying) - long-term debt 39.7 at 6/30/26; excludes restricted cash 18.4 and leases. Customer concentration null: 10-K says no customer >10% of revenue. TTM diluted EPS $3.86 = H1'26 0.61 + FY25 4.87 - H1'25 1.62; inflated by Q4'25 tax valuation-allowance release (FY25 tax benefit $82.8M; net income 190.3 vs pre-tax 107.5), so ttm_pe and +100% EPS growth are flattering; TTM pre-tax income 72.6 vs 74.1 (-2%). Q1'26 EPS missed consensus (investing.com transcript) and operating margin compressed YoY on Kidney/Gen 3.0/clinical spending. Founder-led: Waleed Hassanein, founder, President & CEO.",
+  "notes": "Price $79.80 close 2026-10-02. Revenue = total revenue (product + service); Q4 derived FY minus 9M. Revenue model transactional: paid per transplant procedure - National OCS Program organ procurement/transport and aviation services (Q2'26 service $78.8M) plus single-use OCS disposable sets (product $111.2M); no recurring subscription. Guidance annual only (FY26 $737-757M, low end raised 2026-08-04) -> next-Q null, provides_guidance true. GM GAAP 59.6%. Adj. op margin 13.6%, GAAP 12.5% (Q2'26 release). FCF TTM = OCF 145.9 - capex 66.9 = 79.0 on revenue 668.5. Net cash = cash 472.7 - current debt 20.0 - convertible notes 454.3 (net carrying) - long-term debt 39.7 at 6/30/26; excludes restricted cash 18.4 and leases. Customer concentration null: 10-K says no customer >10% of revenue. TTM diluted EPS $3.86 = H1'26 0.61 + FY25 4.87 - H1'25 1.62; inflated by Q4'25 tax valuation-allowance release (FY25 tax benefit $82.8M; net income 190.3 vs pre-tax 107.5), so ttm_pe and +100% EPS growth are flattering; TTM pre-tax income 72.6 vs 74.1 (-2%). Q1'26 EPS missed consensus (investing.com transcript) and operating margin compressed YoY on Kidney/Gen 3.0/clinical spending. Founder-led: Waleed Hassanein, founder, President & CEO. | Scoring adjustment (2026-10-04): eps_growth_ttm_pct set to -2.0 = TTM pre-tax income growth (72.6 vs 74.1), stripping the FY25 tax valuation-allowance release; reported diluted-EPS growth kept in eps_growth_ttm_pct_reported.",
   "sources": {
     "quarterly_revenue": [
       "SEC EDGAR XBRL companyfacts (Revenues) from 10-Q/10-K; Q4 = FY minus 9M",
@@ -161,5 +161,6 @@
       "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
       "2026-10-03"
     ]
-  }
+  },
+  "eps_growth_ttm_pct_reported": 100.0
 }

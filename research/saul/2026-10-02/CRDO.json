@@ -1,0 +1,189 @@
+{
+  "ticker": "CRDO",
+  "company": "Credo Technology Group Holding Ltd",
+  "as_of": "2026-10-02",
+  "latest_quarter": "FQ1'27",
+  "quarterly_revenue": [
+    {
+      "period": "FQ2'22",
+      "revenue": 26.427
+    },
+    {
+      "period": "FQ3'22",
+      "revenue": 31.8
+    },
+    {
+      "period": "FQ4'22",
+      "revenue": 37.526
+    },
+    {
+      "period": "FQ1'23",
+      "revenue": 46.467
+    },
+    {
+      "period": "FQ2'23",
+      "revenue": 51.369
+    },
+    {
+      "period": "FQ3'23",
+      "revenue": 54.27
+    },
+    {
+      "period": "FQ4'23",
+      "revenue": 32.088
+    },
+    {
+      "period": "FQ1'24",
+      "revenue": 35.095
+    },
+    {
+      "period": "FQ2'24",
+      "revenue": 44.035
+    },
+    {
+      "period": "FQ3'24",
+      "revenue": 53.058
+    },
+    {
+      "period": "FQ4'24",
+      "revenue": 60.782
+    },
+    {
+      "period": "FQ1'25",
+      "revenue": 59.714
+    },
+    {
+      "period": "FQ2'25",
+      "revenue": 72.034
+    },
+    {
+      "period": "FQ3'25",
+      "revenue": 135.002
+    },
+    {
+      "period": "FQ4'25",
+      "revenue": 170.025
+    },
+    {
+      "period": "FQ1'26",
+      "revenue": 223.074
+    },
+    {
+      "period": "FQ2'26",
+      "revenue": 268.027
+    },
+    {
+      "period": "FQ3'26",
+      "revenue": 407.012
+    },
+    {
+      "period": "FQ4'26",
+      "revenue": 437.003
+    },
+    {
+      "period": "FQ1'27",
+      "revenue": 479.003
+    }
+  ],
+  "guidance_next_q_revenue": 530.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 68.0,
+  "adj_operating_margin_pct": 48.2,
+  "gaap_operating_margin_pct": 25.2,
+  "fcf_margin_ttm_pct": 27.6,
+  "capex_pct_revenue_ttm": 3.9,
+  "net_cash_musd": 764.3,
+  "customer_concentration": {
+    "top_n": 2,
+    "pct": 71.0,
+    "note": "FQ1'27 10-Q: Customer A 43%, Customer B 28% of revenue (FQ1'26: 50%/35%). FY26 10-K: A 49%, B 32%; top-10 ~90%"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": false,
+  "insider_pct": 8.93,
+  "domicile": "Cayman Islands",
+  "china_domiciled": false,
+  "fwd_pe": 30.0,
+  "ev_ntm_sales": 13.99,
+  "ttm_pe": 53.3,
+  "eps_growth_ttm_pct": 244.5,
+  "market_cap_musd": 41090.0,
+  "theme": "AI capex",
+  "red_flags": [],
+  "notes": "Valuation inputs use closing prices of 2026-10-02 (Friday; last close before 2026-10-04). Fiscal year ends Saturday nearest April 30 (FQ1'27 = 2026-05-03 to 2026-08-01; FQ2'22 = quarter ended 2021-10-31, pre-IPO comparative from 10-Q). FQ4 values derived as 10-K FY minus 9M; FY26 quarters sum to 1,335.1. FQ1'27 includes acquisitions closed in the quarter (goodwill 92.8 -> 986.4; Hyperlume per 10-K). TTM (FQ2'26-FQ1'27): OCF 500.4, capex 61.8, FCF 438.6 on revenue 1591.0. Net cash = cash 466.9 + ST investments 297.4 at 2026-08-01; no debt (operating leases excluded). Adjusted EPS: TTM = FQ2'26 0.67 + FQ3'26 1.07 + FQ4'26 1.16 + FQ1'27 1.20 = 4.10; prior TTM = 0.07 + 0.25 + 0.35 + 0.52 = 1.19 (non-GAAP diluted, 8-K Ex.99.1s). ttm_pe = 218.64 close 2026-10-02 / 4.10. Domicile: Cayman Islands holding company (10-K cover address); operating HQ San Jose. founder_led=false: CEO Bill Brennan joined 2014; co-founders serve as CTO/COO. Very high concentration (top 2 = 71% of FQ1'27 revenue). EV/NTM sales derived from SA EV / (mcap / forward P/S). No dated 2026 red flags found.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings (latest-filed value per period); Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-09-02",
+      "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Credo 8-K Ex.99.1, FQ2'27 revenue guide $525-535M",
+      "2026-09-01",
+      "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm"
+    ],
+    "gross_margin_pct": [
+      "Credo 8-K Ex.99.1 (non-GAAP GM)",
+      "2026-09-01"
+    ],
+    "adj_operating_margin_pct": [
+      "Credo 8-K Ex.99.1",
+      "2026-09-01"
+    ],
+    "gaap_operating_margin_pct": [
+      "Credo 8-K Ex.99.1",
+      "2026-09-01"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Credo 10-K FY26 + 10-Q FQ1'27/FQ1'26 cash flows (XBRL): OCF 464.3+90.2-54.2; calc",
+      "2026-09-02"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same: PP&E purchases 57.3+7.3-2.8; calc",
+      "2026-09-02"
+    ],
+    "net_cash_musd": [
+      "Credo 8-K Ex.99.1 balance sheet 2026-08-01",
+      "2026-09-01"
+    ],
+    "customer_concentration": [
+      "Credo 10-Q FQ1'27 note 3; 10-K FY26 note 3",
+      "2026-09-02",
+      "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm"
+    ],
+    "founder_led": [
+      "Credo IR management team page (Brennan CEO since 2014; Cheng co-founder/CTO), via web search",
+      "2026-10-04",
+      "https://investors.credosemi.com/corporate-governance/management-team"
+    ],
+    "domicile": [
+      "Credo 10-K FY26 cover page",
+      "2026-06-15"
+    ],
+    "ttm_pe": [
+      "Credo 8-K Ex.99.1s 2025-12-01, 2026-03-02, 2026-06-01, 2026-09-01 (non-GAAP diluted EPS); price per SA/Yahoo; calc",
+      "2026-09-01"
+    ],
+    "eps_growth_ttm_pct": [
+      "same; calc",
+      "2026-09-01"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API; EV / (mcap / fwd P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ]
+  }
+}

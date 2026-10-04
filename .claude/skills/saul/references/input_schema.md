@@ -49,6 +49,8 @@ One JSON file per company, written to `research/saul/<YYYY-MM-DD>/<TICKER>.json`
 | `net_cash_musd` | Cash + short- and long-term investments − all debt including converts. Exclude operating leases and say so. Negative means net debt. |
 | `customer_concentration` | `top_n` is how many customers `pct` covers. Use the most specific disclosure available (10-K / 20-F major-customer note). `null` if undisclosed. |
 | `revenue_model` | Exactly one of `subscription`, `usage`, `transactional`, `hardware`, `commodity`. `commodity` covers undifferentiated products priced by supply and demand (DRAM, NAND, most materials). Explain judgment calls in `notes`. |
+| `em_operations` | Optional. `true` if the company is domiciled in, or earns most of its revenue from, emerging markets. Prime mode fails these (KB1). |
+| `ttm_pe`, `eps_growth_ttm_pct`, `market_cap_musd` | Used by prime mode: 1YPEG = `ttm_pe` ÷ `eps_growth_ttm_pct`, plus the runway test. Strip one-off tax effects from EPS growth and note it. |
 | `fwd_pe` | Consensus NTM P/E on non-GAAP EPS. `null` if loss-making. |
 | `theme` | A short label for the dominant demand driver ("AI capex", "AI software", "fintech", "consumer", "security"). Used for the portfolio theme-concentration warning. |
 | `red_flags` | Zero or more of: `delayed_filing`, `guidance_cut`, `mgmt_cant_see_future`, `accounting_restatement`, `operational_carelessness`, `vanity_capex`, `shrinking_market`, `heavy_dilution`, `stockholders_last`, `litigation_overhang`, `inventory_build`. Each one needs a dated source in `sources`. |

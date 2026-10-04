@@ -1,0 +1,184 @@
+{
+  "ticker": "ANET",
+  "company": "Arista Networks, Inc.",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 748.697
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 824.459
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 877.066
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 1051.891
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 1176.801
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 1275.552
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 1351.351
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 1458.924
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 1509.456
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 1540.469
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 1571.4
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 1690.4
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 1810.9
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 1930.4
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 2004.8
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 2204.8
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 2308.3
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 2487.8
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 2709.0
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 3035.7
+    }
+  ],
+  "guidance_next_q_revenue": 3300.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 63.4,
+  "adj_operating_margin_pct": 49.9,
+  "gaap_operating_margin_pct": 45.4,
+  "fcf_margin_ttm_pct": 48.9,
+  "capex_pct_revenue_ttm": 1.4,
+  "net_cash_musd": 13343.3,
+  "customer_concentration": {
+    "top_n": 2,
+    "pct": 42.0,
+    "note": "FY2025 10-K: two end customers 26% and 16% of revenue (FY24 20%/15%)"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": false,
+  "insider_pct": 16.66,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 44.64,
+  "ev_ntm_sales": 17.12,
+  "ttm_pe": 59.9,
+  "eps_growth_ttm_pct": 30.6,
+  "market_cap_musd": 261510.0,
+  "theme": "AI capex",
+  "red_flags": [],
+  "notes": "Valuation inputs use closing prices of 2026-10-02 (Friday; last close before 2026-10-04). Q4 values derived as FY minus 9M. Service revenue ~14% of Q2'26 (430.5 of 3,035.7) - classed hardware. TTM (Q3'25-Q2'26): OCF 5306.6, capex 151.3 (FY25 'property, equipment and intangible assets' 119.5 + H1'26 84.2 - H1'25 52.4), FCF margin on revenue 10540.8. Net cash = cash 2,290.2 + marketable securities 11,053.1 at 2026-06-30; no debt. Deferred revenue $5.1B. Adjusted EPS: TTM = Q3'25 0.75 + Q4'25 0.82 + Q1'26 0.87 + Q2'26 1.02 = 3.46; prior TTM = Q3'24 0.60 + Q4'24 0.66 + Q1'25 0.66 + Q2'25 0.73 = 2.65. Caveat: from Q1'26 Arista changed the non-GAAP tax methodology for stock awards and restated Q1'25 (+$0.01) and Q2'25 (nil); Q3'24-Q4'25 are on the old basis, so the mix is roughly consistent. founder_led=false: CEO Jayshree Ullal joined in 2008 (not a founder); co-founder Andy Bechtolsheim remains an executive. Insider 16.7% largely founders.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings (latest-filed value per period); Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-08-05",
+      "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000175/anet-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Arista 8-K Ex.99.1, Q3'26 revenue ~$3.3B",
+      "2026-08-04",
+      "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000174/ex991q226-earningsrelease.htm"
+    ],
+    "gross_margin_pct": [
+      "Arista 8-K Ex.99.1 (non-GAAP)",
+      "2026-08-04"
+    ],
+    "adj_operating_margin_pct": [
+      "Arista 8-K Ex.99.1",
+      "2026-08-04"
+    ],
+    "gaap_operating_margin_pct": [
+      "Arista 8-K Ex.99.1",
+      "2026-08-04"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Arista 8-K Ex.99.1 Q4'25 (FY25 OCF 4,371.9; capex 119.5) and Q2'26 (H1 OCF 2,776.5 vs 1,841.8; capex 84.2 vs 52.4); calc",
+      "2026-08-04"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-04"
+    ],
+    "net_cash_musd": [
+      "Arista 8-K Ex.99.1 balance sheet 2026-06-30",
+      "2026-08-04"
+    ],
+    "customer_concentration": [
+      "Arista 10-K FY2025",
+      "2026-02-17",
+      "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm"
+    ],
+    "founder_led": [
+      "Web search (Wikipedia / DCK: founders Bechtolsheim, Cheriton, Duda; Ullal CEO from 2008); Arista 8-K 2026-08-04 names Ullal Chairperson & CEO",
+      "2026-10-04"
+    ],
+    "ttm_pe": [
+      "Arista 8-K Ex.99.1s 2025-11-04, 2026-02-12, 2026-05-05, 2026-08-04; calc",
+      "2026-08-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "same; calc",
+      "2026-08-04"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API; EV / (mcap / fwd P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ]
+  }
+}

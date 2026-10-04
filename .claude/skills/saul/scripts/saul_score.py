@@ -68,6 +68,7 @@ THRESHOLDS = {
     "pr_growth_flag": 20.0,          # SBNY/AMZN-type ~20-29% growers were held but not core-grade
     "pr_1ypeg_pass": 1.0,            # SKX bought at PE 18.6 on 73% TTM EPS growth (1YPEG ~0.25)
     "pr_1ypeg_flag": 2.0,
+    "pr_gm_flag": 30.0,              # LGIH (~26% GM) would have flagged too; FLAG, not FAIL
     "pr_saas_growth_min": 40.0,      # Path B (unprofitable SaaS) needs Era-2-grade growth
     "pr_saas_gm_pass": 65.0, "pr_saas_gm_flag": 55.0,
     "pr_saas_fcf_flag": -10.0, "pr_saas_fcf_fail": -30.0,   # Westport: losses >125% of revenue
@@ -445,6 +446,9 @@ def prime_checks(company_input: dict, metrics: dict) -> tuple[str, list[Check]]:
 
     if company_input.get("china_domiciled"):
         add("PR-X1", "China domicile", STOP, company_input.get("domicile", "?"), "No Chinese companies after the 2010 frauds.")
+    elif company_input.get("em_operations"):
+        add("PR-X2", "Emerging-market company", FAIL, company_input.get("domicile", "?"),
+            "'I probably wouldn't invest in companies in other emerging markets either.' (He bought NU only in 2024.)")
     for red_flag in company_input.get("red_flags") or []:
         if red_flag in STOP_LEVEL_FLAGS:
             add("PR-R1", f"red flag: {red_flag}", STOP, red_flag, "Clear exit signal.")
@@ -477,6 +481,9 @@ def prime_checks(company_input: dict, metrics: dict) -> tuple[str, list[Check]]:
         status = PASS if one_year_peg <= TH["pr_1ypeg_pass"] else FLAG if one_year_peg <= TH["pr_1ypeg_flag"] else FAIL
         add("PR-E1", "1YPEG (TTM PE / TTM EPS growth)", status, f"PE {ttm_pe} / {fmt(eps_growth)} = {one_year_peg:.2f}",
             "Saul's own screen: 'the PE divided by the rate of growth of earnings over the most recent twelve months.'" if status != PASS else "")
+        gross_margin = company_input.get("gross_margin_pct")
+        if gross_margin is not None and gross_margin < TH["pr_gm_flag"]:
+            add("PR-M1", "Gross margin (Path A)", FLAG, fmt(gross_margin), "Thin-margin businesses risk being 'a commodity product made well'.")
     elif model == "subscription":
         path = "B (recurring hypergrowth)"
         status = PASS if (revenue_yoy_latest or 0) >= TH["pr_saas_growth_min"] else FAIL
@@ -523,7 +530,9 @@ def prime_tier(checks: list[Check]) -> str:
         return "AVOID"
     n_fail = sum(c.status == FAIL for c in checks)
     n_flag = sum(c.status == FLAG for c in checks)
-    if n_fail == 0 and n_flag <= 2:
+    decelerating = any(c.rule_id == "PR-G3" for c in checks)
+    # A decelerating name was never a top position: he wanted "rapidly improving metrics".
+    if n_fail == 0 and n_flag <= 2 and not decelerating:
         return "CORE"
     if (n_fail == 0 and n_flag <= 4) or (n_fail == 1 and n_flag <= 2):
         return "FULL"

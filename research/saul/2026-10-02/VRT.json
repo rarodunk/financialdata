@@ -1,0 +1,183 @@
+{
+  "ticker": "VRT",
+  "company": "Vertiv Holdings Co",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 1228.9
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 1410.5
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 1156.4
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 1399.4
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 1481.1
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 1654.6
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 1521.1
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 1734.1
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 1742.6
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 1865.4
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 1639.1
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 1952.8
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 2073.5
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 2346.4
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 2036.0
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 2638.1
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 2675.8
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 2880.0
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 2649.5
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 3274.3
+    }
+  ],
+  "guidance_next_q_revenue": 3750.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 37.7,
+  "adj_operating_margin_pct": 22.6,
+  "gaap_operating_margin_pct": 19.5,
+  "fcf_margin_ttm_pct": 25.5,
+  "capex_pct_revenue_ttm": 3.7,
+  "net_cash_musd": 170.8,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "No customer percentage disclosed in FY2025 10-K or Q2'26 10-Q (no 10%-customer note found)"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": false,
+  "insider_pct": 0.19,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 31.99,
+  "ev_ntm_sales": 6.04,
+  "ttm_pe": 47.7,
+  "eps_growth_ttm_pct": 58.4,
+  "market_cap_musd": 97090.0,
+  "theme": "AI capex",
+  "red_flags": [],
+  "notes": "Valuation inputs use closing prices of 2026-10-02 (Friday; last close before 2026-10-04). Q4 values derived as FY minus 9M. Revenue includes services (services cost of sales 371.6 of 2,039.4 in Q2'26); classed hardware (power/thermal equipment). Q2'26 growth +24% incl. ~5pts from acquisitions. Gross margin is GAAP (no adjusted gross margin reported): (3,274.3 - 2,039.4)/3,274.3. GAAP op margin 637.9/3,274.3. TTM (Q3'25-Q2'26): OCF 3354.2 (FY25 2,113.8 + H1'26 1,866.6 - H1'25 626.2), capex 430.2 (PP&E 424.4 + capitalized software 5.8), revenue 11479.6. Net cash = cash 2,810.6 + ST investments 300.0 - LT debt 2,939.8 at 2026-06-30 (company also reports a net cash position); leases excluded. Post-quarter: 2026-09-01 agreement to acquire Utility Innovation Holdings for ~$1.45B cash + up to $1.15B earn-out (close Q4'26) and 2026-09-24 King Environmental deal; these would move VRT to net debt. Inventory rose 1,456.5 -> 2,522.7 in H1'26 but deferred revenue (customer prepayments) rose 1,814.7 -> 3,633.7 and OCF was strong, so inventory_build not flagged. Adjusted EPS: TTM = Q3'25 1.24 + Q4'25 1.36 + Q1'26 1.17 + Q2'26 1.52 = 5.29; prior TTM = Q3'24 0.76 + Q4'24 0.99 + Q1'25 0.64 + Q2'25 0.95 = 3.34. founder_led=false (CEO Giordano Albertazzi; Executive Chairman Dave Cote).",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings (latest-filed value per period); Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-07-29",
+      "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050609/vrt-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Vertiv 8-K Ex.99.1, Q3'26 net sales $3,650-3,850M",
+      "2026-07-29",
+      "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050323/q22026exhibit991vrt07292026.htm"
+    ],
+    "gross_margin_pct": [
+      "Vertiv 8-K Ex.99.1 income statement (GAAP); calc",
+      "2026-07-29"
+    ],
+    "adj_operating_margin_pct": [
+      "Vertiv 8-K Ex.99.1",
+      "2026-07-29"
+    ],
+    "gaap_operating_margin_pct": [
+      "Vertiv 8-K Ex.99.1; calc",
+      "2026-07-29"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Vertiv 10-K FY25 + 10-Q Q2'26/Q2'25 cash flows (XBRL); calc",
+      "2026-07-29"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-07-29"
+    ],
+    "net_cash_musd": [
+      "Vertiv 8-K Ex.99.1 balance sheet 2026-06-30; calc",
+      "2026-07-29"
+    ],
+    "customer_concentration": [
+      "Vertiv 10-K FY2025 / 10-Q Q2'26 (no disclosure)",
+      "2026-02-13"
+    ],
+    "founder_led": [
+      "Vertiv 8-K Ex.99.1 (CEO and Executive Chairman named)",
+      "2026-07-29"
+    ],
+    "ttm_pe": [
+      "Vertiv 8-K Ex.99.1s 2025-10-22, 2026-02-11, 2026-04-22, 2026-07-29 (adjusted diluted EPS reconciliations); calc",
+      "2026-07-29"
+    ],
+    "eps_growth_ttm_pct": [
+      "same; calc",
+      "2026-07-29"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API; EV / (mcap / fwd P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ]
+  }
+}

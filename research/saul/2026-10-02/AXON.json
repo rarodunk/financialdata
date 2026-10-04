@@ -1,0 +1,189 @@
+{
+  "ticker": "AXON",
+  "company": "Axon Enterprise, Inc.",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 231.989
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 219.835
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 256.426
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 285.613
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 311.754
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 333.35
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 344.341
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 372.704
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 413.278
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 430.376
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 459.871
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 503.236
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 544.274
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 575.145
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 603.633
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 668.538
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 710.641
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 796.724
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 807.345
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 904.389
+    }
+  ],
+  "guidance_next_q_revenue": null,
+  "provides_guidance": true,
+  "gross_margin_pct": 62.9,
+  "adj_operating_margin_pct": null,
+  "gaap_operating_margin_pct": 5.2,
+  "fcf_margin_ttm_pct": 4.1,
+  "capex_pct_revenue_ttm": 4.1,
+  "net_cash_musd": -1039.3,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "FY2025 10-K: no customer >10% of net sales in 2025, 2024 or 2023 (thousands of public-safety agencies)"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": 126.0,
+  "founder_led": true,
+  "insider_pct": 4.74,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 46.14,
+  "ev_ntm_sales": 8.25,
+  "ttm_pe": 60.7,
+  "eps_growth_ttm_pct": -5.2,
+  "market_cap_musd": 33580.0,
+  "theme": "public safety",
+  "red_flags": [],
+  "notes": "Valuation inputs use closing prices of 2026-10-02 (Friday; last close before 2026-10-04). revenue_model judgment: Q2'26 Connected Devices 506.6 (56%) vs Software & Services 397.8 (44%), so classed hardware by majority, although many devices are sold inside multi-year subscription bundles (ARR $1.6B, +39%; NRR 126%; future contracted bookings $15.1B). Guidance is annual only (FY26 revenue growth 32-34%, adj. EBITDA margin 25.5%), so guidance_next_q_revenue=null but provides_guidance=true. No adjusted operating margin is reported (adj. EBITDA margin 26.8% in Q2'26), so adj_operating_margin_pct=null. Gross margin = adjusted 62.9% (GAAP 60.4%). GAAP op margin 46.8/904.4. TTM (Q3'25-Q2'26): OCF 265.8 (FY25 211.3 + H1'26 -11.4 - H1'25 -65.9), capex 132.6, revenue 3219.1. Net cash = cash 597.7 + ST investments 75.7 + marketable securities 19.1 - senior notes carrying value 1,731.8 (principal $1.8B) at 2026-06-30; strategic investments 853.8 excluded. Post-quarter: $1.15B 0% convertible notes due 2031 issued 2026-09-18 (conversion ~$652/share) - adds equal cash and debt, net cash roughly unchanged before fees/uses. Adjusted EPS caveat: from Q1'26 non-GAAP EPS also excludes acquired-intangible amortization; Q1'26 1.61, Q2'26 1.88, Q1'25 1.47 (= H1'25 3.65 - Q2'25 2.18) and Q2'25 2.18 are on the new basis, Q3'25 1.17, Q4'25 2.15, Q3'24 1.45, Q4'24 2.08 on the old basis (two of each in both windows). TTM 6.81 vs prior 7.18 = -5% (heavy SBC and margin investment; TTM P/E ~61). Founder-led: Patrick (Rick) Smith, CEO, 'Founder-led since 1993' (10-K).",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings (latest-filed value per period); Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-08-06",
+      "https://www.sec.gov/Archives/edgar/data/1069183/000162828026053646/axon-20260630.htm"
+    ],
+    "provides_guidance": [
+      "Axon 8-K Ex.99.1 (FY26 revenue growth 32-34%; no quarterly guide)",
+      "2026-08-05",
+      "https://www.sec.gov/Archives/edgar/data/1069183/000162828026053363/axon-20260805xex991.htm"
+    ],
+    "gross_margin_pct": [
+      "Axon 8-K Ex.99.1 (adjusted gross margin)",
+      "2026-08-05"
+    ],
+    "gaap_operating_margin_pct": [
+      "Axon 8-K Ex.99.1 (income from operations 46,778); calc",
+      "2026-08-05"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Axon 10-K FY25 + 10-Q Q2'26/Q2'25 cash flows (XBRL); calc",
+      "2026-08-06"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same (136.3 + 44.2 - 47.8); calc",
+      "2026-08-06"
+    ],
+    "net_cash_musd": [
+      "Axon 8-K Ex.99.1 balance sheet 2026-06-30; calc. Convert: Axon 8-K 2026-09-21",
+      "2026-09-21",
+      "https://www.sec.gov/Archives/edgar/data/1069183/000119312526395997/d476163d8k.htm"
+    ],
+    "customer_concentration": [
+      "Axon 10-K FY2025",
+      "2026-02-25",
+      "https://www.sec.gov/Archives/edgar/data/1069183/000162828026011360/axon-20251231.htm"
+    ],
+    "nrr_pct": [
+      "Axon 8-K Ex.99.1 shareholder letter ('net revenue retention reaches 126%')",
+      "2026-08-05"
+    ],
+    "revenue_model": [
+      "Axon 8-K Ex.99.1 segment revenue (Software & Services 398; Connected Devices 507)",
+      "2026-08-05"
+    ],
+    "founder_led": [
+      "Axon 10-K FY2025 ('Founder-led since 1993'; Patrick Smith CEO)",
+      "2026-02-25"
+    ],
+    "ttm_pe": [
+      "Axon 8-K Ex.99.1s 2025-11-04, 2026-02-24, 2026-08-05 (non-GAAP diluted EPS tables); calc",
+      "2026-08-05"
+    ],
+    "eps_growth_ttm_pct": [
+      "same; calc",
+      "2026-08-05"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API; EV / (mcap / fwd P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ]
+  }
+}

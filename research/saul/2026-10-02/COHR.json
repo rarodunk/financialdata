@@ -1,0 +1,195 @@
+{
+  "ticker": "COHR",
+  "company": "Coherent Corp.",
+  "as_of": "2026-10-02",
+  "latest_quarter": "FQ4'26",
+  "quarterly_revenue": [
+    {
+      "period": "FQ1'22",
+      "revenue": 795.111
+    },
+    {
+      "period": "FQ2'22",
+      "revenue": 806.819
+    },
+    {
+      "period": "FQ3'22",
+      "revenue": 827.724
+    },
+    {
+      "period": "FQ4'22",
+      "revenue": 886.962
+    },
+    {
+      "period": "FQ1'23",
+      "revenue": 1344.57
+    },
+    {
+      "period": "FQ2'23",
+      "revenue": 1370.285
+    },
+    {
+      "period": "FQ3'23",
+      "revenue": 1240.194
+    },
+    {
+      "period": "FQ4'23",
+      "revenue": 1205.051
+    },
+    {
+      "period": "FQ1'24",
+      "revenue": 1053.083
+    },
+    {
+      "period": "FQ2'24",
+      "revenue": 1131.434
+    },
+    {
+      "period": "FQ3'24",
+      "revenue": 1208.809
+    },
+    {
+      "period": "FQ4'24",
+      "revenue": 1314.362
+    },
+    {
+      "period": "FQ1'25",
+      "revenue": 1348.135
+    },
+    {
+      "period": "FQ2'25",
+      "revenue": 1434.665
+    },
+    {
+      "period": "FQ3'25",
+      "revenue": 1497.879
+    },
+    {
+      "period": "FQ4'25",
+      "revenue": 1529.436
+    },
+    {
+      "period": "FQ1'26",
+      "revenue": 1581.378
+    },
+    {
+      "period": "FQ2'26",
+      "revenue": 1685.629
+    },
+    {
+      "period": "FQ3'26",
+      "revenue": 1805.641
+    },
+    {
+      "period": "FQ4'26",
+      "revenue": 2045.533
+    }
+  ],
+  "guidance_next_q_revenue": 2300.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 40.2,
+  "adj_operating_margin_pct": 21.8,
+  "gaap_operating_margin_pct": 12.4,
+  "fcf_margin_ttm_pct": -14.5,
+  "capex_pct_revenue_ttm": 15.6,
+  "net_cash_musd": -1235.2,
+  "customer_concentration": {
+    "top_n": 2,
+    "pct": 32.0,
+    "note": "FY2026 10-K: major customers 20% and 12% of consolidated revenue (FY25 10% and 12%)"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": false,
+  "insider_pct": 0.29,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 35.78,
+  "ev_ntm_sales": 6.36,
+  "ttm_pe": 60.1,
+  "eps_growth_ttm_pct": 58.9,
+  "market_cap_musd": 66000.0,
+  "theme": "AI capex",
+  "red_flags": [
+    "heavy_dilution",
+    "inventory_build"
+  ],
+  "notes": "Valuation inputs use closing prices of 2026-10-02 (Friday; last close before 2026-10-04). Fiscal year ends June 30 (FQ4'26 = Apr-Jun 2026); FY26 = TTM. FQ4 values derived as 10-K FY minus 9M; no restatement found across filings. The step-up from FQ1'23 reflects the Coherent, Inc. acquisition. Reported revenue includes businesses divested during FY26 (gain on sale of business 124.1; proceeds 437.0): FQ4'26 growth +34% reported vs +42% pro forma per the company. FY26 cash flow: OCF only 79.5 (FY25 633.6) as inventories rose 1,437.6 -> 2,581.0 (+80% vs FQ4 revenue +34%); capex 1,102.9 PP&E + 7.2 intangibles; FCF -1,030.6. Net cash = cash 1,162.0 + ST investments 825.0 - debt 3,222.2 (7.9 current + 3,214.3 LT) at 2026-06-30; restricted cash (35.2 current, 571.2 non-current) and operating leases excluded. Adjusted EPS FY26 5.61 vs FY25 3.53 (non-GAAP diluted; methodology refined FQ2'25 with prior periods restated). heavy_dilution: shares outstanding 155.8M (FY25 10-K cover, 2025-08-11) -> 195.8M (FY26 10-K cover, 2026-08-10), +26%, from $2.0B common issuance and conversion of $2.48B mezzanine preferred (proceeds used to repay debt). inventory_build: inventory/quarterly revenue 1.26x vs 0.94x a year earlier; judgment call in a demand ramp, but it consumed nearly all operating cash flow. 2026-08-31 8-K: special PSU mega-grants ($50M target to CEO, $100M total to five executives) tied to share-price milestones through 2030. founder_led=false (CEO Jim Anderson joined from Lattice, per 10-K).",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings (latest-filed value per period); Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-08-14",
+      "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Coherent 8-K Ex.99.1, FQ1'27 revenue $2.2-2.4B",
+      "2026-08-12",
+      "https://www.sec.gov/Archives/edgar/data/820318/000119312526346860/d128030dex991.htm"
+    ],
+    "gross_margin_pct": [
+      "Coherent 8-K Ex.99.1 (non-GAAP)",
+      "2026-08-12"
+    ],
+    "adj_operating_margin_pct": [
+      "Coherent 8-K Ex.99.1",
+      "2026-08-12"
+    ],
+    "gaap_operating_margin_pct": [
+      "Coherent 8-K Ex.99.1",
+      "2026-08-12"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Coherent 8-K Ex.99.1 FY26 cash flow statement; calc",
+      "2026-08-12"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-12"
+    ],
+    "net_cash_musd": [
+      "Coherent 8-K Ex.99.1 balance sheet 2026-06-30; calc",
+      "2026-08-12"
+    ],
+    "customer_concentration": [
+      "Coherent 10-K FY2026 (Major Customers)",
+      "2026-08-14"
+    ],
+    "founder_led": [
+      "Coherent 10-K FY2026 (executive officers)",
+      "2026-08-14"
+    ],
+    "ttm_pe": [
+      "Coherent 8-K Ex.99.1 (FY26 non-GAAP diluted EPS 5.61; FY25 3.53); calc",
+      "2026-08-12"
+    ],
+    "eps_growth_ttm_pct": [
+      "same; calc",
+      "2026-08-12"
+    ],
+    "red_flags.heavy_dilution": [
+      "Coherent 10-K FY2026 cover (195.8M shares, 2026-08-10) vs FY2025 10-K cover (155.8M, 2025-08-11); FY26 cash flow (common issuance 1,998.6); balance sheet (mezzanine equity 2,483.3 -> 0)",
+      "2026-08-14",
+      "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm"
+    ],
+    "red_flags.inventory_build": [
+      "Coherent 8-K Ex.99.1 balance sheet (inventories 2,581.0 vs 1,437.6) and cash flow (OCF 79.5 vs 633.6)",
+      "2026-08-12"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API; EV / (mcap / fwd P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "ticker": "ALAB",
+  "company": "Astera Labs, Inc.",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q1'23",
+      "revenue": 17.664
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 10.688
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 36.928
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 50.514
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 65.258
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 76.85
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 113.086
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 141.096
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 159.442
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 191.925
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 230.575
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 270.583
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 308.361
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 392.4
+    }
+  ],
+  "guidance_next_q_revenue": 550.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 73.7,
+  "adj_operating_margin_pct": 39.1,
+  "gaap_operating_margin_pct": 22.7,
+  "fcf_margin_ttm_pct": 23.0,
+  "capex_pct_revenue_ttm": 4.9,
+  "net_cash_musd": 1253.0,
+  "customer_concentration": {
+    "top_n": 3,
+    "pct": 86.0,
+    "note": "FY2025 10-K: top three END customers ~86% of revenue, one end customer >70%. Q2'26 10-Q direct customers (distributors/CMs): B 25%, C 15%, D 13% (+ Customer A)"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 9.89,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 62.43,
+  "ev_ntm_sales": 22.73,
+  "ttm_pe": 141.3,
+  "eps_growth_ttm_pct": 81.0,
+  "market_cap_musd": 60780.0,
+  "theme": "AI capex",
+  "red_flags": [],
+  "notes": "Valuation inputs use closing prices of 2026-10-02 (Friday; last close before 2026-10-04). IPO March 2024: only 14 contiguous quarters (Q1'23-Q2'26) exist in SEC filings (earliest are 2023 comparatives in 2024 10-Qs; Q4 values = FY minus 9M); fewer than 16, so the 12-YoY-point downturn test has only 10 points. TTM (Q3'25-Q2'26): OCF 335.7, capex 59.0, FCF 276.7 on revenue 1201.9. Net cash = cash 111.5 + marketable securities 1,141.5 at 2026-06-30; no debt. Adjusted EPS (non-GAAP / pro forma diluted): TTM = Q3'25 0.49 + Q4'25 0.58 + Q1'26 0.61 + Q2'26 0.80 = 2.48; prior TTM = Q3'24 0.23 + Q4'24 0.37 + Q1'25 0.33 + Q2'25 0.44 = 1.37. Q3'26 guide $540-560M implies +40% QoQ (Scorpio X-Series ramp). Founder-led: Jitendra Mohan is Co-Founder & CEO (10-K). Extreme end-customer concentration (one hyperscaler >70%).",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings (latest-filed value per period); Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-08-05",
+      "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000035/alab-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Astera Labs 8-K Ex.99.1, Q3'26 revenue $540-560M",
+      "2026-08-04",
+      "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000033/q226exhibit991.htm"
+    ],
+    "gross_margin_pct": [
+      "Astera Labs 8-K Ex.99.1 (non-GAAP)",
+      "2026-08-04"
+    ],
+    "adj_operating_margin_pct": [
+      "Astera Labs 8-K Ex.99.1",
+      "2026-08-04"
+    ],
+    "gaap_operating_margin_pct": [
+      "Astera Labs 8-K Ex.99.1",
+      "2026-08-04"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Astera Labs 10-K FY25 + 10-Q Q2'26/Q2'25 cash flows (XBRL): OCF 319.3+162.3-145.9; calc",
+      "2026-08-05"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same: PP&E 37.5+28.1-6.6; calc",
+      "2026-08-05"
+    ],
+    "net_cash_musd": [
+      "Astera Labs 8-K Ex.99.1 balance sheet 2026-06-30",
+      "2026-08-04"
+    ],
+    "customer_concentration": [
+      "Astera Labs 10-K FY2025 (risk factors); 10-Q Q2'26 concentration table",
+      "2026-02-20",
+      "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm"
+    ],
+    "founder_led": [
+      "Astera Labs 10-K FY2025 ('Jitendra Mohan, our Co-Founder and Chief Executive Officer')",
+      "2026-02-20"
+    ],
+    "ttm_pe": [
+      "Astera Labs 8-K Ex.99.1s 2025-11-04, 2026-02-10, 2026-05-05, 2026-08-04; calc",
+      "2026-08-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "same; calc",
+      "2026-08-04"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API; EV / (mcap / fwd P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "ticker": "CLS",
+  "company": "Celestica Inc.",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'22",
+      "revenue": 1923.3
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 2042.6
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 1837.8
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 1939.4
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 2043.3
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 2140.5
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 2208.9
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 2391.9
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 2499.5
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 2545.7
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 2648.6
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 2893.4
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 3194.0
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 3654.9
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 4047.0
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 4698.6
+    }
+  ],
+  "guidance_next_q_revenue": 5400.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 11.5,
+  "adj_operating_margin_pct": 8.2,
+  "gaap_operating_margin_pct": 9.8,
+  "fcf_margin_ttm_pct": 3.3,
+  "capex_pct_revenue_ttm": 4.0,
+  "net_cash_musd": -274.7,
+  "customer_concentration": {
+    "top_n": 3,
+    "pct": 65.0,
+    "note": "Q2'26 10-Q: three CCS customers 34%/16%/15% of 1H'26 revenue (Q2: 32/17/14); top 10 = 83%"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": false,
+  "insider_pct": 0.75,
+  "domicile": "Canada",
+  "china_domiciled": false,
+  "fwd_pe": 24.93,
+  "ev_ntm_sales": 1.65,
+  "ttm_pe": 47.4,
+  "eps_growth_ttm_pct": 72.4,
+  "market_cap_musd": 44500.0,
+  "theme": "AI capex",
+  "red_flags": [],
+  "notes": "Valuation inputs use closing prices of 2026-10-02 (Friday; last close before 2026-10-04). Q3'22-Q4'23 from 6-K earnings releases (IFRS; total = ATS + CCS segment revenue; 2022 and 2023 quarters sum exactly to 20-F FY revenue 7,250.0 and 7,961.0). Q1'24 onward from US GAAP 10-Q/10-K XBRL (Celestica moved to 10-K/US GAAP for FY2024); Q4 = FY minus 9M. IFRS-to-US GAAP revenue differences are assumed immaterial but not reconciled. EMS/ODM contract manufacturer: thin margins by design. Gross margin = adjusted (non-GAAP) 11.5% (GAAP 12.3%); adjusted op margin 8.2% vs GAAP 9.8% in Q2'26 (company-defined adjustments). TTM (Q3'25-Q2'26): OCF 1144.0 (FY25 659.5 + H1'26 767.2 - H1'25 282.7), gross capex 625.3 (201.2 + 493.3 - 69.2), revenue 15594.5. Net cash = cash 535.7 - borrowings under credit facility incl. finance lease obligations 810.4 (26.4 current + 784.0 LT) at 2026-06-30; operating leases excluded. Adjusted EPS: TTM = Q3'25 1.58 + Q4'25 1.89 + Q1'26 2.16 + Q2'26 2.54 = 8.17; prior TTM = 1.04 + 1.11 + 1.20 + 1.39 = 4.74. FY26 outlook raised to revenue $20.5B / adj EPS $11.30 (2026-07-27). CFO transition effective 2026-10-01 (8-K 2026-09-11; internal promotion). founder_led=false.",
+  "sources": {
+    "quarterly_revenue": [
+      "Celestica 6-K earnings releases 2022-10-25, 2023-01-26, 2023-04-27, 2023-07-27, 2023-10-26, 2024-01-30 (segment tables) + SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings (latest-filed value per period); Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-07-27",
+      "https://www.sec.gov/Archives/edgar/data/1030894/000103089426000044/cls-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Celestica 8-K Ex.99.1, Q3'26 revenue $5.25-5.55B",
+      "2026-07-27",
+      "https://www.sec.gov/Archives/edgar/data/1030894/000103089426000043/cls-20260630prcondensedfs.htm"
+    ],
+    "gross_margin_pct": [
+      "Celestica 8-K Ex.99.1 Schedule 1 (adjusted gross margin)",
+      "2026-07-27"
+    ],
+    "adj_operating_margin_pct": [
+      "Celestica 8-K Ex.99.1",
+      "2026-07-27"
+    ],
+    "gaap_operating_margin_pct": [
+      "Celestica 8-K Ex.99.1",
+      "2026-07-27"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Celestica 10-K FY25 + 10-Q Q2'26/Q2'25 cash flows (XBRL); calc",
+      "2026-07-27"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-07-27"
+    ],
+    "net_cash_musd": [
+      "Celestica 8-K Ex.99.1 balance sheet 2026-06-30; calc",
+      "2026-07-27"
+    ],
+    "customer_concentration": [
+      "Celestica 10-Q Q2'26",
+      "2026-07-27"
+    ],
+    "founder_led": [
+      "Celestica 8-K Ex.99.1 (Rob Mionis, CEO); 8-K 2026-09-11",
+      "2026-09-11"
+    ],
+    "ttm_pe": [
+      "Celestica 8-K Ex.99.1s 2025-10-27, 2026-01-28, 2026-04-27, 2026-07-27 (adjusted EPS); calc",
+      "2026-07-27"
+    ],
+    "eps_growth_ttm_pct": [
+      "same; calc",
+      "2026-07-27"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API; EV / (mcap / fwd P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02 (fetched 2026-10-04); close cross-checked vs Yahoo Finance chart API",
+      "2026-10-04"
+    ]
+  }
+}

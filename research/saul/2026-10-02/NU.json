@@ -82,7 +82,7 @@
   "nrr_pct": null,
   "founder_led": true,
   "insider_pct": 22.8,
-  "domicile": "Cayman Islands (HQ São Paulo, Brazil)",
+  "domicile": "Cayman Islands (HQ S\u00e3o Paulo, Brazil)",
   "china_domiciled": false,
   "fwd_pe": 13.78,
   "ev_ntm_sales": 2.55,
@@ -91,7 +91,7 @@
   "market_cap_musd": 64880.0,
   "theme": "fintech",
   "red_flags": [],
-  "notes": "Price $13.43 close 2026-10-02. Currency: NU reports in USD (IFRS); revenue = IFRS accounting 'Total revenue' (interest income and gains net of losses on financial instruments + fee and commission income), gross of interest expense, from quarterly 6-K financial statements; Q4 = FY minus 9M. Not the new 2026 'managerial' total revenue (Q2'26 $5,875.7M vs IFRS $5,513.2M), to keep the 16-quarter series consistent. Revenue model transactional by instruction (credit/float interest ~86%, fees ~14%). No revenue guidance -> provides_guidance false. Gross margin null: not meaningful for a bank (cost of funding/credit losses). Adj. operating margin = Q2'26 managerial EBT / managerial revenue (1,630.3/5,875.7); GAAP margin = IFRS profit before income tax / total revenue (1,236.3/5,513.2 = 22.4%). FCF null: bank OCF dominated by loan/deposit flows. Capex TTM 288.4 = PP&E + intangible development (H1'26 100.5 + FY25 340.8 - H1'25 152.9) on TTM revenue 19,339.8. Net cash null: bank balance sheet (deposits $45.3B) not comparable. Customer concentration null: 20-F FY25 says no single customer represented 10% or more of revenues. TTM diluted EPS $0.7343 = H1'26 0.3936 + FY25 0.5846 - H1'25 0.2439; prior TTM 0.4697. ev_ntm_sales = forward P/S from stockanalysis (bank EV not meaningful). China exposure: none material identified. Founder-led: David Vélez, founder & CEO.",
+  "notes": "Price $13.43 close 2026-10-02. Currency: NU reports in USD (IFRS); revenue = IFRS accounting 'Total revenue' (interest income and gains net of losses on financial instruments + fee and commission income), gross of interest expense, from quarterly 6-K financial statements; Q4 = FY minus 9M. Not the new 2026 'managerial' total revenue (Q2'26 $5,875.7M vs IFRS $5,513.2M), to keep the 16-quarter series consistent. Revenue model transactional by instruction (credit/float interest ~86%, fees ~14%). No revenue guidance -> provides_guidance false. Gross margin null: not meaningful for a bank (cost of funding/credit losses). Adj. operating margin = Q2'26 managerial EBT / managerial revenue (1,630.3/5,875.7); GAAP margin = IFRS profit before income tax / total revenue (1,236.3/5,513.2 = 22.4%). FCF null: bank OCF dominated by loan/deposit flows. Capex TTM 288.4 = PP&E + intangible development (H1'26 100.5 + FY25 340.8 - H1'25 152.9) on TTM revenue 19,339.8. Net cash null: bank balance sheet (deposits $45.3B) not comparable. Customer concentration null: 20-F FY25 says no single customer represented 10% or more of revenues. TTM diluted EPS $0.7343 = H1'26 0.3936 + FY25 0.5846 - H1'25 0.2439; prior TTM 0.4697. ev_ntm_sales = forward P/S from stockanalysis (bank EV not meaningful). China exposure: none material identified. Founder-led: David V\u00e9lez, founder & CEO. | em_operations=true (2026-10-04): Brazil/Mexico/Colombia consumer bank.",
   "sources": {
     "quarterly_revenue": [
       "Nu Holdings 6-K quarterly IFRS financial statements Q3'23-Q2'26 (current and prior-year columns; FY from Q4 6-K)",
@@ -117,7 +117,7 @@
       "https://www.sec.gov/Archives/edgar/data/1691493/000129281426002166/nuform20f_2025.htm"
     ],
     "founder_led": [
-      "Nu 6-K Q2'26 release (David Vélez, founder and global CEO)",
+      "Nu 6-K Q2'26 release (David V\u00e9lez, founder and global CEO)",
       "2026-08-13"
     ],
     "insider_pct": [
@@ -145,5 +145,6 @@
       "stockanalysis.com statistics page, close of 2026-10-02 (page updated 2026-10-03/04)",
       "2026-10-03"
     ]
-  }
+  },
+  "em_operations": true
 }
