@@ -104,6 +104,44 @@ class Tiers(unittest.TestCase):
         self.assertEqual(ss.score(make_company(revenue_model="hardware")).era2_verdict, "PASS ON IT")
 
 
+class PrimeMode(unittest.TestCase):
+    def skx_2015_like(self, **overrides):
+        # Synthetic Skechers-2015 profile: revenue +34%, PE 18.6 on 73% TTM EPS growth, small cap, hardware-ish goods
+        revenues = [100 * 1.076 ** i for i in range(16)]   # ~34% YoY
+        base = make_company(quarterly_revenue=[{"period": f"q{i}", "revenue": r} for i, r in enumerate(revenues)],
+                            revenue_model="transactional", gross_margin_pct=45.0, ttm_pe=18.6, eps_growth_ttm_pct=73.0,
+                            market_cap_musd=4_500.0, nrr_pct=None, guidance_next_q_revenue=None)
+        base.update(overrides)
+        return base
+
+    def test_skx_profile_is_prime_core_via_path_a(self):
+        result = ss.score(self.skx_2015_like())
+        self.assertTrue(result.prime_path.startswith("A"))
+        self.assertEqual(result.prime_tier, "CORE")
+
+    def test_expensive_1ypeg_fails(self):
+        result = ss.score(self.skx_2015_like(ttm_pe=120.0, eps_growth_ttm_pct=30.0))  # 1YPEG 4.0
+        self.assertEqual(status_of_prime(result, "PR-E1"), ss.FAIL)
+
+    def test_mega_cap_fails_runway(self):
+        result = ss.score(self.skx_2015_like(market_cap_musd=1_200_000.0))
+        self.assertEqual(status_of_prime(result, "PR-W1"), ss.FAIL)
+
+    def test_unprofitable_saas_uses_path_b(self):
+        result = ss.score(make_company(ttm_pe=None, eps_growth_ttm_pct=None, fcf_margin_ttm_pct=-5.0, market_cap_musd=20_000.0))
+        self.assertTrue(result.prime_path.startswith("B"))
+        self.assertEqual(result.prime_tier, "CORE")
+
+    def test_unprofitable_hardware_has_no_path(self):
+        result = ss.score(make_company(revenue_model="hardware", ttm_pe=None, eps_growth_ttm_pct=None, market_cap_musd=20_000.0))
+        self.assertEqual(result.prime_path, "none")
+        self.assertEqual(status_of_prime(result, "PR-E1"), ss.FAIL)
+
+
+def status_of_prime(result, rule_id):
+    return next(c.status for c in result.prime_checks if c.rule_id == rule_id)
+
+
 class Batch(unittest.TestCase):
     def test_theme_concentration_warning(self):
         inputs = [make_company(ticker=f"T{i}", theme="AI capex") for i in range(4)]

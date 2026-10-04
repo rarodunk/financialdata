@@ -187,3 +187,36 @@ Calibration: the FAIL/FLAG cutoffs for each tier are mine. They were set so the 
 - **Stay invested and don't time the market**; in panics, rotate from names that fell least into high-confidence names that fell most [KB2].
 - **No anchoring.** "The stock price has no memory of the price you bought it at." [KB1] "You don't have to be right about the stocks you sell, just the ones you hold." [KB1]
 - **Adjusted, not GAAP.** He used adjusted earnings and excluded SBC [KB2]. The scorer uses adjusted operating margin when available. The narrative should still show SBC as a % of revenue and net dilution so the reader can see what his method hides.
+
+## Prime mode (2015–2019): `Prime (2015-19)` column, `--sort prime`
+
+Prime mode reconstructs how Saul bought during his best stretch: 2015 +16%, 2016 +2.5%, 2017 +84.2%, 2018 +71.4%, 2019 +28.4% [KB1]. The evidence is his actual month-end books:
+
+- **End of 2016**, 15 positions: LGIH 13.2%, SHOP 12.5%, AMZN 12.2%, SBNY 12.1%, UBNT 8.0%, ANET 7.9%, PAYC 6.3%, SPLK 5.7%, BOFI 5.2%, SSNI 4.5%. Skechers was sold that December after 30 months. ["My portfolio at the end of the year 2016", topic 39044, via search excerpt]
+- **End of November 2017**, 14 positions plus 3.4% margin: LGIH 23.2%, SHOP 13.6%, ANET 11.8%, SQ 9.0%, UBNT 7.1%, TLND 6.7%, HUBS 5.6%, NTNX 5.3%, NVDA 5.1%, SWKS 4.3%, MULE 4.2%, AMZN 3.4%, BRK.B 2.6%, PAYC 1.1%. Alteryx was a 12.1% position by end-December. [search excerpt; October 2017 summary topic 41545]
+- **End of 2018:** AYX, SQ, TWLO, OKTA, MDB, ZS ≈ 75% of the book. Added TTD (Oct), ESTC/ABMD/GH (Nov), NTNX/VCEL (Dec). [topic 46509, via search excerpt]
+- **Skechers buy logic (Nov 2015):** revenue +34% over 9 months, earnings +70%, "PE of 18.6 and a trailing earnings growth rate of 73%" (1YPEG ≈ 0.25). [topic 36078, via search excerpt]
+- **Ubiquiti:** bought at a PE of about 15–23 with revenue growth reaccelerating to 34–38%. Started as a 2% position when an average position was 6.25%. [topics 38377/33784, via search excerpt]
+- **Arista:** revenue growth of 33–51% for eight straight quarters, with earnings outgrowing revenue. [topic 42694, via search excerpt]
+
+What this shows, and how the scorer encodes it:
+
+- **Two ways in.**
+  - Path A, a profitable fast grower bought on **1YPEG** = TTM P/E ÷ TTM EPS growth ("It has the major disadvantage of looking backward, but has the advantage of using a real number" [KB3]). PASS ≤1.0, FLAG ≤2.0, FAIL above that.
+  - Path B, recurring-revenue hypergrowth bought despite losses: growth ≥40% (FAIL otherwise), SaaS gross margin PASS ≥65% / FLAG ≥55%, FCF margin PASS ≥ −10% / FAIL < −30%.
+  - Anything that fits neither path FAILs.
+- **Growth.** PR-G1: PASS ≥30%, FLAG 20–30%, FAIL <20%, STOP <10%. Banks and Amazon at 20–29% were held, but never as the biggest bets.
+- **Cyclicals and concentration were tolerated.** A homebuilder was his largest position, and he owned Skyworks (Apple-dependent) and NVDA. In prime mode, commodity products, concentration and missing guidance only FLAG. This is the main difference from Era 3, which FAILs durability and concentration.
+- **Runway.** PR-W1: market cap ≤$100B PASS, ≤$500B FLAG, >$500B FAIL. "Can you imagine Nike doubling and doubling again? It's impossible." [KB1] Amazon (~$360B in 2016) was the exception. Calibration: the dollar lines are mine, scaled up for 2026 market caps.
+- **Deceleration.** PR-G3: annualized sequential below 0.5× YoY FLAGs. Skechers was sold after growth slid from ~32% to ~10% through 2016. That he sold it for this reason is my inference; it's not a quote.
+- **Balance sheet.** PR-B1: net debt FLAGs; net debt above 1× revenue FAILs.
+- **Sizing.**
+  - 14–16 positions; an average position of ~6%.
+  - Top positions 12–23%.
+  - Try-outs of 1–2% to "put it on the radar"; UBNT started at 2%.
+- **Prime tiers.**
+  - CORE: 0 FAIL and ≤2 FLAG.
+  - FULL: 0 FAIL and ≤4 FLAG, or 1 FAIL and ≤2 FLAG.
+  - STARTER: ≤1 FAIL.
+  - RADAR: 2 FAIL.
+  - AVOID: 3+ FAIL or any STOP.

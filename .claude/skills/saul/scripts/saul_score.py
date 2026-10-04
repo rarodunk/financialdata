@@ -63,6 +63,16 @@ THRESHOLDS = {
     "ev_ntm_sales_rich": 30.0,
     # Portfolio-level (batch) theme concentration: the 2021 lesson
     "theme_share_warn": 0.4,
+    # Prime mode (2015-2019 actual portfolios: SKX, LGIH, UBNT, ANET, SBNY, AMZN, SHOP, SQ, AYX, TWLO...)
+    "pr_growth_pass": 30.0,          # SKX 34%, UBNT 34-38%, ANET 35-51%, LGIH ~40% at purchase
+    "pr_growth_flag": 20.0,          # SBNY/AMZN-type ~20-29% growers were held but not core-grade
+    "pr_1ypeg_pass": 1.0,            # SKX bought at PE 18.6 on 73% TTM EPS growth (1YPEG ~0.25)
+    "pr_1ypeg_flag": 2.0,
+    "pr_saas_growth_min": 40.0,      # Path B (unprofitable SaaS) needs Era-2-grade growth
+    "pr_saas_gm_pass": 65.0, "pr_saas_gm_flag": 55.0,
+    "pr_saas_fcf_flag": -10.0, "pr_saas_fcf_fail": -30.0,   # Westport: losses >125% of revenue
+    "pr_runway_pass_musd": 100_000.0,   # must plausibly triple; AMZN (~$360B in 2016) was the outlier
+    "pr_runway_fail_musd": 500_000.0,
     # Era-2 shadow
     "e2_growth_pass": 40.0, "e2_growth_flag": 35.0,
     "e2_gm_pass": 70.0, "e2_gm_flag": 60.0,
@@ -109,6 +119,9 @@ class Result:
     tier_path: list = field(default_factory=list)
     era2_verdict: str = ""
     era2_checks: list = field(default_factory=list)
+    prime_tier: str = ""
+    prime_path: str = ""
+    prime_checks: list = field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -419,6 +432,109 @@ def era2_checks(company_input: dict, metrics: dict) -> tuple[str, list[Check]]:
 
 
 # ---------------------------------------------------------------------------
+# Prime mode (2015-2019): how he actually bought in his best years.
+# Two ways in: Path A, a profitable fast grower bought on 1YPEG (SKX, LGIH, UBNT, ANET),
+# or Path B, recurring-revenue hypergrowth bought despite losses (SHOP, SQ, AYX, TWLO).
+# Cyclicality and customer concentration were tolerated (LGIH homebuilder, SWKS ~Apple), so
+# they only FLAG here; runway (can it still triple?) and the balance sheet are shared gates.
+# ---------------------------------------------------------------------------
+def prime_checks(company_input: dict, metrics: dict) -> tuple[str, list[Check]]:
+    TH = THRESHOLDS
+    out: list[Check] = []
+    add = lambda *a: out.append(Check(*a))
+
+    if company_input.get("china_domiciled"):
+        add("PR-X1", "China domicile", STOP, company_input.get("domicile", "?"), "No Chinese companies after the 2010 frauds.")
+    for red_flag in company_input.get("red_flags") or []:
+        if red_flag in STOP_LEVEL_FLAGS:
+            add("PR-R1", f"red flag: {red_flag}", STOP, red_flag, "Clear exit signal.")
+        elif red_flag in FAIL_LEVEL_FLAGS:
+            add("PR-R1", f"red flag: {red_flag}", FAIL, red_flag, "Story changed for the worse.")
+        elif red_flag in FLAG_LEVEL_FLAGS:
+            add("PR-R1", f"red flag: {red_flag}", FLAG, red_flag, "")
+
+    revenue_yoy_latest = metrics.get("yoy_latest")
+    if revenue_yoy_latest is None or revenue_yoy_latest < TH["growth_hard_stop"]:
+        add("PR-G1", "Revenue growth", STOP if revenue_yoy_latest is not None else FAIL, fmt(revenue_yoy_latest), "Cut <10% growers first.")
+    else:
+        status = PASS if revenue_yoy_latest >= TH["pr_growth_pass"] else FLAG if revenue_yoy_latest >= TH["pr_growth_flag"] else FAIL
+        add("PR-G1", "Revenue growth", status, fmt(revenue_yoy_latest), "'I want rapid revenue growth.'" if status != PASS else "")
+
+    ttm_growth = metrics.get("ttm_growth")
+    if ttm_growth is not None and revenue_yoy_latest and revenue_yoy_latest > 0 and ttm_growth / revenue_yoy_latest < TH["ttm_vs_latest_min_ratio"]:
+        add("PR-G2", "Growth sustained", FLAG, f"TTM {fmt(ttm_growth)} vs Q {fmt(revenue_yoy_latest)}", "One quarter is not a trend.")
+
+    # Deceleration was a sell signal (SKX was sold after growth slid from ~32% to ~10% in 2016) but scored as FLAG only.
+    if revenue_yoy_latest and revenue_yoy_latest > 0 and metrics.get("seq_annualized") is not None:
+        if metrics["seq_annualized"] / revenue_yoy_latest < TH["seq_ratio_flag"]:
+            add("PR-G3", "Decelerating", FLAG, f"{fmt(metrics['seq_annualized'], '%', 0)} annualized vs {fmt(revenue_yoy_latest, '%', 0)} YoY", "Slowing growth: watch for the SKX pattern.")
+
+    ttm_pe, eps_growth = company_input.get("ttm_pe"), company_input.get("eps_growth_ttm_pct")
+    model = company_input.get("revenue_model")
+    if ttm_pe and eps_growth and eps_growth > 0:
+        path = "A (profitable grower, 1YPEG)"
+        one_year_peg = ttm_pe / eps_growth
+        status = PASS if one_year_peg <= TH["pr_1ypeg_pass"] else FLAG if one_year_peg <= TH["pr_1ypeg_flag"] else FAIL
+        add("PR-E1", "1YPEG (TTM PE / TTM EPS growth)", status, f"PE {ttm_pe} / {fmt(eps_growth)} = {one_year_peg:.2f}",
+            "Saul's own screen: 'the PE divided by the rate of growth of earnings over the most recent twelve months.'" if status != PASS else "")
+    elif model == "subscription":
+        path = "B (recurring hypergrowth)"
+        status = PASS if (revenue_yoy_latest or 0) >= TH["pr_saas_growth_min"] else FAIL
+        add("PR-S1", "SaaS growth >= 40%", status, fmt(revenue_yoy_latest), "Losses are tolerated only with hypergrowth." if status != PASS else "")
+        gross_margin = company_input.get("gross_margin_pct")
+        status = FAIL if gross_margin is None or gross_margin < TH["pr_saas_gm_flag"] else FLAG if gross_margin < TH["pr_saas_gm_pass"] else PASS
+        add("PR-S2", "SaaS gross margin", status, fmt(gross_margin), "")
+        fcf_margin = company_input.get("fcf_margin_ttm_pct")
+        status = FLAG if fcf_margin is None else PASS if fcf_margin >= TH["pr_saas_fcf_flag"] else FLAG if fcf_margin >= TH["pr_saas_fcf_fail"] else FAIL
+        add("PR-S3", "Losses contained", status, fmt(fcf_margin), "Westport lesson: losses must be shrinking toward break-even." if status != PASS else "")
+    else:
+        path = "none"
+        add("PR-E1", "Qualifying path", FAIL, f"model={model}, PE={ttm_pe}, EPS growth={eps_growth}",
+            "Neither a profitable grower with EPS growth nor recurring-revenue hypergrowth.")
+
+    market_cap = company_input.get("market_cap_musd")
+    if market_cap is not None:
+        status = PASS if market_cap <= TH["pr_runway_pass_musd"] else FLAG if market_cap <= TH["pr_runway_fail_musd"] else FAIL
+        add("PR-W1", "Runway (can it triple?)", status, f"${market_cap/1000:,.0f}B",
+            "'Can you imagine Nike doubling and doubling again? It's impossible.'" if status != PASS else "")
+
+    net_cash, ttm_revenue = company_input.get("net_cash_musd"), metrics.get("ttm_revenue")
+    if net_cash is not None and net_cash < 0:
+        leverage = -net_cash / ttm_revenue if ttm_revenue else None
+        status = FAIL if leverage is not None and leverage > TH["net_debt_to_rev_fail"] else FLAG
+        add("PR-B1", "Net cash", status, f"net debt ${-net_cash:,.0f}M", "'A lot of cash and little or no debt.'")
+
+    concentration = company_input.get("customer_concentration")
+    if concentration and concentration.get("pct") is not None:
+        n, pct = concentration.get("top_n", 1), concentration["pct"]
+        fail_line = TH["conc_top1_fail"] if n == 1 else TH["conc_top3_fail"] if n <= 3 else TH["conc_top5_fail"]
+        if n <= 5 and pct >= fail_line:
+            add("PR-C1", "Customer concentration", FLAG, f"top {n}: {fmt(pct)}", "Tolerated in his prime (SWKS/Apple), but a risk.")
+
+    if model == "commodity":
+        add("PR-V1", "Commodity product", FLAG, model, "'A rule breaker, not a company that just makes a commodity product well.'")
+    if not company_input.get("provides_guidance", True):
+        add("PR-V2", "No guidance", FLAG, "none", "Harder to follow.")
+    return path, out
+
+
+def prime_tier(checks: list[Check]) -> str:
+    if any(c.status == STOP for c in checks):
+        return "AVOID"
+    n_fail = sum(c.status == FAIL for c in checks)
+    n_flag = sum(c.status == FLAG for c in checks)
+    if n_fail == 0 and n_flag <= 2:
+        return "CORE"
+    if (n_fail == 0 and n_flag <= 4) or (n_fail == 1 and n_flag <= 2):
+        return "FULL"
+    if n_fail <= 1:
+        return "STARTER"
+    if n_fail == 2:
+        return "RADAR"
+    return "AVOID"
+
+
+# ---------------------------------------------------------------------------
 # Driver and rendering
 # ---------------------------------------------------------------------------
 def score(company_input: dict) -> Result:
@@ -427,6 +543,8 @@ def score(company_input: dict) -> Result:
     result.checks = era3_checks(company_input, metrics)
     result.tier, result.action, result.tier_path = era3_tier(result.checks)
     result.era2_verdict, result.era2_checks = era2_checks(company_input, metrics)
+    result.prime_path, result.prime_checks = prime_checks(company_input, metrics)
+    result.prime_tier = prime_tier(result.prime_checks)
     return result
 
 
@@ -450,10 +568,11 @@ def batch_warnings(inputs: list[dict], results: list[Result]) -> list[str]:
     return warns
 
 
-def render_markdown(results: list[Result], warns: list[str], detail: bool) -> str:
-    lines = ["| Ticker | Latest Q | Rev YoY | Seq ann. | GM | FCF margin | Fwd PE | PEG | FAIL/FLAG | Era-3 tier | Action | Era-2 (2019) |",
-             "|---|---|---|---|---|---|---|---|---|---|---|---|"]
-    order = sorted(results, key=lambda result: (TIER_ORDER.index(result.tier), -(result.metrics.get("yoy_latest") or 0)))
+def render_markdown(results: list[Result], warns: list[str], detail: bool, sort_by: str = "era3") -> str:
+    lines = ["| Ticker | Latest Q | Rev YoY | Seq ann. | GM | FCF margin | Fwd PE | PEG | FAIL/FLAG | Era-3 tier | Action | Era-2 (2019) | Prime (2015-19) |",
+             "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    tier_of = (lambda result: result.prime_tier) if sort_by == "prime" else (lambda result: result.tier)
+    order = sorted(results, key=lambda result: (TIER_ORDER.index(tier_of(result)), -(result.metrics.get("yoy_latest") or 0)))
     for result in order:
         metrics = result.metrics
         gross_margin = next((c.observed for c in result.checks if c.rule_id == "E3-M1"), "n/a")
@@ -462,7 +581,7 @@ def render_markdown(results: list[Result], warns: list[str], detail: bool) -> st
         nf = sum(c.status == FAIL for c in result.checks if c.rule_id != "E3-P1")
         nfl = sum(c.status == FLAG for c in result.checks if c.rule_id != "E3-P1")
         lines.append(f"| {result.ticker} | {result.latest_quarter} | {fmt(metrics.get('yoy_latest'), '%', 0)} | {fmt(metrics.get('seq_annualized'), '%', 0)} | {gross_margin} | {fcf_margin} | {fwd_pe} | "
-                     f"{fmt(metrics.get('peg'), '', 2)} | {nf}/{nfl} | {result.tier} | {result.action} | {result.era2_verdict} |")
+                     f"{fmt(metrics.get('peg'), '', 2)} | {nf}/{nfl} | {result.tier} | {result.action} | {result.era2_verdict} | {result.prime_tier} |")
     out = "\n".join(lines)
     if warns:
         out += "\n\nPortfolio-level warnings:\n" + "\n".join(f"- {w}" for w in warns)
@@ -474,6 +593,9 @@ def render_markdown(results: list[Result], warns: list[str], detail: bool) -> st
             for c in result.checks:
                 out += f"| {c.rule_id} | {c.name} | {c.status} | {c.observed} | {c.reason} |\n"
             out += f"\nEra-2 shadow: {result.era2_verdict} — " + "; ".join(f"{c.name}: {c.status} ({c.observed})" for c in result.era2_checks) + "\n"
+            out += f"\nPrime (2015-19): {result.prime_tier} via path {result.prime_path}\n\n| Rule | Check | Status | Observed | Why |\n|---|---|---|---|---|\n"
+            for c in result.prime_checks:
+                out += f"| {c.rule_id} | {c.name} | {c.status} | {c.observed} | {c.reason} |\n"
     return out
 
 
@@ -482,6 +604,7 @@ def main(argv=None) -> int:
     ap.add_argument("files", nargs="+", type=Path)
     ap.add_argument("--json", action="store_true", help="emit JSON instead of markdown")
     ap.add_argument("--detail", action="store_true", help="include per-check tables")
+    ap.add_argument("--sort", choices=["era3", "prime"], default="era3", help="order rows by Era-3 or Prime tier")
     a = ap.parse_args(argv)
     inputs = [json.loads(p.read_text()) for p in a.files]
     results = [score(company_input) for company_input in inputs]
@@ -489,7 +612,7 @@ def main(argv=None) -> int:
     if a.json:
         print(json.dumps({"results": [asdict(result) for result in results], "warnings": warns, "thresholds": THRESHOLDS}, indent=2, default=str))
     else:
-        print(render_markdown(results, warns, a.detail))
+        print(render_markdown(results, warns, a.detail, a.sort))
     return 0
 
 
