@@ -1,0 +1,151 @@
+{
+  "ticker": "NBIS",
+  "company": "Nebius Group",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'22",
+      "revenue": null
+    },
+    {
+      "period": "Q4'22",
+      "revenue": null
+    },
+    {
+      "period": "Q1'23",
+      "revenue": null
+    },
+    {
+      "period": "Q2'23",
+      "revenue": null
+    },
+    {
+      "period": "Q3'23",
+      "revenue": null
+    },
+    {
+      "period": "Q4'23",
+      "revenue": null
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 9.7
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 14.5
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 32.1
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 35.2
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 50.9
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 105.1
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 146.1
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 227.7
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 399.0
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 582.3
+    }
+  ],
+  "guidance_next_q_revenue": null,
+  "provides_guidance": true,
+  "gross_margin_pct": 77.1,
+  "adj_operating_margin_pct": null,
+  "gaap_operating_margin_pct": -30.2,
+  "fcf_margin_ttm_pct": -434.2,
+  "capex_pct_revenue_ttm": 822.2,
+  "net_cash_musd": -503.6,
+  "customer_concentration": {
+    "top_n": 3,
+    "pct": 51.0,
+    "note": "FY2025 20-F: Customer A 25%, B 15%, third ~11%; one customer 83% of receivables at 12/31/25. Microsoft (up to $19.4B) and Meta (up to ~$27B) contracts"
+  },
+  "revenue_model": "usage",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 15.2,
+  "domicile": "Netherlands",
+  "china_domiciled": false,
+  "fwd_pe": null,
+  "ev_ntm_sales": 9.6,
+  "theme": "AI capex",
+  "red_flags": [
+    "heavy_dilution"
+  ],
+  "notes": "Revenue = continuing operations as most recently restated (ex-Russian Yandex businesses and ex-Toloka, which became discontinued in 2025). Q1'24 9.7 derived as restated H1'24 24.2 (Q2'25 6-K) minus restated Q2'24 14.5; Q3'24 32.1 and Q4'24 35.2 are restated figures from the Q3'25/Q4'25 6-Ks (originally reported 43.3/37.9 incl. Toloka); Q1'25 restated 50.9 (originally 55.3). Q3'22-Q4'23 set to null: no restated ex-Toloka quarterly figures exist in filings (2023 comparatives in 2024 releases still include Toloka, and pre-2024 Yandex quarterly results are not comparable). Only 10 non-null quarters / 6 YoY points are computable. No quarterly guidance; FY26 guide revenue $3.0-3.4B, ARR $7-9B (reaffirmed 2026-08-12) so provides_guidance=true. Gross margin 77.1% = (revenue - cost of revenues)/revenue, where cost of revenues EXCLUDES D&A (total D&A was 44.6% of Q2 revenue); a D&A-burdened gross margin would be far lower. Adjusted operating margin not reported (adj. EBITDA margin 40.6%). TTM: OCF ~5,258 (inflated by customer prepayments; deferred revenue $5.98B) minus capex ~11,142 on TTM revenue 1,355.1. Net cash = cash 8,042.1 - debt (mostly converts) 8,545.7 at 6/30/26, excluding $1.51B operating leases and the $775M secured facility raised July 2026. Revenue model classed usage (GPU cloud capacity) although much is contracted 1-3yr or long-term with prepayments (~70% of Q2 deals). Founder Arkady Volozh controls ~52% of votes. heavy_dilution: H1'26 ATM sales of 12.7M Class A shares for ~$2.85B gross plus $4.34B of convertible notes issued in H1'26.",
+  "sources": {
+    "quarterly_revenue": [
+      "Nebius 6-K Ex.99.1 earnings releases 2025-08-07 (Q2'25), 2025-11-12 (Q3'25), 2026-02-12 (Q4'25), 2026-05-13 (Q1'26), 2026-08-12 (Q2'26)",
+      "2026-08-12",
+      "https://www.sec.gov/Archives/edgar/data/0001513845/000110465926094568/tm2622968d1_ex99-1.htm"
+    ],
+    "provides_guidance": [
+      "Nebius Q2'26 shareholder letter (6-K Ex.99.2) reaffirming FY26 targets",
+      "2026-08-12"
+    ],
+    "gross_margin_pct": [
+      "Nebius 6-K Ex.99.1 Q2'26 income statement; calc",
+      "2026-08-12"
+    ],
+    "gaap_operating_margin_pct": [
+      "Nebius 6-K Ex.99.1 Q2'26 (loss from operations -175.9)",
+      "2026-08-12"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Nebius 6-K Q2'26 and Q4'25 cash flow statements; calc (fundamentals_2026-10.md)",
+      "2026-08-12"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-12"
+    ],
+    "net_cash_musd": [
+      "Nebius 6-K Ex.99.1 balance sheet 2026-06-30; calc",
+      "2026-08-12"
+    ],
+    "customer_concentration": [
+      "Nebius 20-F FY2025",
+      "2026-04-30",
+      "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+    ],
+    "founder_led": [
+      "Nebius 20-F FY2025",
+      "2026-04-30"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-03"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); EV / (mcap / fwd P/S)",
+      "2026-10-03"
+    ],
+    "red_flags.heavy_dilution": [
+      "Nebius Q2'26 shareholder letter (ATM: 12.7M shares, ~$2.8B) and 6-K Ex.99.1 cash flow (convertible notes 4,337.5; treasury share sales 2,846.7 in H1'26)",
+      "2026-08-12",
+      "https://www.sec.gov/Archives/edgar/data/0001513845/000110465926094568/tm2622968d1_ex99-2.htm"
+    ]
+  }
+}

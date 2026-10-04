@@ -1,0 +1,165 @@
+{
+  "ticker": "VICR",
+  "company": "Vicor Corp",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 84.911
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 90.281
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 88.282
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 102.186
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 103.118
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 105.493
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 97.816
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 106.747
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 107.844
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 92.652
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 83.872
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 85.854
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 93.166
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 96.166
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 93.968
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 96.046
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 110.423
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 107.264
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 112.969
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 143.352
+    }
+  ],
+  "guidance_next_q_revenue": null,
+  "provides_guidance": false,
+  "gross_margin_pct": 58.0,
+  "adj_operating_margin_pct": null,
+  "gaap_operating_margin_pct": 24.3,
+  "fcf_margin_ttm_pct": 10.8,
+  "capex_pct_revenue_ttm": 7.0,
+  "net_cash_musd": 456.1,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": 11.1,
+    "note": "FY2025 10-K: one customer 11.1% of net revenue (12.1% in 2024); Advanced Products mostly from one or a limited number of customers"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 44.2,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 56.9,
+  "ev_ntm_sales": 16.9,
+  "theme": "AI capex",
+  "red_flags": [],
+  "notes": "Revenue series = 'Total net revenues' (product + royalty) as reported, which EXCLUDES the one-time $45.0M patent litigation settlement Vicor booked in Q2'25 on a separate line ('Total net revenues and patent litigation settlement' was 141.0 in Q2'25). This is separable directly in the 10-Q/10-K (XBRL RevenueFromContractWithCustomer excludes it; 'Revenues' includes it). Q3'25 from Q3'25 10-Q (the FY25 10-K XBRL mis-tags 407.7 to Q3 dates; ignored); Q4'25 = FY25 407.701 - 9M 300.437 = 107.264; Q2'26 from Q2'26 10-Q. Caveat: Q2'26 royalty revenue jumped to $30.4M (Q1'26 ~$15.0M, Q2'25 $10.4M) 'due to a new license agreement entered into during the quarter' (10-Q); any catch-up/lump-sum portion is not separable from filings, so it is left in. Ex-royalty product revenue Q2'26 112.9 vs 85.7 (+31.8% YoY). No revenue guidance given; backlog $380M at 6/30/26. TTM (Q3'25-Q2'26): OCF 84.4, capex 33.1 (incl. internal-use software), FCF 51.3 on revenue 474.0. Net cash = cash 453.6 + LT investment 2.5, no funded debt (leases excluded). Q1'26 OCF included a $28.6M litigation award payment by Vicor. GAAP op margin = 34.9/143.4. Founder Patrizio Vinciarelli controls 79.6% of votes.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M; Q2'26 from Vicor 10-Q",
+      "2026-07-31",
+      "https://www.sec.gov/Archives/edgar/data/0000751978/000119312526322462/vicr-20260630.htm"
+    ],
+    "provides_guidance": [
+      "Vicor 8-K Ex.99.1 (no guidance)",
+      "2026-07-21",
+      "https://www.sec.gov/Archives/edgar/data/0000751978/000119312526309538/d115827dex991.htm"
+    ],
+    "gross_margin_pct": [
+      "Vicor 10-Q Q2'26 (GAAP GM 83.12/143.35)",
+      "2026-07-31"
+    ],
+    "gaap_operating_margin_pct": [
+      "Vicor 10-Q Q2'26 (income from operations 34.878); calc",
+      "2026-07-31"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Vicor 10-K FY2025, 10-Q Q2'25 and 10-Q Q2'26 cash flow statements; calc",
+      "2026-07-31"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same (FY25 20.3 - H1'25 10.8 + H1'26 23.6); calc",
+      "2026-07-31"
+    ],
+    "net_cash_musd": [
+      "Vicor 10-Q Q2'26 balance sheet",
+      "2026-07-31"
+    ],
+    "customer_concentration": [
+      "Vicor 10-K FY2025",
+      "2026-03-02",
+      "https://www.sec.gov/Archives/edgar/data/751978/000119312526085102/vicr-20251231.htm"
+    ],
+    "founder_led": [
+      "Vicor 10-K FY2025",
+      "2026-03-02"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-02"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-02"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); EV / (mcap / fwd P/S)",
+      "2026-10-02"
+    ]
+  }
+}

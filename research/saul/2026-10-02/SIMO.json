@@ -1,0 +1,185 @@
+{
+  "ticker": "SIMO",
+  "company": "Silicon Motion Technology",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 254.241
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 264.357
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 241.978
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 252.373
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 250.812
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 200.759
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 124.069
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 140.361
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 172.333
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 202.379
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 189.311
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 210.67
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 212.412
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 191.16
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 166.492
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 198.675
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 241.999
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 278.461
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 342.105
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 451.001
+    }
+  ],
+  "guidance_next_q_revenue": 530.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 50.2,
+  "adj_operating_margin_pct": 23.1,
+  "gaap_operating_margin_pct": 22.4,
+  "fcf_margin_ttm_pct": -9.2,
+  "capex_pct_revenue_ttm": 4.1,
+  "net_cash_musd": 122.6,
+  "customer_concentration": {
+    "top_n": 5,
+    "pct": 66.0,
+    "note": "FY2025 20-F: top-5 ~66% of revenue; >10% customers ~58% combined"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 4.7,
+  "domicile": "Taiwan",
+  "china_domiciled": false,
+  "fwd_pe": 19.9,
+  "ev_ntm_sales": 4.4,
+  "theme": "AI capex",
+  "red_flags": [
+    "inventory_build",
+    "litigation_overhang"
+  ],
+  "notes": "Quarterly net sales from each quarter's 6-K earnings release income statement (US$ thousands /1000); FY25 sums to 885.627 as reported. Domicile: HQ Taipei, Taiwan (incorporated in Cayman Islands); not China-domiciled. Theme 'AI capex' is a judgment call: demand is AI/enterprise SSD controllers within a NAND upcycle (cyclical). TTM (Q3'25-Q2'26): OCF -66.6, capex 53.9, FCF -120.5 on revenue 1,313.6. Net cash 122.6 = cash, equivalents and restricted cash 181.8 - loans 59.2 at 6/30/26; excludes $127.4M long-term marketable equity investments. AFTER quarter-end SIMO issued $1.15B 0% convertible notes due 2031 (closed 2026-08-13, net proceeds ~$1,127M, conversion ~$380.50/ADS, partly to repay the credit facility); pro forma net cash roughly unchanged (~+$100M) but gross debt now ~$1.15B; potential dilution ~3.0M ADS. inventory_build: inventory $208.0M (6/30/25) -> $421.8M (12/31/25) -> $673.0M (6/30/26) with H1'26 OCF -$95.0M. litigation_overhang: SIAC arbitration vs MaxLinear (SIMO claims $160M termination fee + damages; MaxLinear counterclaim; hearings Oct 2025 and Mar 2026; award pending as of 2026-08-10 6-K). Note SIMO is the claimant, so the overhang is two-sided.",
+  "sources": {
+    "quarterly_revenue": [
+      "SIMO 6-K Ex.99.1 earnings releases 2022-11-02, 2023-02-08, 2023-05-05, 2023-07-28, 2023-11-02, 2024-02-07, 2024-05-03, 2024-08-02, 2024-10-31, 2025-02-06, 2025-04-30, 2025-07-31, 2025-10-31, 2026-02-04, 2026-04-29, 2026-07-30",
+      "2026-07-30",
+      "https://www.sec.gov/Archives/edgar/data/0001329394/000119312526324391/d114913dex991.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "SIMO 6-K Ex.99.1 Q3'26 guide $519-541M",
+      "2026-07-30"
+    ],
+    "gross_margin_pct": [
+      "SIMO 6-K Ex.99.1 (non-GAAP)",
+      "2026-07-30"
+    ],
+    "adj_operating_margin_pct": [
+      "SIMO 6-K Ex.99.1",
+      "2026-07-30"
+    ],
+    "gaap_operating_margin_pct": [
+      "SIMO 6-K Ex.99.1",
+      "2026-07-30"
+    ],
+    "fcf_margin_ttm_pct": [
+      "SIMO 6-K Ex.99.1 cash flows Q2'25, Q4'25, Q2'26 (OCF FY25 61.4 - H1'25 33.0 + H1'26 -95.0; capex 55.1 - 27.2 + 26.0); calc",
+      "2026-07-30"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-07-30"
+    ],
+    "net_cash_musd": [
+      "SIMO 6-K Ex.99.1 balance sheet 6/30/26; calc",
+      "2026-07-30"
+    ],
+    "customer_concentration": [
+      "SIMO 20-F FY2025",
+      "2026-04-30",
+      "https://www.sec.gov/Archives/edgar/data/0001329394/000119312526197184/d17718d20f.htm"
+    ],
+    "founder_led": [
+      "MarketScreener (Wallace Kou founder/CEO) via fundamentals_2026-10.md",
+      "2026-03-18"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-02"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-02"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); EV / (mcap / fwd P/S)",
+      "2026-10-02"
+    ],
+    "convertible_notes": [
+      "SIMO 6-K Ex.99.3 closing of $1.15B 0% converts due 2031",
+      "2026-08-14",
+      "https://www.sec.gov/Archives/edgar/data/1329394/000119312526349730/d149638dex993.htm"
+    ],
+    "red_flags.inventory_build": [
+      "SIMO 6-K Ex.99.1 balance sheets (inventories 208,005 / 515,250 / 673,042) and cash flows",
+      "2026-07-30"
+    ],
+    "red_flags.litigation_overhang": [
+      "SIMO 6-K Ex.99.2 interim financial statements, Litigation note",
+      "2026-08-10",
+      "https://www.sec.gov/Archives/edgar/data/1329394/000119312526341199/d124768dex992.htm"
+    ]
+  }
+}

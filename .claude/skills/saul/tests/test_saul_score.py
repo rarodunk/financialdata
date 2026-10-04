@@ -42,6 +42,15 @@ class DerivedMetrics(unittest.TestCase):
         self.assertEqual(len(metrics["yoy_history"]), 12)
 
 
+    def test_leading_nulls_use_trailing_contiguous_run(self):
+        series = [{"period": f"q{i}", "revenue": None} for i in range(4)] + \
+                 [{"period": f"q{i}", "revenue": 100 * 1.1 ** i} for i in range(4, 16)]
+        metrics = ss.derive_metrics(make_company(quarterly_revenue=series))
+        self.assertEqual(metrics["n_quarters"], 12)
+        self.assertEqual(len(metrics["yoy_history"]), 8)
+        self.assertAlmostEqual(metrics["yoy_latest"], 46.41, places=1)
+
+
 class Tiers(unittest.TestCase):
     def test_clean_saas_is_core(self):
         result = ss.score(make_company())

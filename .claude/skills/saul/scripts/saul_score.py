@@ -125,7 +125,13 @@ def annualize_qoq(qoq_pct: float) -> float:
 
 
 def derive_metrics(company_input: dict) -> dict:
-    quarterly_revenues = [q["revenue"] for q in company_input.get("quarterly_revenue") or [] if q.get("revenue") is not None]
+    # Use only the trailing run of contiguous non-null quarters: dropping a null mid-series would
+    # shift every later quarter and silently misalign the YoY (t vs t-4) comparisons.
+    quarterly_revenues: list[float] = []
+    for quarter in reversed(company_input.get("quarterly_revenue") or []):
+        if quarter.get("revenue") is None:
+            break
+        quarterly_revenues.insert(0, quarter["revenue"])
     metrics: dict = {"n_quarters": len(quarterly_revenues)}
     if len(quarterly_revenues) >= 5:
         yoy_growth_series = yoy_series(quarterly_revenues)
@@ -345,9 +351,9 @@ def era3_tier(checks: list[Check]) -> tuple[str, str, list[str]]:
         tier = "CORE"
     elif n_fail <= 1 and n_flag <= 3:
         tier = "FULL"
-    elif n_fail <= 2:
+    elif n_fail <= 2 and n_flag <= 5:
         tier = "STARTER"
-    elif n_fail == 3:
+    elif n_fail <= 3:
         tier = "RADAR"
     else:
         tier = "AVOID"
@@ -371,6 +377,10 @@ def era3_tier(checks: list[Check]) -> tuple[str, str, list[str]]:
         action = "do not own"
     elif seq_bad:
         action = "if held: trim (sequential deceleration)"
+    elif tier == "RADAR":
+        action = "radar-size only; re-score next quarter"
+    elif tier == "STARTER":
+        action = "small try-out; add only as FAILs clear"
     elif val and val.status in (FLAG, FAIL):
         action = "hold; trim around the edges on strength"
     else:

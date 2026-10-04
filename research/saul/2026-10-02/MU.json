@@ -1,0 +1,164 @@
+{
+  "ticker": "MU",
+  "company": "Micron Technology",
+  "as_of": "2026-10-02",
+  "latest_quarter": "FQ4'26",
+  "quarterly_revenue": [
+    {
+      "period": "FQ1'22",
+      "revenue": 7687.0
+    },
+    {
+      "period": "FQ2'22",
+      "revenue": 7786.0
+    },
+    {
+      "period": "FQ3'22",
+      "revenue": 8642.0
+    },
+    {
+      "period": "FQ4'22",
+      "revenue": 6643.0
+    },
+    {
+      "period": "FQ1'23",
+      "revenue": 4085.0
+    },
+    {
+      "period": "FQ2'23",
+      "revenue": 3693.0
+    },
+    {
+      "period": "FQ3'23",
+      "revenue": 3752.0
+    },
+    {
+      "period": "FQ4'23",
+      "revenue": 4010.0
+    },
+    {
+      "period": "FQ1'24",
+      "revenue": 4726.0
+    },
+    {
+      "period": "FQ2'24",
+      "revenue": 5824.0
+    },
+    {
+      "period": "FQ3'24",
+      "revenue": 6811.0
+    },
+    {
+      "period": "FQ4'24",
+      "revenue": 7750.0
+    },
+    {
+      "period": "FQ1'25",
+      "revenue": 8709.0
+    },
+    {
+      "period": "FQ2'25",
+      "revenue": 8053.0
+    },
+    {
+      "period": "FQ3'25",
+      "revenue": 9301.0
+    },
+    {
+      "period": "FQ4'25",
+      "revenue": 11315.0
+    },
+    {
+      "period": "FQ1'26",
+      "revenue": 13643.0
+    },
+    {
+      "period": "FQ2'26",
+      "revenue": 23860.0
+    },
+    {
+      "period": "FQ3'26",
+      "revenue": 41456.0
+    },
+    {
+      "period": "FQ4'26",
+      "revenue": 54229.0
+    }
+  ],
+  "guidance_next_q_revenue": 61500.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 87.0,
+  "adj_operating_margin_pct": 82.3,
+  "gaap_operating_margin_pct": 80.7,
+  "fcf_margin_ttm_pct": 44.3,
+  "capex_pct_revenue_ttm": 23.1,
+  "net_cash_musd": 68274.0,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": 10.0,
+    "note": "FQ3'26 10-Q: one customer = 10% of revenue for 9M FY26 (16% prior-year period), mainly CMBU; FY26 10-K figure not yet available"
+  },
+  "revenue_model": "commodity",
+  "nrr_pct": null,
+  "founder_led": false,
+  "insider_pct": 0.22,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 6.1,
+  "ev_ntm_sales": 4.5,
+  "theme": "AI capex",
+  "red_flags": [],
+  "notes": "Fiscal year ends late Aug/early Sep (FQ4'26 = 2026-05-29 to 2026-09-03, a 14-week quarter; FQ1'22 = quarter ended 2021-12-02). FQ4'22/'23/'24/'25 derived as 10-K FY minus 9M 10-Q YTD; FQ4'26 from 8-K Ex.99.1 (FY26 10-K not yet filed; FY26 sum 133,188 ties to the 8-K). FCF margin uses OCF $89,675M minus gross PP&E capex $30,712M = 44.3% of FY26 revenue $133,188M (Micron's 'adjusted FCF' net of government incentives/proceeds = 46.8%; net capex 20.5%). capex_pct uses gross capex 23.1%. Net cash = cash 38,364 + ST inv 5,070 + LT marketable inv 30,019 - debt 5,179 at 2026-09-03. Margins are peak-cycle (memory is a mean-reverting commodity). Revenue model classed commodity (DRAM/HBM/NAND) despite multi-year Strategic Customer Agreements. No dated 2026 red flags found. EV/NTM sales derived from SA forward P/S (approximate).",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M; FQ4'26 from Micron 8-K Ex.99.1",
+      "2026-09-30",
+      "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Micron 8-K Ex.99.1 FQ1'27 guide $61.5B +/- $1.5B",
+      "2026-09-30"
+    ],
+    "gross_margin_pct": [
+      "Micron 8-K Ex.99.1 (non-GAAP GM)",
+      "2026-09-30"
+    ],
+    "adj_operating_margin_pct": [
+      "Micron 8-K Ex.99.1",
+      "2026-09-30"
+    ],
+    "gaap_operating_margin_pct": [
+      "Micron 8-K Ex.99.1",
+      "2026-09-30"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Micron 8-K Ex.99.1 FY26 cash flow statement (OCF 89,675; PP&E 30,712); calc",
+      "2026-09-30"
+    ],
+    "capex_pct_revenue_ttm": [
+      "Micron 8-K Ex.99.1; calc",
+      "2026-09-30"
+    ],
+    "net_cash_musd": [
+      "Micron 8-K Ex.99.1 balance sheet 2026-09-03; calc",
+      "2026-09-30"
+    ],
+    "customer_concentration": [
+      "Micron 10-Q for quarter ended 2026-05-28",
+      "2026-06-25",
+      "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-03"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-03"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); EV / (mcap / fwd P/S)",
+      "2026-10-03"
+    ]
+  }
+}

@@ -156,13 +156,15 @@ Saul's method went through three eras. The scorer uses Era 3 as primary and runs
 2. Count FAILs and FLAGs, excluding valuation and INFO.
    - CORE: 0 FAIL, profitability PASS, ≤2 FLAG.
    - FULL: ≤1 FAIL, ≤3 FLAG.
-   - STARTER: ≤2 FAIL.
-   - RADAR: 3 FAIL.
+   - STARTER: ≤2 FAIL and ≤5 FLAG. (Calibration: the FLAG cap keeps a name with 2 FAILs and a pile of tripwires, such as SIMO in the 2026-10 set, out of STARTER.)
+   - RADAR: ≤3 FAIL, including 2 FAIL with 6+ FLAG.
    - AVOID: 4 or more FAIL.
 3. A FAIL on visibility (E3-V1) or profitability (E3-M2) caps the tier at STARTER.
 4. A valuation FAIL downgrades one tier, but never below RADAR.
 5. Action:
    - Sequential FAIL (E3-G4/G5): "if held: trim".
+   - RADAR: "radar-size only; re-score next quarter".
+   - STARTER: "small try-out; add only as FAILs clear".
    - Valuation FLAG/FAIL: "hold; trim around the edges".
    - Otherwise: "buy / add on market-wide weakness" ("When the whole market is falling, putting more money into your high confidence stocks usually works out" [KB2]).
 

@@ -1,0 +1,164 @@
+{
+  "ticker": "ONTO",
+  "company": "Onto Innovation",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 200.589
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 225.644
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 241.35
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 256.31
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 254.253
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 253.27
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 199.165
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 190.662
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 207.185
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 218.856
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 228.846
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 242.327
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 252.21
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 263.938
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 266.607
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 253.597
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 218.193
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 266.866
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 291.949
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 343.129
+    }
+  ],
+  "guidance_next_q_revenue": 390.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 57.0,
+  "adj_operating_margin_pct": 30.0,
+  "gaap_operating_margin_pct": 18.5,
+  "fcf_margin_ttm_pct": 22.5,
+  "capex_pct_revenue_ttm": 1.2,
+  "net_cash_musd": 382.1,
+  "customer_concentration": {
+    "top_n": 4,
+    "pct": 57.3,
+    "note": "H1'26 10-Q: customers A-D 16.2/15.9/14.9/10.3%"
+  },
+  "revenue_model": "hardware",
+  "nrr_pct": null,
+  "founder_led": false,
+  "insider_pct": 0.67,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 31.8,
+  "ev_ntm_sales": 9.2,
+  "theme": "AI capex",
+  "red_flags": [],
+  "notes": "Fiscal quarters were 13-week periods through FY2025 (Q4'25 ended 2026-01-03, a 14-week quarter); FY2026 quarters end on calendar quarter-ends (Q1'26 2026-01-04 to 2026-03-31). Q4 values derived as 10-K FY minus 9M. TTM (Q3'25-Q2'26): OCF 266.2, capex 13.75, FCF 252.5 on revenue 1,120.1. Net cash = cash 1,253.2 + marketable securities 628.9 - $1.5B principal 0% converts due 2031 (carrying 1,471.7) at 6/30/26; excludes the ~$710M pending payment for a 27% Rigaku stake (expected H2'26). Semicap equipment classed hardware; backlog >$1B.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M",
+      "2026-08-06",
+      "https://www.sec.gov/Archives/edgar/data/0000704532/000119312526338401/onto-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Onto 8-K Ex.99.1 Q3'26 guide $380-400M",
+      "2026-08-06",
+      "https://www.sec.gov/Archives/edgar/data/0000704532/000119312526337990/onto-ex99_1.htm"
+    ],
+    "gross_margin_pct": [
+      "Onto 8-K Ex.99.1 (non-GAAP)",
+      "2026-08-06"
+    ],
+    "adj_operating_margin_pct": [
+      "Onto 8-K Ex.99.1",
+      "2026-08-06"
+    ],
+    "gaap_operating_margin_pct": [
+      "Onto 8-K Ex.99.1",
+      "2026-08-06"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Onto 10-K FY2025, 10-Q Q2'25, 10-Q Q2'26 cash flows (XBRL); calc",
+      "2026-08-06"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-06"
+    ],
+    "net_cash_musd": [
+      "Onto 10-Q Q2'26 balance sheet (XBRL); calc",
+      "2026-08-06"
+    ],
+    "customer_concentration": [
+      "Onto 10-Q Q2'26",
+      "2026-08-06"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-02"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-02"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); EV / (mcap / fwd P/S)",
+      "2026-10-02"
+    ]
+  }
+}

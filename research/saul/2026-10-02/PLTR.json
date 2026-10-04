@@ -1,0 +1,173 @@
+{
+  "ticker": "PLTR",
+  "company": "Palantir Technologies",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 392.146
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 432.867
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 446.357
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 473.01
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 477.88
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 508.624
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 525.186
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 533.317
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 558.159
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 608.35
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 634.338
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 678.134
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 725.516
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 827.519
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 883.855
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 1003.697
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 1181.092
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 1406.802
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 1632.583
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 1935.464
+    }
+  ],
+  "guidance_next_q_revenue": 2162.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 84.7,
+  "adj_operating_margin_pct": 62.0,
+  "gaap_operating_margin_pct": 47.0,
+  "fcf_margin_ttm_pct": 54.6,
+  "capex_pct_revenue_ttm": 0.7,
+  "net_cash_musd": 9409.1,
+  "customer_concentration": {
+    "top_n": 20,
+    "pct": 40.0,
+    "note": "Q2'26 10-Q: top-20 customers avg TTM revenue $124M each (~$2.48B, ~40% of TTM revenue; calc). US government ~42% of Q2 revenue"
+  },
+  "revenue_model": "subscription",
+  "nrr_pct": 157.0,
+  "founder_led": true,
+  "insider_pct": 7.4,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 99.5,
+  "ev_ntm_sales": 43.7,
+  "theme": "AI software",
+  "red_flags": [],
+  "notes": "Q4 values derived as 10-K FY minus 9M. Gross margin is GAAP (adjusted GM not confirmed). TTM (Q3'25-Q2'26): OCF 3,400.3, capex 42.0 (0.7%), FCF 3,358.3 on revenue 6,155.9 = 54.6% (GAAP basis; Q2 adjusted FCF margin 63%). Net cash = cash 2,030.0 + marketable securities 7,379.1 at 6/30/26; no financial debt (operating leases ~$0.2B excluded). NRR 157% is from the Q2'26 earnings call (transcript/call highlights, +700bp QoQ), not the 10-Q. Many government contracts carry termination-for-convenience clauses. RPO $4.9B.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M",
+      "2026-08-04",
+      "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000041/pltr-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Palantir 8-K Ex.99.1 Q3'26 guide $2.160-2.164B",
+      "2026-08-03",
+      "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000039/a2026q2ex991pressrelease.htm"
+    ],
+    "gross_margin_pct": [
+      "Palantir 8-K Ex.99.1 (GAAP)",
+      "2026-08-03"
+    ],
+    "adj_operating_margin_pct": [
+      "Palantir 8-K Ex.99.1",
+      "2026-08-03"
+    ],
+    "gaap_operating_margin_pct": [
+      "Palantir 8-K Ex.99.1",
+      "2026-08-03"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Palantir 10-K FY2025, 10-Q Q2'25, 10-Q Q2'26 cash flows (XBRL); calc",
+      "2026-08-04"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same (FY25 33.9 - H1'25 13.8 + H1'26 22.0); calc",
+      "2026-08-04"
+    ],
+    "net_cash_musd": [
+      "Palantir 10-Q Q2'26 balance sheet (XBRL)",
+      "2026-08-04"
+    ],
+    "customer_concentration": [
+      "Palantir 10-Q Q2'26; calc",
+      "2026-08-04"
+    ],
+    "nrr_pct": [
+      "Palantir Q2'26 earnings call transcript (Motley Fool) / Yahoo call highlights",
+      "2026-08",
+      "https://www.fool.com/earnings/call-transcripts/2026/08/10/palantir-pltr-q2-2026-earnings-call-transcript/"
+    ],
+    "founder_led": [
+      "Palantir 10-Q Q2'26 (Class F founder voting trust)",
+      "2026-08-04"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-03"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md)",
+      "2026-10-03"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, closes of 2026-10-02 (via fundamentals_2026-10.md); EV / (mcap / fwd P/S)",
+      "2026-10-03"
+    ]
+  }
+}
