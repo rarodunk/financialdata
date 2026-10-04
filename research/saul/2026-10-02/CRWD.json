@@ -1,0 +1,187 @@
+{
+  "ticker": "CRWD",
+  "company": "CrowdStrike Holdings",
+  "as_of": "2026-10-02",
+  "latest_quarter": "FQ2'27",
+  "quarterly_revenue": [
+    {
+      "period": "FQ3'22",
+      "revenue": 380.051
+    },
+    {
+      "period": "FQ4'22",
+      "revenue": 431.01
+    },
+    {
+      "period": "FQ1'23",
+      "revenue": 487.834
+    },
+    {
+      "period": "FQ2'23",
+      "revenue": 535.153
+    },
+    {
+      "period": "FQ3'23",
+      "revenue": 580.882
+    },
+    {
+      "period": "FQ4'23",
+      "revenue": 637.367
+    },
+    {
+      "period": "FQ1'24",
+      "revenue": 692.58
+    },
+    {
+      "period": "FQ2'24",
+      "revenue": 731.626
+    },
+    {
+      "period": "FQ3'24",
+      "revenue": 786.014
+    },
+    {
+      "period": "FQ4'24",
+      "revenue": 845.335
+    },
+    {
+      "period": "FQ1'25",
+      "revenue": 921.036
+    },
+    {
+      "period": "FQ2'25",
+      "revenue": 963.872
+    },
+    {
+      "period": "FQ3'25",
+      "revenue": 1010.178
+    },
+    {
+      "period": "FQ4'25",
+      "revenue": 1058.538
+    },
+    {
+      "period": "FQ1'26",
+      "revenue": 1103.434
+    },
+    {
+      "period": "FQ2'26",
+      "revenue": 1168.952
+    },
+    {
+      "period": "FQ3'26",
+      "revenue": 1234.244
+    },
+    {
+      "period": "FQ4'26",
+      "revenue": 1305.375
+    },
+    {
+      "period": "FQ1'27",
+      "revenue": 1385.629
+    },
+    {
+      "period": "FQ2'27",
+      "revenue": 1470.897
+    }
+  ],
+  "guidance_next_q_revenue": 1526.2,
+  "provides_guidance": true,
+  "gross_margin_pct": 78.7,
+  "adj_operating_margin_pct": 25.3,
+  "gaap_operating_margin_pct": -2.3,
+  "fcf_margin_ttm_pct": 28.3,
+  "capex_pct_revenue_ttm": 9.1,
+  "net_cash_musd": 4267.6,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "FY2026 10-K: no channel partner or direct customer >=10% of revenue in FY24-FY26"
+  },
+  "revenue_model": "subscription",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 1.49,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 191.45,
+  "ev_ntm_sales": 41.04,
+  "theme": "security",
+  "red_flags": [],
+  "ttm_pe": 244.4,
+  "eps_growth_ttm_pct": 37.3,
+  "market_cap_musd": 277100.0,
+  "notes": "Fiscal year ends Jan 31 (FQ2'27 = quarter ended 2026-07-31). Revenue is from XBRL; FQ4 values are FY minus 9M. Subscription revenue is 95% of the total. Gross margin is total non-GAAP: (subscription 1,136.1 + services 21.1) / 1,470.9 = 78.7% (subscription only 81%). TTM (FQ3'26-FQ2'27): OCF 2,016.6, capex 491.0 (PP&E + capitalized internal-use software), FCF 1,525.6 on revenue 5,396.1. Net cash = cash 5,013.8 - senior notes carrying 746.2 at 7/31/26; operating leases excluded. NRR: the Q2 release and 10-Q say dollar-based gross and net retention 'increased' but give no number, so null. 4-for-1 stock split effective 2026-07-01: pre-split non-GAAP EPS was divided by 4. TTM non-GAAP EPS 0.24+0.28+0.275+0.31=1.105 vs 0.19+0.2025+0.1825+0.23=0.805. Price $270.04 (post-split) at the 2026-10-02 close. July 19, 2024 incident litigation is still pending (10-Q FQ2'27; the airline-passenger class action is on appeal). Not flagged because the company does not describe it as material.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) for CRWD, built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-08-27",
+      "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000031/crwd-20260731.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "CrowdStrike 8-K Ex.99.1 FQ3'27 revenue guide $1,523.2-1,529.2M",
+      "2026-08-26",
+      "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000029/crwd-20260826xex991.htm"
+    ],
+    "gross_margin_pct": [
+      "CrowdStrike 8-K Ex.99.1 GAAP-to-non-GAAP gross profit reconciliation; calc",
+      "2026-08-26"
+    ],
+    "adj_operating_margin_pct": [
+      "CrowdStrike 8-K Ex.99.1 (non-GAAP income from operations 371.6)",
+      "2026-08-26"
+    ],
+    "gaap_operating_margin_pct": [
+      "CrowdStrike 8-K Ex.99.1 (GAAP loss from operations 33.2)",
+      "2026-08-26"
+    ],
+    "fcf_margin_ttm_pct": [
+      "CrowdStrike 8-K Ex.99.1 cash flows FY26 (2026-03-03) and H1 FY27 (2026-08-26); calc",
+      "2026-08-26"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-26"
+    ],
+    "net_cash_musd": [
+      "CrowdStrike 8-K Ex.99.1 balance sheet 2026-07-31",
+      "2026-08-26"
+    ],
+    "customer_concentration": [
+      "CrowdStrike 10-K FY2026",
+      "2026-03-05"
+    ],
+    "nrr_pct": [
+      "CrowdStrike 8-K Ex.99.1 CFO quote (retention 'increased', no figure)",
+      "2026-08-26"
+    ],
+    "founder_led": [
+      "CrowdStrike 8-K Ex.99.1 (George Kurtz, Founder and CEO)",
+      "2026-08-26"
+    ],
+    "ttm_pe": [
+      "CrowdStrike 8-K Ex.99.1 non-GAAP diluted EPS FQ3'26-FQ2'27, split-adjusted; price from stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-08-26 / 2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "same releases, prior-year comparatives, split-adjusted; calc",
+      "2026-08-26"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02; EV / (market cap / forward P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ]
+  }
+}

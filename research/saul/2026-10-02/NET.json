@@ -1,0 +1,187 @@
+{
+  "ticker": "NET",
+  "company": "Cloudflare",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 172.347
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 193.596
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 212.167
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 234.517
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 253.857
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 274.7
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 290.175
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 308.494
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 335.603
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 362.473
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 378.602
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 400.996
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 430.082
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 459.946
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 479.087
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 512.316
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 562.027
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 614.507
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 639.755
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 696.061
+    }
+  ],
+  "guidance_next_q_revenue": 736.5,
+  "provides_guidance": true,
+  "gross_margin_pct": 73.1,
+  "adj_operating_margin_pct": 13.8,
+  "gaap_operating_margin_pct": -29.6,
+  "fcf_margin_ttm_pct": 12.5,
+  "capex_pct_revenue_ttm": 12.7,
+  "net_cash_musd": 892.5,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "FY2025 10-K: no customer >10% of revenue in 2023-2025"
+  },
+  "revenue_model": "subscription",
+  "nrr_pct": 120.0,
+  "founder_led": true,
+  "insider_pct": 9.73,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 236.19,
+  "ev_ntm_sales": 37.94,
+  "theme": "security",
+  "red_flags": [],
+  "ttm_pe": 320.2,
+  "eps_growth_ttm_pct": 43.4,
+  "market_cap_musd": 124300.0,
+  "notes": "Revenue is from XBRL; Q4 values are FY minus 9M. Mostly subscription, with some usage-based products (Workers, R2). Non-GAAP gross margin is 73.1% (GAAP 71.8%). The GAAP operating loss of 29.6% in Q2'26 includes charges from the announced workforce reduction / 'agentic AI-first' restructuring; it was -13.1% a year earlier. TTM (Q3'25-Q2'26): OCF 633.4, capex 318.6 (PP&E 280.0 + capitalized software 38.6; network build-out), FCF 314.9 (12.5%) on revenue 2,512.4. Net cash = cash 1,663.8 + available-for-sale securities 2,499.0 - convertible notes carrying 3,270.3 (current 1,293.3 + non-current 1,977.0) at 6/30/26; operating leases excluded. NRR 120% is the dollar-based net retention for Q2'26 from the 10-Q. ttm_pe uses non-GAAP diluted EPS: 0.27+0.28+0.25+0.29=1.09 vs 0.20+0.19+0.16+0.21=0.76. Price $349.07 at the 2026-10-02 close. Theme: security / edge network; could also be filed as AI infrastructure.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) for NET, built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-08-06",
+      "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000054/cloud-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Cloudflare 8-K Ex.99.1 Q3'26 guide $736.0-737.0M",
+      "2026-08-06",
+      "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000053/q226exhibit991.htm"
+    ],
+    "gross_margin_pct": [
+      "Cloudflare 8-K Ex.99.1 (non-GAAP)",
+      "2026-08-06"
+    ],
+    "adj_operating_margin_pct": [
+      "Cloudflare 8-K Ex.99.1",
+      "2026-08-06"
+    ],
+    "gaap_operating_margin_pct": [
+      "Cloudflare 8-K Ex.99.1",
+      "2026-08-06"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Cloudflare 8-K Ex.99.1 Q4'25 (FY25) and Q2'26 (H1) cash flows; calc",
+      "2026-02-10 / 2026-08-06"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-06"
+    ],
+    "net_cash_musd": [
+      "Cloudflare 8-K Ex.99.1 balance sheet 2026-06-30",
+      "2026-08-06"
+    ],
+    "customer_concentration": [
+      "Cloudflare 10-K FY2025",
+      "2026-02-26"
+    ],
+    "nrr_pct": [
+      "Cloudflare 10-Q Q2'26 (MD&A)",
+      "2026-08-06"
+    ],
+    "founder_led": [
+      "Cloudflare 8-K Ex.99.1 (Matthew Prince, co-founder & CEO)",
+      "2026-08-06"
+    ],
+    "ttm_pe": [
+      "Cloudflare 8-K Ex.99.1 non-GAAP diluted EPS Q3'25-Q2'26; price from stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-08-06 / 2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "same releases, prior-year comparatives; calc",
+      "2026-08-06"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02; EV / (market cap / forward P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ]
+  }
+}

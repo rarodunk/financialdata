@@ -1,0 +1,175 @@
+{
+  "ticker": "APP",
+  "company": "AppLovin",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'22",
+      "revenue": 306.592
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 306.195
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 354.758
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 406.063
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 504.452
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 576.489
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 678.37
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 711.015
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 835.186
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 999.487
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 1158.974
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 1258.754
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 1405.045
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 1657.944
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 1842.449
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 1923.686
+    }
+  ],
+  "guidance_next_q_revenue": 2070.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 88.3,
+  "adj_operating_margin_pct": null,
+  "gaap_operating_margin_pct": 77.7,
+  "fcf_margin_ttm_pct": 66.3,
+  "capex_pct_revenue_ttm": 0.03,
+  "net_cash_musd": -461.8,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "FY2025 10-K: no individual customer >=10% of revenue (2023-2025) or of receivables; no top-N figure disclosed"
+  },
+  "revenue_model": "transactional",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 20.03,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 14.9,
+  "ev_ntm_sales": 9.81,
+  "theme": "adtech",
+  "red_flags": [
+    "litigation_overhang"
+  ],
+  "ttm_pe": 20.6,
+  "eps_growth_ttm_pct": 77.7,
+  "market_cap_musd": 89760.0,
+  "notes": "Revenue = continuing operations (advertising) only. The Apps business was sold to Tripledot on 2025-06-30 and is a discontinued operation; Q3'22-Q1'24 use the Software Platform segment revenue, which is the same perimeter (the Q4'24 and Q1'25 advertising revenue in the 2025 releases, 999.5 and 1,159.0, equal the restated continuing-ops revenue in XBRL). Q3'22-Q3'23 come from the Q3'23 8-K segment table, Q4'23 (576.5) and Q1'24 (678.4) are the prior-year comparatives in the Q4'24/Q1'25 8-Ks, and Q2'24 onward come from XBRL. Gross margin is GAAP (no non-GAAP GM reported). No adjusted operating margin is reported (adjusted EBITDA margin 84% in Q2'26), so the field is null and the scorer uses GAAP 77.7%. TTM (Q3'25-Q2'26): OCF 4,527.6, PP&E capex 2.1 (finance-lease principal another 17.2), FCF (OCF-PP&E) 4,525.5 on revenue 6,829.1. Q2'26 OCF was depressed by $640M of H1 cash taxes. Net cash = cash 3,053.3 - long-term debt carrying value 3,515.1 at 6/30/26; no investments; operating leases excluded. Revenue model: ad network / marketing platform paid per install or per action, so transactional. APP reports no non-GAAP EPS, so ttm_pe and eps_growth use GAAP diluted EPS from continuing operations (SBC is small, about 4% of revenue): TTM 2.45+3.24+3.56+3.76=13.01 vs prior TTM 1.24+1.72+2.10+2.26=7.32. Q2'26 revenue (1,924) came in just under APP's own guidance midpoint (1,930). No red flag assigned, but note: a 2025 securities class action is still pending (motion to dismiss fully briefed Feb 2026, per the Q2'26 10-Q), and press reports a new securities class action filed in mid-September 2026 after the Q2 miss. Shares are down ~55-60% in 2026. Price $268.22 at the 2026-10-02 close.",
+  "sources": {
+    "quarterly_revenue": [
+      "AppLovin 8-K Ex.99.1 Q3'23 (segment table Q3'22-Q3'23), 8-K Ex.99.1 Q4'24 and Q1'25 (advertising revenue prior-year comparatives); SEC EDGAR XBRL companyfacts (data.sec.gov) for APP, built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M YTD (Q2'24 onward)",
+      "2023-11-08 / 2025-02-12 / 2025-05-07 / 2026-08-05",
+      "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000057/exhibit991-2q26earningspre.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "AppLovin 8-K Ex.99.1, Q3'26 revenue guide $2,055-2,085M",
+      "2026-08-05"
+    ],
+    "gross_margin_pct": [
+      "AppLovin 8-K Ex.99.1 Q2'26 income statement (GAAP); calc",
+      "2026-08-05"
+    ],
+    "gaap_operating_margin_pct": [
+      "AppLovin 8-K Ex.99.1 Q2'26 (income from operations 1,494.3)",
+      "2026-08-05"
+    ],
+    "fcf_margin_ttm_pct": [
+      "AppLovin 8-K Ex.99.1 FCF reconciliations Q3'25, Q4'25, Q1'26, Q2'26; calc",
+      "2025-11-05 to 2026-08-05"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-05"
+    ],
+    "net_cash_musd": [
+      "AppLovin 8-K Ex.99.1 balance sheet 2026-06-30",
+      "2026-08-05"
+    ],
+    "customer_concentration": [
+      "AppLovin 10-K FY2025",
+      "2026-02-19",
+      "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm"
+    ],
+    "founder_led": [
+      "AppLovin 10-K FY2025 (co-founder, CEO and Chairperson Adam Foroughi)",
+      "2026-02-19"
+    ],
+    "ttm_pe": [
+      "AppLovin 8-K Ex.99.1 diluted EPS from continuing operations, four quarters; price from stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-08-05 / 2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "AppLovin 8-K Ex.99.1 releases Q3'25-Q2'26 (current and prior-year quarters); calc",
+      "2026-08-05"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02; EV / (market cap / forward P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "notes.litigation": [
+      "AppLovin 10-Q Q2'26 Legal Proceedings; tikr.com / Benzinga reports of a mid-September 2026 class action",
+      "2026-08-05 / 2026-10",
+      "https://www.tikr.com/blog/applovin-stock-is-down-54-in-2026-and-facing-a-class-action-heres-where-it-could-go"
+    ],
+    "red_flags.litigation_overhang": [
+      "AppLovin 10-Q Q2'26 Legal Proceedings; tikr.com / Benzinga reports of a mid-September 2026 class action",
+      "2026-08-05 / 2026-10",
+      "https://www.tikr.com/blog/applovin-stock-is-down-54-in-2026-and-facing-a-class-action-heres-where-it-could-go"
+    ]
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "ticker": "DDOG",
+  "company": "Datadog",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 270.488
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 326.198
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 363.03
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 406.138
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 436.533
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 469.399
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 481.714
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 509.46
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 547.536
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 589.649
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 611.253
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 645.279
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 690.016
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 737.727
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 761.553
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 826.76
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 885.651
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 953.194
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 1006.426
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 1121.454
+    }
+  ],
+  "guidance_next_q_revenue": 1140.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 79.6,
+  "adj_operating_margin_pct": 22.9,
+  "gaap_operating_margin_pct": 0.5,
+  "fcf_margin_ttm_pct": 27.0,
+  "capex_pct_revenue_ttm": 3.9,
+  "net_cash_musd": 3999.9,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "No % disclosed. 10-Q Q2'26: usage reduction from largest customer (AI-native) starting Q3'26 'may cause a deceleration'. FY25 10-K: AI-native cohort incl. largest customer = ~7pp of Q4'25 YoY growth"
+  },
+  "revenue_model": "usage",
+  "nrr_pct": 120.0,
+  "founder_led": true,
+  "insider_pct": 5.44,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 104.5,
+  "ev_ntm_sales": 19.41,
+  "theme": "AI software",
+  "red_flags": [],
+  "ttm_pe": 116.0,
+  "eps_growth_ttm_pct": 27.8,
+  "market_cap_musd": 99540.0,
+  "notes": "Revenue is from XBRL; Q4 values are FY minus 9M. Revenue model is usage (judgment call): Datadog sells subscriptions with committed minimums, but much revenue is consumption above commitments or on-demand. Customers 'optimize' usage (2022-23 cloud-native, now AI-native cohort), so visibility is consumption-like. Q3'26 guide 1,140 implies only +1.7% QoQ, reflecting the largest customer's usage cut from Q3'26 (10-Q 2026-08-06), but the FY26 guide was raised to $4.45-4.47B. Not tagged guidance_cut. Gross margin is non-GAAP 79.6% (GAAP 79%). TTM (Q3'25-Q2'26): OCF 1,229.0, capex 156.3 (PP&E + capitalized software), FCF 1,072.8 on revenue 3,966.7. Net cash = cash 435.0 + marketable securities 4,550.5 - 2029 convertible notes carrying 985.5 ($1.0B principal) at 6/30/26; operating leases excluded. NRR: the 10-Q gives trailing-12-month dollar-based net retention in the 'low-120%s', entered as 120 (lower bound). ttm_pe uses non-GAAP diluted EPS after Datadog's non-GAAP tax adjustment (prior year recast on the same basis): 0.55+0.59+0.60+0.65=2.39 vs 0.46+0.49+0.46+0.46=1.87. Price $277.22 at the 2026-10-02 close.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) for DDOG, built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-08-06",
+      "https://www.sec.gov/Archives/edgar/data/1561550/000162828026054458/ddog-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Datadog 8-K Ex.99.1 Q3'26 guide $1.135-1.145B",
+      "2026-08-06",
+      "https://www.sec.gov/Archives/edgar/data/1561550/000162828026053829/ex-991x20260630x8k.htm"
+    ],
+    "gross_margin_pct": [
+      "Datadog 8-K Ex.99.1 non-GAAP gross profit 892.3; calc",
+      "2026-08-06"
+    ],
+    "adj_operating_margin_pct": [
+      "Datadog 8-K Ex.99.1 non-GAAP operating income 257.0; calc",
+      "2026-08-06"
+    ],
+    "gaap_operating_margin_pct": [
+      "Datadog 8-K Ex.99.1 operating income 5.5; calc",
+      "2026-08-06"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Datadog 8-K Ex.99.1 FCF reconciliations Q3'25-Q2'26; calc",
+      "2025-11-06 to 2026-08-06"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-06"
+    ],
+    "net_cash_musd": [
+      "Datadog 8-K Ex.99.1 balance sheet 2026-06-30",
+      "2026-08-06"
+    ],
+    "customer_concentration": [
+      "Datadog 10-Q Q2'26 MD&A; 10-K FY2025 risk factors",
+      "2026-08-06 / 2026-02-18"
+    ],
+    "nrr_pct": [
+      "Datadog 10-Q Q2'26 MD&A",
+      "2026-08-06"
+    ],
+    "founder_led": [
+      "Datadog 8-K Ex.99.1 (Olivier Pomel, co-founder and CEO)",
+      "2026-08-06"
+    ],
+    "ttm_pe": [
+      "Datadog 8-K Ex.99.1 non-GAAP diluted EPS Q3'25-Q2'26; price from stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-08-06 / 2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "same releases, prior-year columns; calc",
+      "2026-08-06"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02; EV / (market cap / forward P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ]
+  }
+}

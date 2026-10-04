@@ -1,0 +1,181 @@
+{
+  "ticker": "RDDT",
+  "company": "Reddit",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 121.187
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 176.672
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 146.182
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 148.556
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 171.535
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 200.428
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 163.74
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 183.031
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 207.508
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 249.75
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 242.963
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 281.184
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 348.351
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 427.707
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 392.361
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 499.627
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 584.911
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 725.607
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 663.411
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 804.905
+    }
+  ],
+  "guidance_next_q_revenue": 865.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 91.3,
+  "adj_operating_margin_pct": null,
+  "gaap_operating_margin_pct": 28.8,
+  "fcf_margin_ttm_pct": 36.7,
+  "capex_pct_revenue_ttm": 0.27,
+  "net_cash_musd": 2786.4,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "FY2025 10-K: no customer >10% of revenue (2023-2025) or of receivables"
+  },
+  "revenue_model": "transactional",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 2.95,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 24.5,
+  "ev_ntm_sales": 6.62,
+  "theme": "adtech",
+  "red_flags": [],
+  "ttm_pe": 34.4,
+  "eps_growth_ttm_pct": 290.9,
+  "market_cap_musd": 28450.0,
+  "notes": "20 quarters, Q3'21-Q2'26. Q3'21-Q4'23 come from the IPO prospectus (424B4, 'Unaudited Quarterly Results of Operations Data'), and 2023 ties to later 10-Qs. Q1'24 onward come from XBRL. Revenue is mostly advertising plus data licensing ('other'), so the model is transactional (advertising). Gross margin is GAAP (none reported on an adjusted basis). No adjusted operating margin is reported (adjusted EBITDA 342.8 = 42.6% in Q2'26), so the scorer uses GAAP 28.8%. TTM (Q3'25-Q2'26): FCF 1,018.6 (OCF less PP&E 7.4) on revenue 2,778.8. Net cash = cash 1,486.8 + marketable securities 1,299.5 at 6/30/26; no debt; operating leases (~20.9) excluded. Reddit reports no non-GAAP EPS, so ttm_pe and eps_growth use GAAP diluted EPS (GAAP EPS bears stock-based compensation, so it understates an adjusted EPS): TTM 0.80+1.24+1.01+1.25=4.30 vs 0.16+0.36+0.13+0.45=1.10. NRR is not applicable. Price $147.86 at the 2026-10-02 close.",
+  "sources": {
+    "quarterly_revenue": [
+      "Reddit 424B4 prospectus (quarterly table Q1'21-Q4'23)",
+      "2024-03-21",
+      "https://www.sec.gov/Archives/edgar/data/1713445/000162828024012380/reddit-final424b4.htm",
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) for RDDT, built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M YTD (2024-2026)",
+      "2026-07-31"
+    ],
+    "guidance_next_q_revenue": [
+      "Reddit 8-K Ex.99.1 Q3'26 revenue guide $860-870M",
+      "2026-07-30",
+      "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000098/earningspressreleaseq226.htm"
+    ],
+    "gross_margin_pct": [
+      "Reddit 8-K Ex.99.1 Q2'26 income statement; calc",
+      "2026-07-30"
+    ],
+    "gaap_operating_margin_pct": [
+      "Reddit 8-K Ex.99.1 Q2'26 (income from operations 231.7)",
+      "2026-07-30"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Reddit 8-K Ex.99.1 FCF reconciliations Q3'25-Q2'26; calc",
+      "2025-10-30 to 2026-07-30"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-07-30"
+    ],
+    "net_cash_musd": [
+      "Reddit 8-K Ex.99.1 balance sheet 2026-06-30",
+      "2026-07-30"
+    ],
+    "customer_concentration": [
+      "Reddit 10-K FY2025",
+      "2026-02-06"
+    ],
+    "founder_led": [
+      "Reddit 10-K FY2025 (Steven Huffman, co-founder, CEO and President)",
+      "2026-02-06"
+    ],
+    "ttm_pe": [
+      "Reddit 8-K Ex.99.1 GAAP diluted EPS Q3'25-Q2'26; price from stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-07-30 / 2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "Reddit 8-K Ex.99.1 releases Q3'25-Q2'26 (prior-year columns); calc",
+      "2026-07-30"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02; EV / (market cap / forward P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ]
+  }
+}

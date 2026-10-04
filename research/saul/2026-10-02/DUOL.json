@@ -1,0 +1,179 @@
+{
+  "ticker": "DUOL",
+  "company": "Duolingo",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q3'21",
+      "revenue": 63.595
+    },
+    {
+      "period": "Q4'21",
+      "revenue": 73.014
+    },
+    {
+      "period": "Q1'22",
+      "revenue": 81.22
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 88.386
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 96.065
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 103.824
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 115.661
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 126.839
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 137.624
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 150.985
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 167.553
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 178.327
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 192.594
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 209.55
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 230.743
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 252.265
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 271.713
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 282.868
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 291.967
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 298.454
+    }
+  ],
+  "guidance_next_q_revenue": 302.0,
+  "provides_guidance": true,
+  "gross_margin_pct": 72.6,
+  "adj_operating_margin_pct": null,
+  "gaap_operating_margin_pct": 11.4,
+  "fcf_margin_ttm_pct": 34.7,
+  "capex_pct_revenue_ttm": 2.9,
+  "net_cash_musd": 1416.6,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "End customers are consumers; no customer concentration. FY2025 10-K: Apple App Store 61.6%, Google Play 23.4%, Stripe 10.3% of revenue processed (payment/distribution platforms, not customers)"
+  },
+  "revenue_model": "subscription",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 14.5,
+  "domicile": "US",
+  "china_domiciled": false,
+  "fwd_pe": 54.83,
+  "ev_ntm_sales": 4.31,
+  "theme": "consumer",
+  "red_flags": [],
+  "ttm_pe": 46.2,
+  "eps_growth_ttm_pct": 28.6,
+  "market_cap_musd": 6750.0,
+  "notes": "Revenue is from XBRL; Q4 values are FY minus 9M. Growth has slowed sharply: Q2'26 +18% YoY, Q3'26 guide 302 (+11.1% YoY, +1.2% QoQ), FY26 guide 15-18% revenue and 10-12% bookings (reaffirmed). Management is deliberately prioritizing DAU growth (+23%) over monetization. Gross margin is GAAP 72.6% (no non-GAAP GM). No adjusted operating margin is reported (adjusted EBITDA margin 25.9%), so the scorer uses GAAP 11.4%. TTM (Q3'25-Q2'26): OCF 430.5, capex 33.0 (PP&E + capitalized software), FCF 397.5 on revenue 1,145.0. Net cash = cash 1,180.9 + short-term investments 133.0 + long-term investments 102.7 at 6/30/26; no debt; operating leases excluded. ttm_pe/eps_growth (judgment call): Duolingo reports no adjusted EPS, and GAAP TTM EPS (~$8.4, P/E ~17) is inflated by the one-time $256.7M valuation-allowance release in Q3/Q4'25. Adjusted TTM EPS = GAAP less that benefit: Q3'25 (292.2-222.7)/49.1M = 1.41, Q4'25 (42.0-34.0)/49.1M = 0.16 (Q3 diluted share count used as proxy), Q1'26 0.89, Q2'26 0.66, total ~3.12. Prior TTM GAAP EPS 0.49+0.31 (Q4'24 derived FY 1.88 - 9M 1.57)+0.72+0.91 = 2.43. Prior-TTM earnings carried almost no tax (valuation allowance), so the growth rate understates pre-tax growth. NRR is not disclosed. Price $144.27 at the 2026-10-02 close.",
+  "sources": {
+    "quarterly_revenue": [
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) for DUOL, built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M YTD",
+      "2026-08-06",
+      "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053603/duol-20260630.htm"
+    ],
+    "guidance_next_q_revenue": [
+      "Duolingo Q2'26 shareholder letter (8-K Ex.99.2) Q3'26 revenue guide $302M",
+      "2026-08-05",
+      "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053299/q2fy26duolingo6-30x26share.htm"
+    ],
+    "gross_margin_pct": [
+      "Duolingo Q2'26 shareholder letter income statement; calc",
+      "2026-08-05"
+    ],
+    "gaap_operating_margin_pct": [
+      "Duolingo Q2'26 shareholder letter (income from operations 33.9); calc",
+      "2026-08-05"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Duolingo shareholder letters Q3'25, Q4'25, Q1'26, Q2'26 FCF reconciliations; calc",
+      "2025-11-05 to 2026-08-05"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-05"
+    ],
+    "net_cash_musd": [
+      "Duolingo 10-Q Q2'26 balance sheet",
+      "2026-08-06"
+    ],
+    "customer_concentration": [
+      "Duolingo 10-K FY2025",
+      "2026-02-27"
+    ],
+    "founder_led": [
+      "Duolingo 8-K Ex.99.1 (Luis von Ahn, Co-Founder and CEO)",
+      "2026-08-05"
+    ],
+    "ttm_pe": [
+      "Duolingo shareholder letters Q3'25/Q4'25 (valuation allowance release $222.7M / FY $256.7M); XBRL net income, diluted EPS and diluted shares; price from stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-02-26 / 2026-08-06 / 2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "Duolingo XBRL diluted EPS 2024-2026; calc",
+      "2026-08-06"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02; EV / (market cap / forward P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ]
+  }
+}

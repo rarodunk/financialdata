@@ -1,0 +1,177 @@
+{
+  "ticker": "SHOP",
+  "company": "Shopify",
+  "as_of": "2026-10-02",
+  "latest_quarter": "Q2'26",
+  "quarterly_revenue": [
+    {
+      "period": "Q1'22",
+      "revenue": 1204.0
+    },
+    {
+      "period": "Q2'22",
+      "revenue": 1295.0
+    },
+    {
+      "period": "Q3'22",
+      "revenue": 1366.0
+    },
+    {
+      "period": "Q4'22",
+      "revenue": 1735.0
+    },
+    {
+      "period": "Q1'23",
+      "revenue": 1508.0
+    },
+    {
+      "period": "Q2'23",
+      "revenue": 1694.0
+    },
+    {
+      "period": "Q3'23",
+      "revenue": 1714.0
+    },
+    {
+      "period": "Q4'23",
+      "revenue": 2144.0
+    },
+    {
+      "period": "Q1'24",
+      "revenue": 1861.0
+    },
+    {
+      "period": "Q2'24",
+      "revenue": 2045.0
+    },
+    {
+      "period": "Q3'24",
+      "revenue": 2162.0
+    },
+    {
+      "period": "Q4'24",
+      "revenue": 2812.0
+    },
+    {
+      "period": "Q1'25",
+      "revenue": 2360.0
+    },
+    {
+      "period": "Q2'25",
+      "revenue": 2680.0
+    },
+    {
+      "period": "Q3'25",
+      "revenue": 2844.0
+    },
+    {
+      "period": "Q4'25",
+      "revenue": 3672.0
+    },
+    {
+      "period": "Q1'26",
+      "revenue": 3170.0
+    },
+    {
+      "period": "Q2'26",
+      "revenue": 3583.0
+    }
+  ],
+  "guidance_next_q_revenue": 3739.9,
+  "provides_guidance": true,
+  "gross_margin_pct": 47.7,
+  "adj_operating_margin_pct": null,
+  "gaap_operating_margin_pct": 13.6,
+  "fcf_margin_ttm_pct": 17.7,
+  "capex_pct_revenue_ttm": 0.19,
+  "net_cash_musd": 5472,
+  "customer_concentration": {
+    "top_n": 1,
+    "pct": null,
+    "note": "FY2025 10-K: no individual merchant >=10% of revenues or receivables"
+  },
+  "revenue_model": "transactional",
+  "nrr_pct": null,
+  "founder_led": true,
+  "insider_pct": 6.16,
+  "domicile": "Canada",
+  "china_domiciled": false,
+  "fwd_pe": 72.48,
+  "ev_ntm_sales": 11.18,
+  "theme": "e-commerce",
+  "red_flags": [],
+  "ttm_pe": 110.7,
+  "eps_growth_ttm_pct": 28.8,
+  "market_cap_musd": 194790.0,
+  "notes": "Q1'22-Q4'23 come from the 6-K earnings releases (Shopify filed 40-F/6-K then); Q1'24 onward from 10-Q/10-K XBRL. Shopify became a US domestic filer (10-K) for FY2024. Revenue includes the logistics businesses until their sale in mid-2023 (Deliverr), which depresses H2'23-H1'24 YoY comparisons. Revenue model is transactional (judgment call): merchant solutions (payments/GMV-linked) were 2,781 of 3,583 = 77.6% of Q2'26 revenue; subscription solutions were 22.4% (MRR $221M). Guidance is qualitative only: Q3'26 revenue to grow at a 'low-thirties percentage rate' YoY. 3,740 = Q3'25 2,844 x 1.315, an assumed ~31.5% midpoint (derived, not a company figure). Gross margin is GAAP (Shopify no longer reports non-GAAP margins); there is no adjusted operating margin, so the scorer uses GAAP 13.6%. TTM (Q3'25-Q2'26): OCF 2,377, capex 25, FCF 2,352 on revenue 13,269. Net cash = cash 1,656 + marketable securities 3,291 + long-term investments 525 at 6/30/26. It excludes equity and other investments (4,854, mostly listed stakes) and the equity-method investment (559). The convertible notes matured in Nov 2025, so there is no debt; operating leases excluded. ttm_pe/eps_growth (judgment call): Shopify reports no adjusted EPS. It does report non-GAAP 'net income excluding the impact of equity investments': TTM 367+594+360+439=1,760 vs prior 344+458+226+338=1,366. P/E = market cap / that figure; growth is on net income, since the diluted share count is roughly flat at ~1.30B. GAAP TTM EPS $1.48 (P/E ~102) swings with mark-to-market gains. Price $151.39 at the 2026-10-02 close.",
+  "sources": {
+    "quarterly_revenue": [
+      "Shopify 6-K Ex.99.1 earnings releases Q3'22, Q1'23, Q2'23, Q3'23, Q4'23 (current and prior-year quarters)",
+      "2022-10-27 to 2024-02-13",
+      "https://www.sec.gov/Archives/edgar/data/1594805/000159480524000006/exhibit991pressreleaseq420.htm",
+      "SEC EDGAR XBRL companyfacts (data.sec.gov) for SHOP, built from 10-Q/10-K filings; Q4/FQ4 derived as FY (10-K) minus 9M YTD (2024 onward)",
+      "2026-08-05"
+    ],
+    "guidance_next_q_revenue": [
+      "Shopify 8-K Ex.99.1 Q3'26 outlook (low-thirties % YoY revenue growth); derived",
+      "2026-08-05",
+      "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000046/exhibit991pressreleaseq220.htm"
+    ],
+    "gross_margin_pct": [
+      "Shopify 8-K Ex.99.1 Q2'26 (gross profit 1,708); calc",
+      "2026-08-05"
+    ],
+    "gaap_operating_margin_pct": [
+      "Shopify 8-K Ex.99.1 Q2'26 (operating income 488); calc",
+      "2026-08-05"
+    ],
+    "fcf_margin_ttm_pct": [
+      "Shopify 8-K Ex.99.1 FCF reconciliations Q3'25-Q2'26; calc",
+      "2025-11-04 to 2026-08-05"
+    ],
+    "capex_pct_revenue_ttm": [
+      "same; calc",
+      "2026-08-05"
+    ],
+    "net_cash_musd": [
+      "Shopify 8-K Ex.99.1 balance sheet 2026-06-30",
+      "2026-08-05"
+    ],
+    "customer_concentration": [
+      "Shopify 10-K FY2025 (market risk)",
+      "2026-02-11"
+    ],
+    "revenue_model": [
+      "Shopify 8-K Ex.99.1 Q2'26 revenue split",
+      "2026-08-05"
+    ],
+    "founder_led": [
+      "Shopify 10-K FY2025 (Founder Share; founder and CEO Tobi Lutke)",
+      "2026-02-11"
+    ],
+    "ttm_pe": [
+      "Shopify 8-K Ex.99.1 'Net income excluding the impact of equity investments' reconciliations Q3'25-Q2'26; market cap from stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-08-05 / 2026-10-04"
+    ],
+    "eps_growth_ttm_pct": [
+      "same releases plus Q2'25 8-K (prior-year columns); calc",
+      "2026-08-05"
+    ],
+    "insider_pct": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "fwd_pe": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ],
+    "ev_ntm_sales": [
+      "stockanalysis.com statistics page, close of 2026-10-02; EV / (market cap / forward P/S)",
+      "2026-10-04"
+    ],
+    "market_cap_musd": [
+      "stockanalysis.com statistics page, close of 2026-10-02",
+      "2026-10-04"
+    ]
+  }
+}
