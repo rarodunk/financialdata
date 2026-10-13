@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+lxml
+pandas
+pillow
+pymupdf
+# Pinned to match the Chromium build preinstalled in the cloud environment (/opt/pw-browsers/chromium-1194).
+# Elsewhere: pip install playwright && playwright install chromium
+playwright==1.56.0

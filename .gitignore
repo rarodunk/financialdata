@@ -1,0 +1,13 @@
+# Downloaded filings and caches (large, re-fetchable with tools/edgar.py)
+filings/
+
+# Personal data. Kept out of git while this repository is public; remove these lines once it is private
+# so the voice profile and drafts persist across sessions.
+voice/*.md
+voice/*.jsonl
+voice/*.csv
+voice/raw/
+drafts/
+
+__pycache__/
+*.pyc
