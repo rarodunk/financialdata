@@ -161,19 +161,24 @@ def style_section(o: pd.DataFrame) -> list[str]:
         bigrams.update(" ".join(p) for p in zip(toks, toks[1:]) if not (p[0] in STOPWORDS and p[1] in STOPWORDS))
     emojis = Counter(e for t in texts for e in EMOJI_RE.findall(t))
     q = o["chars"].quantile([0.1, 0.25, 0.5, 0.75, 0.9]).round().astype(int).tolist()
+    # Regexes and quoted lists are built outside the f-strings: backslashes inside {} need Python 3.12+.
+    has_hashtag = texts.str.contains(r"(?:^|\s)#\w", regex=True)
+    has_lol = texts.str.contains(r"\blol\b", case=False, regex=True)
+    has_numbered = texts.str.contains(r"(?:^|\n)\s*\d+[.)] ", regex=True)
+    has_em_dash = texts.str.contains("\u2014", regex=False)
+    openers = ", ".join('"%s" (%d)' % (w, n) for w, n in Counter(first_two).most_common(15))
     return [
         "## Style (original posts, thread starters included)",
         f"- Length in characters p10/p25/median/p75/p90: {q}",
         f"- Contains media: {pct(o['has_media'])} | link: {pct(o['has_link'])} | quote post: {pct(o['is_quote'])}",
-        f"- Contains a cashtag: {pct(o['cashtags'].str.len() > 0)} | hashtag: {pct(texts.str.contains(r'(?:^|\s)#\w', regex=True))}",
+        f"- Contains a cashtag: {pct(o['cashtags'].str.len() > 0)} | hashtag: {pct(has_hashtag)}",
         f"- Emoji: {pct(texts.str.contains(EMOJI_RE))} | most used: {' '.join(e for e, _ in emojis.most_common(10))}",
         f"- '!': {pct(texts.str.contains('!', regex=False))} | '?': {pct(texts.str.contains('?', regex=False))} | "
-        f"'--': {pct(texts.str.contains('--', regex=False))} | em dash: {pct(texts.str.contains('—', regex=False))} | "
-        f"'lol': {pct(texts.str.contains(r'\blol\b', case=False, regex=True))}",
-        f"- Line breaks: {pct(texts.str.contains(chr(10), regex=False))} | numbered list: {pct(texts.str.contains(r'(?:^|\n)\s*\d+[.)] ', regex=True))}",
+        f"'--': {pct(texts.str.contains('--', regex=False))} | em dash: {pct(has_em_dash)} | 'lol': {pct(has_lol)}",
+        f"- Line breaks: {pct(texts.str.contains(chr(10), regex=False))} | numbered list: {pct(has_numbered)}",
         f"- Starts lowercase: {pct(texts.str.match(r'^[a-z]'))} | ends with period: {pct(texts.str.rstrip().str.endswith('.'))}",
         f"- Top first words: {', '.join(f'{w} ({n})' for w, n in Counter(first_words).most_common(15))}",
-        f"- Top openers: {', '.join(f'\"{w}\" ({n})' for w, n in Counter(first_two).most_common(15))}",
+        f"- Top openers: {openers}",
         f"- Top content words: {', '.join(w for w, _ in words.most_common(40))}",
         f"- Top bigrams: {', '.join(b for b, _ in bigrams.most_common(30))}",
         f"- Most mentioned cashtags: {', '.join(f'{c} ({n})' for c, n in Counter(c for cs in o['cashtags'] for c in cs).most_common(25))}",
