@@ -1,28 +1,37 @@
 # Earnings newsletter style guide
 
-Distilled from the earnings recaps in the weekly updates (Girish Weekly: Duolingo Q4 2025,
-MercadoLibre, Nu, TransMedics, Bloom Energy, Axon, Rubrik, Figure) and the writer's own
-`my-writing-voice` skill. `examples.md` has the verbatim source passages; read it before writing.
+Distilled from the earnings sections of the dated weekly updates in the rarodunk13 "Weekly
+Updates" folder (April 13-17 through Nov 2-6, 2026: Tesla Q2, Amazon Q3, MercadoLibre, Axon,
+TransMedics), the earlier Girish Weekly recaps (Duolingo Q4 2025, MercadoLibre, Nu, TransMedics,
+Bloom Energy), and the writer's own `my-writing-voice` skill. `examples.md` has the verbatim
+source passages; read it before writing.
 
 ## Document shape
 
-1. **Title**: company and quarter, plain. "Duolingo Q3 2026". No tickers-with-colons, no subtitle.
-2. **Optional one-line setup** (0-2 sentences). Only if it adds something the images don't show, e.g. "Overall, another quarter of accelerating sales growth on the back of an increase in the credit business and narrowing margins." Skip it otherwise.
-3. **Revenue image**, then an *italic caption* of 1-2 sentences.
-4. **EBIT image**, then an *italic caption* of 1-2 sentences.
-5. "Quotes from the call:"
-6. **3-4 sections**, each: *italic verbatim quote* with at most one key sentence in ***bold italic***, then a **bold comment** paragraph directly underneath.
-7. **My Take**: bold label, then 1-3 plain paragraphs.
-8. The MNPI line (config `docx.disclaimer`), italic. Every weekly update ends with it.
+The output is one company's earnings section, written so it pastes straight into the week's
+Google Doc. From "Weekly Update October 26-30" (Amazon) and "July 20-24" (Tesla):
 
-## Image captions
+1. **Company name** as Heading 3. Just the name: "Amazon", "Tesla", "Duolingo".
+2. **Setup line**, one sentence, then a colon:
+   - "Amazon reported earnings after the bell yesterday. Here are the numbers and then we'll also look at the call:"
+   - "Tesla reported after the bell on Wednesday. Let's look at the financials and then the call:"
+   - "Meli reported earnings after the bell on Wednesday. Here are the numbers and the earnings call quotes:"
+3. **Revenue image, then EBIT image.** No captions in the dated updates.
+4. **Optional numbers paragraph**: one plain paragraph that reads the tables, used when the
+   numbers need explaining before the quotes. Tesla Q2: "So you can see that revenue is
+   accelerating off of some easy comps but margins are degrading. One reason is the lack of
+   regulatory credits now and then just more overall opex spend..." Use it when there's an
+   inflection or a margin story; skip it when the quotes carry it.
+5. **"Quotes from the call:"** (variants: "Now onto the quotes:", "And now for the quotes:").
+6. **3-4 sections**, each: *italic verbatim quote*, usually with one key sentence in
+   ***bold italic***, then a **bold comment** paragraph directly underneath (bold, not italic).
+7. **My Take** as Heading 3, then 1-3 plain paragraphs.
+8. No MNPI line. It belongs to Girish Weekly only; the spec can add it with `include_disclaimer`.
 
-Captions read the image for the reader and say what's bold. Patterns from the source:
-- "*Bolded numbers are guidance. The new CFO was very clear about the cadence they expect for bookings this year, picking up into the back half of the year.*"
-- "*This is a worrying trend but should reverse in six months. That will feel like an eternity to wait but alas…*"
-- "*The bolded is an estimate based on management commentary.*"
-
-Rules: name the inflection (acceleration, deceleration, trough, margin step-down) with the exact number from `metrics.json`. Say whether bold cells are company guidance or the writer's own estimates; if you can't tell, write "Bolded numbers are estimates." Don't restate every cell.
+Inside the numbers paragraph, name the inflection (acceleration, deceleration, trough, margin
+step-down) with the exact numbers from `metrics.json`. If you mention bold cells, say whether
+they're company guidance or the writer's estimates; if you can't tell, "the bolded numbers are
+estimates".
 
 ## Choosing the 3-4 quotes
 
@@ -54,6 +63,11 @@ Comment moves the writer uses, with real examples:
 - **Read the market's reaction**: "They, like MELI, will be in an investment cycle so I wasn't necessarily surprised to see the stock down after hours."
 - **Flag what's new**: "I hadn't heard Waleed say this before..."
 - **Decode jargon inline**: "agents (a term you'll see a lot from here on out – it just means software that can take actions on your behalf)".
+- **Call out an evasive answer**: "Sounded a little defensive on this one. It's too early to tell if agentic commerce is affected the ad revenue but he didn't address how they're thinking about it. That's not great." (Amazon Q3)
+- **Name the principle**: "This is Amazon 101. Structural cost advantages being pushed back to customers."
+- **Explain the stock move**: "This was probably one reason the stock was down. Optimus won't scale as fast as Elon has promised. Are we surprised? Not at all. He's Mr. Overpromise, then eventually deliver. Better late than never!" (Tesla Q2)
+- **One-line awe at a number**: "Half a trillion backlog is wild!"
+- **Scale math off a capex quote**: "That is some serious scale!! How do you compete with a company that spent $77 billion in capex in three months? ... even if it only grows 25% and gets to $275 billion, that would require more than 50% operating cash flow growth, which frankly, isn't going to happen."
 
 Don't summarize the quote back. React to it.
 

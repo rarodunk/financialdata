@@ -18,7 +18,10 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 # Section headers: "### Week 16 – LMND, JOE, MELI" in the weekly doc, or a bare date line
 # like "9/29" in the running Ryan/Osman chat docs.
@@ -26,12 +29,18 @@ WEEK_RE = re.compile(r"^(?:#+\s*\**\s*(Week\s+\d+[^*]*)\**|(\d{1,2}/\d{1,2}))\s*
 
 
 def load_text(path: Path) -> tuple[str, str]:
+    """Accepts Drive read_file_content JSON ({"fileContent"}), Google Docs read_doc JSON
+    ({"content": {"tabs": ...}}), or plain/markdown text (e.g. gdoc_to_text.py output)."""
     raw = path.read_text(encoding="utf-8")
     try:
         obj = json.loads(raw)
-        return obj.get("fileContent", ""), obj.get("title", path.stem)
     except json.JSONDecodeError:
         return raw, path.stem
+    if "fileContent" in obj:
+        return obj.get("fileContent", ""), obj.get("title", path.stem)
+    from gdoc_to_text import convert  # Docs API structure -> marked-up text
+    title, text = convert(obj)
+    return text, title
 
 
 def paragraphs_by_week(text: str) -> list[tuple[str, list[str]]]:

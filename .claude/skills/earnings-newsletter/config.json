@@ -38,10 +38,11 @@
     }
   ],
 
-  "weekly_update_search": {
-    "_comment": "Dated weekly updates live in rarodunk13's Drive. They are found by search, not a fixed list, so new weeks are picked up automatically once that account's docs are visible to the connected Google account. {name} is replaced by each of the ticker/company/CEO names.",
-    "query_template": "owner = 'rarodunk13@gmail.com' and mimeType = 'application/vnd.google-apps.document' and (fullText contains '{name}')",
-    "max_docs_per_run": 12
+  "weekly_updates_folder": {
+    "_comment": "Dated weekly updates ('Weekly Update Nov 2-6', ...) live in rarodunk13's Drive. This folder is shared with the Drive connector's account and holds SHORTCUTS: list it with Drive search_files(parentId), take shortcutDetails.targetFileId, and read each target with the Google Docs connector (read_doc). The Drive connector cannot open the targets; the Docs connector can.",
+    "folder_id": "1Ee9O_G96SWBHr4JQCnSee-GoJ4Y9cN3I",
+    "title": "Weekly Updates",
+    "read_most_recent": 4
   },
 
   "blocks": {
@@ -89,12 +90,14 @@
   },
 
   "docx": {
-    "font": "Calibri",
+    "_comment": "Matches the dated weekly updates: Arial 11, company and 'My Take' as Heading 3, no captions, no MNPI line (that line is a Girish Weekly convention; set include_disclaimer in the spec to add it).",
+    "font": "Arial",
     "body_size_pt": 11,
     "image_width_in": 6.5,
     "quotes_lead_in": "Quotes from the call:",
     "my_take_heading": "My Take",
     "show_speaker": false,
+    "include_disclaimer_default": false,
     "disclaimer": "We confirm that the update doesn't have MNPI, no notes or transcripts from experts less than 6 months removed from the company."
   },
 

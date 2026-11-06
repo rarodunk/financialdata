@@ -147,3 +147,71 @@ We confirm that the update doesn't have MNPI, no notes or transcripts from exper
 3c. Lemonade combined ratio including marketing (not including R&D + G&A)
 
 They are making strong progress on the bottom line, though that could certainly reverse if they are pricing too low in car insurance. Based on some scuttlebutt though, I don’t think they are. In fact, I don’t think they are being irresponsible at all on the car insurance front.
+
+# Dated weekly updates (rarodunk13 "Weekly Updates" folder)
+
+These are the format the output should match. Comments and My Take are verbatim; long call
+quotes are trimmed with [...] since they are not the writer's words. `[image]` marks the
+sheet screenshots.
+
+## Amazon Q3 2026 (Weekly Update October 26-30 + Conviction List)
+
+### Amazon
+
+Amazon reported earnings after the bell yesterday. Here are the numbers and then we’ll also look at the call:
+
+[image] [image] [image] [image] [image] [image] [image]
+
+*Quotes from the call:*
+
+*Even with heightened component costs like memory, the significant depreciation from the CapEx we're investing. [...] We still expect 2026 cash CapEx of approximately $220 billion, the majority for AWS and* ***expect to spend meaningfully more in 2027. And with a clear line of sight to attractive financial returns,*** *as I laid out on our last call.*
+
+**That is some serious scale!! How do you compete with a company that spent $77 billion in capex in three months? 2027 was the year I was worried about with all of the AI spending since the hyperscalers can no longer fund the buildout from cash flow. Analyst estimates are that Amazon capex could reach $300 billion next year. But even if it only grows 25% and gets to $275 billion, that would require more than 50% operating cash flow growth, which frankly, isn’t going to happen. Therefore, Amazon and all of the other hyperscalers must reach into the debt markets. I just have a hard time seeing how the neoclouds can compete with this scale, especially at higher cost of capital. But it’s very likely that Amazon burns another $50 billion next year. Amazon and Google have a cost advantage and they will benefit immensely once (if?) the memory costs and other component shortages get a little more cleared up. That could be years from now so there may be a bit of burn from now until then.**
+
+*A natural question is whether agentic shopping from external horizontal agents is meaningfully impacting Amazon Ads. And the answer is no. Few customers are doing much shopping this way yet [...]*
+
+**Sounded a little defensive on this one. It’s too early to tell if agentic commerce is affected the ad revenue but he didn’t address how they’re thinking about it. That’s not great.**
+
+*The number of companies who have a significant cloud business and a chip strong enough to sell externally is effectively 2. [...] If you sell externally, you're able to realize more revenue in the short term [...] if you decide to use it inside your cloud [...] you actually will end up driving more absolute revenue and free cash flow from those chips [...]*
+
+**Interesting commentary on how they think about selling Trainium externally. It would result in more revenue shrot-term but less free cash flow in the long run.**
+
+*And the fact that we're running on top of our own chip that's providing both advantaged price performance and it's more cost effective for ourselves because we own it, I think, gives us some structural cost advantages [...]*
+
+**This is Amazon 101. Structural cost advantages being pushed back to customers.**
+
+### My Take
+
+The fact that AWS will grow “at least 40%” for the next two years is amazing. So that is at least around $350 billion in AWS revenue by 2028. At 40% operating margins which is about what they are now, that’s $140 billion in EBIT. The rest of the e-commerce business will probably, conservatively do $70 billion in EBIT. So we’re paying around 11x 2028 EBIT for one of the most dominant businesses in the world. I can sleep all right with that. That’s really not demanding. Further, Jassy said they’ll have two $1 trillion revenue businesses in 5-10 years. Call that $500 billion in EBIT in 7 years and a 20x multiple, that’s roughly a 21% CAGR. I wouldn’t be too sad about a lower risk 20%+ CAGR for almost a decade. That tax-free compounding net effect is probably more like 23-24% as well. The risks are clear to the advertising business and the fact that they don’t have their own model if that ends up being where the value capture is. I suspect it’s not but it’s also not clear to me and I’m very open to changing my mind on this, especially after reading Anthropic’s S-1.
+
+## Tesla Q2 2026 (Weekly Update July 20-24)
+
+### Tesla
+
+Tesla reported after the bell on Wednesday. Let’s look at the financials and then the call:
+
+[image] [image] [image]
+
+So you can see that revenue is accelerating off of some easy comps but margins are degrading. One reason is the lack of regulatory credits now and then just more overall opex spend from a lot of projects going on and then there was the big Elon stock-comp package that is coming through the PnL. The company is reinvesting vigorously. They are ramping capex as well. Free cash flow may be negative for the foreseeable future. It’s pretty amazing how all of these companies like Google, Amazon, and Tesla are now burning cash again as they ramp AI/robotics spending. We have an industrial scale up, as Elon says, that is bigger than anything since World War II.
+
+Now onto the quotes:
+
+*And the Tesla team has performed incredibly well. The Cybercab has started production [...]* ***So we're working on what we believe is the most ambitious build-out of advanced infrastructure manufacturing capacity ever in history.***
+
+**There are just so many things going on at Tesla. If they combine with SpaceX, the optionality would just be mind-boggling. Elon was asked about a potential combination on the call and he didn’t dismiss it.**
+
+*But with Optimus, there is no supply chain. [...] Optimus will follow the sort of normal S-curve of a manufacturing ramp, but* ***the initial portion of the S-curve will be quite flat and long because of the newness of the parts and the robot.***
+
+**This was probably one reason the stock was down. Optimus won’t scale as fast as Elon has promised. Are we surprised? Not at all. He’s Mr. Overpromise, then eventually deliver. Better late than never!**
+
+*[...] And we have like we have Digital Optimus, which is basically driving a computer screen [...] It's photons in, controls out.*
+
+**I hadn’t seen Elon talk about this much but Digital Optimus is their AI agent that is similar to Claude Cowork, where it can control your computer to finish tasks for you. I’d be excited to hear more about this in the future.**
+
+*[...] we should be spending on CapEx as fast as we can spend -- as fast as we can without it being too wasteful. [...] it's okay to be a little less capital efficient if we get things done sooner because that's actually going to be the higher NPV outcome for the company.*
+
+**Elon doesn’t get much credit for being an actually good business-person. Everyone talks about his insane engineering skills and ambition. But this sort of intuitive thinking about NPV and capex is something that a lot of entrepreneurs don’t really understand. But this is a deep grasp on capital efficiency vs. competitive timing.**
+
+### My Take
+
+The Tesla position going into this earnings was too big at 20%. That was a mistake so I’m sorry for that. I just hate making small moves that interrupt compounding. For companies that are truly special long-term, I like thinking about share ownership as a goal. Like the goal of accumulating more shares as you save more money. Surprisingly, Bitcoin people, of all people, talk like this. They talk about “stacking sats” which is a shorthand for buying more Bitcoin. But I don’t hear stock people talk like this. For truly special companies, the goal should be to own more and more shares, within reason. With that said, I am not surprised by the big move down considering the margin compression and big capex ramp. Similar to Amazon, the market doesn't like the cash burn, which is understandable. But eventually, these companies that are reinvesting so much will be virtually untouchable. Having secured energy, physical land, buildings, and chips, it will be incredibly difficult to replicate.

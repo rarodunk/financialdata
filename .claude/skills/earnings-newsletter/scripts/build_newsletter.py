@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Assemble the earnings newsletter .docx from a JSON spec.
 
-Layout (mirrors the earnings recaps in the weekly updates):
-  Title
-  [optional one-line setup]
-  Revenue image + italic caption
-  EBIT image + italic caption
+Layout mirrors the earnings sections of the dated weekly updates (e.g. Amazon in
+"Weekly Update October 26-30", Tesla in "July 20-24"), so the section can be pasted
+straight into the week's Google Doc:
+  <Company>                      Heading 3, bold
+  setup line                     "Amazon reported earnings after the bell yesterday. Here are the numbers..."
+  Revenue image, EBIT image      no captions by default (optional italic caption per figure)
+  [numbers paragraph]            optional plain paragraph reading the images
   "Quotes from the call:"
-  For each of 3-4 sections:  italic verbatim quote (key sentence bold-italic)
-                             bold comment underneath
-  My Take (bold heading) + 1-3 plain paragraphs
-  [disclaimer, italic]
+  For each of 3-4 sections:      italic verbatim quote (one key sentence bold-italic)
+                                 bold comment underneath
+  My Take                        Heading 3, bold, then 1-3 plain paragraphs
+  [MNPI disclaimer]              off by default (Girish Weekly convention only)
 
 Quotes are verified against transcript.json before anything is written; the build stops
 if any quote is not verbatim (override only with --skip-verify, and say so to the user).
@@ -18,16 +20,16 @@ if any quote is not verbatim (override only with --skip-verify, and say so to th
 Spec (newsletter_spec.json):
 {
   "ticker": "DUOL", "company": "Duolingo", "period": "Q3 2026",
-  "title": "Duolingo Q3 2026",                          # optional, defaults to "<company> <period>"
-  "intro": "One-line setup, optional",
-  "figures": [{"image": "WORK/revenue.png", "caption": "..."},
-              {"image": "WORK/ebit.png",    "caption": "..."}],
+  "heading": "Duolingo",                                 # optional, defaults to company
+  "intro": "Duolingo reported after the bell on Monday. Here are the numbers and then the call:",
+  "figures": [{"image": "WORK/revenue.png"}, {"image": "WORK/ebit.png"}],   # "caption" optional
+  "numbers_paragraph": "optional plain paragraph reading the images",
   "sections": [{"speaker": "Luis von Ahn",              # must match transcript speaker name
                 "quote": "exact words from the call",
                 "emphasis": ["sub-span of the quote to bold-italic"],   # optional
                 "comment": "bold reaction underneath"}],
   "my_take": ["paragraph", "paragraph"],
-  "include_disclaimer": true                             # optional, default true
+  "include_disclaimer": false                            # optional, default from config
 }
 
   build_newsletter.py --spec SPEC --transcript WORK/transcript.json --out newsletters/DUOL_Q3_2026.docx
@@ -41,7 +43,6 @@ import sys
 from pathlib import Path
 
 from docx import Document
-from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
@@ -52,13 +53,27 @@ SKILL_DIR = Path(__file__).resolve().parent.parent
 
 
 def set_base_font(doc: Document, name: str, size_pt: float) -> None:
-    for style_name in ("Normal", "Heading 1", "Heading 2"):
+    for style_name in ("Normal", "Heading 3"):
         st = doc.styles[style_name]
         st.font.name = name
-        st.element.rPr.rFonts.set(qn("w:eastAsia"), name)  # python-docx needs this for full override
-        st.font.color.rgb = RGBColor(0, 0, 0)
+        rfonts = st.element.rPr.rFonts
+        rfonts.set(qn("w:eastAsia"), name)  # python-docx needs this for full override
+        # Heading styles point at theme fonts (asciiTheme etc.), which win over an explicit font name.
+        for attr in ("w:asciiTheme", "w:hAnsiTheme", "w:eastAsiaTheme", "w:cstheme"):
+            rfonts.attrib.pop(qn(attr), None)
     doc.styles["Normal"].font.size = Pt(size_pt)
+    doc.styles["Normal"].font.color.rgb = RGBColor(0, 0, 0)
     doc.styles["Normal"].paragraph_format.space_after = Pt(8)
+    # Google Docs' default Heading 3 as used in the weekly updates: 14pt, dark gray, bold here.
+    h3 = doc.styles["Heading 3"]
+    h3.font.size = Pt(14)
+    h3.font.bold = True
+    h3.font.italic = False
+    h3.font.color.rgb = RGBColor(0x43, 0x43, 0x43)
+
+
+def add_heading3(doc: Document, text: str) -> None:
+    doc.add_paragraph(text, style="Heading 3")
 
 
 def add_quote(doc: Document, quote: str, emphasis: list[str]) -> None:
@@ -87,9 +102,7 @@ def build(spec: dict, cfg: dict, out: Path) -> None:
     for s in doc.sections:
         s.left_margin = s.right_margin = Inches(1)
 
-    title = spec.get("title") or f"{spec['company']} {spec['period']}"
-    h = doc.add_heading(title, level=1)
-    h.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    add_heading3(doc, spec.get("heading") or spec["company"])
 
     if spec.get("intro"):
         doc.add_paragraph(spec["intro"])
@@ -102,6 +115,9 @@ def build(spec: dict, cfg: dict, out: Path) -> None:
         if fig.get("caption"):
             doc.add_paragraph().add_run(fig["caption"]).italic = True
 
+    if spec.get("numbers_paragraph"):
+        doc.add_paragraph(spec["numbers_paragraph"])
+
     doc.add_paragraph(dcfg["quotes_lead_in"])
     for sec in spec["sections"]:
         if dcfg.get("show_speaker") and sec.get("speaker"):
@@ -111,14 +127,11 @@ def build(spec: dict, cfg: dict, out: Path) -> None:
         for c in comments:
             doc.add_paragraph().add_run(c).bold = True
 
-    mt = doc.add_paragraph()
-    run = mt.add_run(dcfg["my_take_heading"])
-    run.bold = True
-    run.font.size = Pt(dcfg["body_size_pt"] + 2)
+    add_heading3(doc, dcfg["my_take_heading"])
     for para in spec["my_take"]:
         doc.add_paragraph(para)
 
-    if spec.get("include_disclaimer", True) and dcfg.get("disclaimer"):
+    if spec.get("include_disclaimer", dcfg.get("include_disclaimer_default", False)) and dcfg.get("disclaimer"):
         doc.add_paragraph().add_run(dcfg["disclaimer"]).italic = True
 
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -133,6 +146,8 @@ def lint(spec: dict) -> list[str]:
         issues.append(f"{n} quote sections; the format calls for 3-4")
     if len(spec.get("figures", [])) < 2:
         issues.append("expected two figures (revenue, EBIT)")
+    if not spec.get("intro"):
+        issues.append("no setup line (e.g. 'X reported after the bell on Wednesday. Here are the numbers...')")
     if not spec.get("my_take"):
         issues.append("My Take is empty")
     for i, sec in enumerate(spec.get("sections", []), start=1):
@@ -143,7 +158,8 @@ def lint(spec: dict) -> list[str]:
     banned = [r"\bIt's not just\b", r"\bHere's the thing\b", r"\bThe truth is\b", r"\bdelve\b",
               r"\bIn conclusion\b", r"\bIn summary\b", r"\blandscape\b", r"\bsynerg", "—"]
     prose = " ".join([*(s.get("comment", "") if isinstance(s.get("comment"), str) else " ".join(s.get("comment", []))
-                        for s in spec.get("sections", [])), *spec.get("my_take", []), spec.get("intro", "")])
+                        for s in spec.get("sections", [])), *spec.get("my_take", []), spec.get("intro", ""),
+                      spec.get("numbers_paragraph", "")])
     for pat in banned:
         if re.search(pat, prose, re.I):
             issues.append(f"style: found '{pat}' in comments/My Take (see references/style-guide.md)")

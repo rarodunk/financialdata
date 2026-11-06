@@ -8,16 +8,20 @@ description: "Build the post-earnings newsletter as a Word doc: Revenue and EBIT
 Turns one company's latest quarter into a .docx in the house format:
 
 ```
-<Company> <Quarter>
-[Revenue table image]   italic caption
-[EBIT table image]      italic caption
+<Company>                                   (Heading 3)
+<Company> reported after the bell on <day>. Here are the numbers and then we'll look at the call:
+[Revenue table image]
+[EBIT table image]
+[optional paragraph reading the numbers]
 Quotes from the call:
-  *exact quote*            (x3-4)
+  *exact quote, key sentence bold italic*   (x3-4)
   **comment**
-My Take
+My Take                                     (Heading 3)
   1-3 paragraphs: numbers + call + thesis check + valuation math + verdict
-*MNPI line*
 ```
+
+This is the earnings section of the dated weekly updates (Amazon in "October 26-30", Tesla in
+"July 20-24"), so the output can be pasted straight into that week's Google Doc.
 
 Everything mechanical is a script (auditable, deterministic). Your job is judgment: which
 quotes, what to say about them, and the My Take. Paths below are relative to this skill's
@@ -85,23 +89,28 @@ This writes `revenue.png`, `ebit.png` and `metrics.json`, and prints a summary.
 
 ## 3. Pull prior coverage from the weekly updates
 
-First find the dated weekly updates that mention the company. They live in rarodunk13's
-Drive and are found by search (`config.weekly_update_search`), so new weeks are picked up
-without editing the config:
+Two sources, read differently because two different Google accounts are connected:
+
+**a) Dated weekly updates** ("Weekly Update Nov 2-6", ...): rarodunk13's "Weekly Updates"
+folder (`config.weekly_updates_folder`). It holds shortcuts. List it with Drive, then read
+each target with the **Google Docs** connector (the Drive connector gets "not found" on them):
 
 ```
-mcp__Google_Drive__search_files(
-  query = query_template with {name} = ticker, then company name (one search each, or OR them),
-  pageSize = 50, excludeContentSnippets = true)
+mcp__Google_Drive__search_files(query = "parentId = '<folder_id>'", pageSize = 100, excludeContentSnippets = true)
+  -> each file's shortcutDetails.targetFileId and its title (the week)
+mcp__Google_Docs__read_doc(documentId = <targetFileId>)
 ```
 
-Read the `max_docs_per_run` most recently modified hits, newest first. If the search returns
-nothing at all for `owner = 'rarodunk13@gmail.com' and mimeType = 'application/vnd.google-apps.document'`,
-the connected Google account can't see rarodunk13's docs: tell the user (they share the folder
-with the connected account, or reconnect Google with rarodunk13) and continue with the fixed
-docs below.
+Order by the date in the title and read the `read_most_recent` newest (4). Each comes back
+inline as Docs JSON (~10-15k tokens); read the text runs directly: italic = call quotes, bold
+= the writer's comments, Heading 3 = company names and "My Take". If a result is saved to a
+file instead, run `scripts/gdoc_to_text.py <file> --out-dir $WORK/weekly`. To go further
+back, don't pull every doc into this context: delegate to a subagent with the remaining
+target IDs and ask for every paragraph mentioning the company, verbatim, with the week title.
+If the folder lists nothing, it isn't shared with the Drive account: tell the user to share
+it (Viewer) with that account.
 
-Then read those plus every fixed doc in `config.weekly_update_docs`:
+**b) Older docs** (`config.weekly_update_docs`: Girish Weekly, the Ryan/Osman chats) via Drive:
 
 ```
 mcp__Google_Drive__read_file_content(fileId = <id>)
@@ -143,22 +152,22 @@ Write `$WORK/newsletter_spec.json`:
 ```json
 {
   "ticker": "DUOL", "company": "Duolingo", "period": "Q3 2026",
-  "title": "Duolingo Q3 2026",
-  "intro": "",
-  "figures": [
-    {"image": "<WORK>/revenue.png", "caption": "<1-2 italic sentences>"},
-    {"image": "<WORK>/ebit.png",    "caption": "<1-2 italic sentences>"}
-  ],
+  "heading": "Duolingo",
+  "intro": "Duolingo reported after the bell on Monday. Here are the numbers and then we'll look at the call:",
+  "figures": [{"image": "<WORK>/revenue.png"}, {"image": "<WORK>/ebit.png"}],
+  "numbers_paragraph": "<optional: one plain paragraph reading the two tables>",
   "sections": [
     {"speaker": "<exact speaker name from transcript.txt>",
      "quote": "<copied character-for-character from transcript.txt>",
      "emphasis": ["<optional: one sentence inside the quote to bold-italic>"],
      "comment": "<bold reaction>"}
   ],
-  "my_take": ["<paragraph>", "<paragraph>"],
-  "include_disclaimer": true
+  "my_take": ["<paragraph>", "<paragraph>"]
 }
 ```
+
+Figures take an optional `"caption"`, and `"include_disclaimer": true` adds the MNPI line;
+the dated weekly updates use neither.
 
 Selection and writing rules are in the style guide. Non-negotiables:
 - 3-4 sections. At least one quote explains the numbers in the images (margin move, guide,
