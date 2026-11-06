@@ -78,8 +78,14 @@ python3 scripts/render_blocks.py --sheet-json <path> --ticker <T> --period Q<n>-
 This writes `revenue.png`, `ebit.png` and `metrics.json`, and prints a summary.
 
 - **Warnings are blocking.** If the reported quarter is blank or still bold (estimate
-  formatting), the user hasn't entered the actuals yet. Stop and tell them which cells need
-  updating; continue only if they say to.
+  formatting), the user hasn't entered the actuals yet. Also sanity-check the reported quarter
+  against the call: a pre-earnings estimate is sometimes left in the cell unbolded (TMDX had
+  189.0 entered vs. $203.0M reported; AXON had a formula estimate of 958.24 vs. $908.6M).
+  If the user asked you to proceed anyway, take the figures from the company's release (the
+  8-K exhibit 99.1 on sec.gov; the EBIT rows track GAAP operating income) and re-run with
+  `--override revenue:Q3-2026=<value> --override ebit:Q3-2026=<value> --override-source <url>`.
+  Overridden and recomputed cells render yellow, the sheet is not modified, and you tell the
+  user which cells to update. Never present a pre-earnings estimate as the reported number.
 - Look at both PNGs (Read them). Check that the right blocks were picked (the summary prints the
   labels and sheet rows) and the years look right. If the tab has both GAAP and NGAAP EBIT and
   the user's past recaps or request suggest the other one, re-run with `--ebit-label`.
@@ -198,6 +204,18 @@ pdftoppm -png -r 60 $WORK/<T>_Q<n>_<YYYY>.pdf $WORK/page
 
 Read the page PNGs. Check the images are legible, the italic/bold pattern is right, and
 nothing overflows. Skip this step if LibreOffice isn't installed.
+
+## 7b. Several companies, or straight into a Google Doc
+
+- Several companies in one doc: build each spec, then append sections with
+  `build_newsletter.add_section(doc, spec, cfg)` on one `new_document(cfg)`.
+- Into Google Docs: `render_blocks.py` also writes `revenue.html` / `ebit.html` next to the
+  PNGs. Uploading HTML with `mcp__Google_Drive__create_file(contentMimeType="text/html")`
+  converts it to a native Google Doc where the tables become real Docs tables (bold and yellow
+  cells preserved). Don't upload the .docx through that tool: binary content has to be passed
+  inline as base64, which is impractical for documents with images. Never edit the user's
+  existing weekly doc unless they ask; create a new doc and share it with them (writer).
+  Drive's HTML import mangles 4-byte emoji; fix them afterwards with Docs `replaceAllText`.
 
 ## 8. Deliver
 

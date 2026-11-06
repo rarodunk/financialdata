@@ -22,7 +22,10 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import signal
 import sys
+
+signal.signal(signal.SIGPIPE, signal.SIG_DFL)  # `... list | head` shouldn't traceback
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -114,7 +117,10 @@ def cmd_parse(html_path: Path, out_dir: Path, source_url: str | None) -> None:
     if len(turns) < 5:
         sys.exit(f"Only {len(turns)} speaker turns parsed; page layout may have changed or the download is partial.")
     words = sum(len(par.split()) for t in turns for par in t["paragraphs"])
-    has_qa = any("question" in par.lower() for t in turns if t["speaker"].lower() == "operator" for par in t["paragraphs"])
+    # Q&A present if the operator announces it or analysts speak (some calls, e.g. Axon's, have
+    # IR moderating with no operator at all).
+    has_qa = (any("question" in par.lower() for t in turns if t["speaker"].lower() == "operator" for par in t["paragraphs"])
+              or any("analyst" in t["role"].lower() for t in turns))
 
     meta = {"title": p.title, "call": p.h1, "date": p.date, "source_url": source_url,
             "turns": len(turns), "words": words, "has_qa_section": has_qa}

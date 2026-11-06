@@ -48,6 +48,7 @@ class Cell:
     text: str = ""            # formattedValue exactly as the sheet displays it (stripped)
     number: float | None = None  # effectiveValue.numberValue (unrounded), None for text/blank/error
     bold: bool = False
+    overridden: bool = False  # value supplied via --override (sheet not yet updated), or derived from one
 
     @property
     def empty(self) -> bool:
@@ -185,6 +186,99 @@ def find_block(grid, kind: str, patterns: list[str], exact_label: str | None) ->
     if blk.panel_col is None:
         blk.warnings.append(f"{kind}: no growth/margin panel found to the right; rendering values only.")
     return blk
+
+
+# ----------------------------------------------------------------------------- overrides
+# When the user hasn't entered the reported quarter yet (blank cell, or a pre-earnings estimate
+# still sitting there), the agent can supply the reported figure from the company's release.
+# The sheet itself is never modified; overridden and recomputed cells render highlighted.
+
+def parse_override(s: str) -> tuple[str, int, int, float]:
+    """'revenue:Q3-2026=908.6' -> ('revenue', 2026, 3, 908.6)."""
+    m = re.match(r"^(revenue|ebit):(.+?)=(-?[\d.]+)$", s.strip(), re.I)
+    if not m:
+        sys.exit(f"Bad --override '{s}' (use revenue:Q3-2026=908.6 or ebit:Q3-2026=42.1)")
+    year, q = parse_period(m.group(2))
+    return m.group(1).lower(), year, q, float(m.group(3))
+
+
+def format_like(value: float, neighbors: list[Cell]) -> str:
+    """Format a number the way its row/column neighbors are displayed (decimals, thousands commas)."""
+    texts = [c.text for c in neighbors if c.number is not None and c.text]
+    decimals = max((len(t.split(".")[1].rstrip("%")) for t in texts if "." in t), default=0)
+    commas = any("," in t for t in texts)
+    return f"{value:,.{decimals}f}" if commas else f"{value:.{decimals}f}"
+
+
+def row_of(grid, blk: Block, year: int) -> int | None:
+    return next((r for r in blk.year_rows if cell(grid, r, 0).text == str(year)), None)
+
+
+def set_derived(grid, r: int, c: int, value: float | None, pct_style: bool, bold: bool | None = None) -> None:
+    """Replace a derived cell (Total, YoY, margin) after an override changed its inputs.
+    `bold` follows the inputs (bold = estimate); None keeps the sheet's formatting."""
+    if value is None:
+        return
+    old = cell(grid, r, c)
+    old = Cell(text=old.text, number=old.number, bold=old.bold if bold is None else bold)
+    if pct_style:
+        text = f"{value:.0%}"
+    else:
+        text = format_like(value, [cell(grid, r, k) for k in range(1, 6)] + [old])
+    grid[r][c] = Cell(text=text, number=value, bold=old.bold, overridden=True)
+
+
+def apply_overrides(grid, rev: Block, ebit: Block, overrides: list[tuple[str, int, int, float]]) -> list[dict]:
+    applied = []
+    for kind, year, q, value in overrides:
+        blk = rev if kind == "revenue" else ebit
+        r = row_of(grid, blk, year)
+        if r is None:
+            sys.exit(f"--override {kind} Q{q}-{year}: no {year} row in the {blk.label} block")
+        old = cell(grid, r, q)
+        column = [cell(grid, rr, q) for rr in blk.year_rows]
+        grid[r][q] = Cell(text=format_like(value, column), number=value, bold=False, overridden=True)
+        applied.append({"block": blk.label, "period": f"Q{q} {year}", "sheet_value": old.text or None,
+                        "sheet_value_was_bold": old.bold, "reported_value": value})
+
+    # Recompute what depends on the overridden cells: FY totals, revenue YoY, EBIT margins.
+    def q_num(blk, year, q):
+        r = row_of(grid, blk, year)
+        return None if r is None else cell(grid, r, q).number
+
+    touched_years = {y for _, y, _, _ in overrides} | {y + 1 for _, y, _, _ in overrides}
+    for blk in (rev, ebit):
+        for year in touched_years:
+            r = row_of(grid, blk, year)
+            if r is None:
+                continue
+            qs = [q_num(blk, year, q) for q in range(1, 5)]
+            if any(cell(grid, r, q).overridden for q in range(1, 5)) and all(v is not None for v in qs):
+                set_derived(grid, r, 5, sum(qs), pct_style=False)
+    if rev.panel_col is not None:
+        for year in touched_years:
+            r = row_of(grid, rev, year)
+            if r is None:
+                continue
+            for q in range(1, 6):  # Q1..Q4 and Total
+                now, ly = q_num(rev, year, q), q_num(rev, year - 1, q)
+                changed = cell(grid, r, q).overridden or (row_of(grid, rev, year - 1) is not None
+                                                          and cell(grid, row_of(grid, rev, year - 1), q).overridden)
+                if changed and now is not None and ly not in (None, 0):
+                    # A quarter's YoY is an estimate only if either input is (bold); totals keep sheet style.
+                    est = None if q == 5 else (cell(grid, r, q).bold or cell(grid, row_of(grid, rev, year - 1), q).bold)
+                    set_derived(grid, r, rev.panel_col + q, now / ly - 1, pct_style=True, bold=est)
+    if ebit.panel_col is not None and not re.search("ebitda", ebit.label, re.I):
+        for year in touched_years:
+            re_, rr = row_of(grid, ebit, year), row_of(grid, rev, year)
+            if re_ is None or rr is None:
+                continue
+            for q in range(1, 6):
+                e, v = q_num(ebit, year, q), q_num(rev, year, q)
+                if (cell(grid, re_, q).overridden or cell(grid, rr, q).overridden) and e is not None and v:
+                    est = None if q == 5 else (cell(grid, re_, q).bold or cell(grid, rr, q).bold)
+                    set_derived(grid, re_, ebit.panel_col + q, e / v, pct_style=True, bold=est)
+    return applied
 
 
 # ----------------------------------------------------------------------------- period handling
@@ -364,13 +458,40 @@ def load_font(candidates: list[str], size: int) -> ImageFont.FreeTypeFont:
 
 def render_block(grid, blk: Block, period: tuple[int, int], cfg: dict, out_png: Path) -> list[int]:
     """Draw the block as an Excel-looking table: values panel | gap | growth/margin panel.
-    Returns the years rendered."""
-    rcfg = cfg["render"]
-    s = rcfg["scale"]
-    font_px = round(rcfg["font_size_pt"] * 96 / 72 * s)
-    regular = load_font(rcfg["font_candidates"], font_px)
-    bold = load_font(rcfg["bold_font_candidates"], font_px)
+    Also writes the same table as an HTML fragment (<out>.html) for pasting into Google Docs,
+    where it imports as a native table. Returns the years rendered."""
+    panels, rows = build_panels(grid, blk, period, cfg)
+    out_png.with_suffix(".html").write_text(panels_to_html(panels), encoding="utf-8")
+    draw_panels(panels, rows, period, cfg, out_png)
+    return [int(cell(grid, r, 0).text) for r in rows]
 
+
+def panels_to_html(panels: list[list[list[Cell]]]) -> str:
+    """One HTML table: panels side by side with a blank spacer column, sheet-like gridlines,
+    bold kept, overridden cells highlighted."""
+    def td(c: Cell, header: bool) -> str:
+        style = "border:1px solid #d4d4d4;padding:1px 6px;font-size:9pt;font-family:Arial;"
+        style += "text-align:left;" if header else "text-align:right;"
+        if c.overridden:
+            style += "background-color:#fff2cc;"
+        text = c.text.replace("&", "&amp;").replace("<", "&lt;")
+        return f'<td style="{style}">{"<b>" + text + "</b>" if c.bold and text else text}</td>'
+
+    nrows = max(len(p) for p in panels)
+    out = ['<table style="border-collapse:collapse">']
+    for ri in range(nrows):
+        cells = []
+        for pi, p in enumerate(panels):
+            if pi:
+                cells.append('<td style="border:none;width:18px"></td>')
+            cells.extend(td(c, ri == 0) for c in p[ri])
+        out.append("<tr>" + "".join(cells) + "</tr>")
+    out.append("</table>")
+    return "\n".join(out)
+
+
+def build_panels(grid, blk: Block, period: tuple[int, int], cfg: dict):
+    rcfg = cfg["render"]
     # Rows to show: years with any quarterly data, inside the configured window around the period.
     lo, hi = period[0] - rcfg["years_back"], period[0] + rcfg["years_forward"]
     rows = [r for r in blk.year_rows
@@ -400,7 +521,15 @@ def render_block(grid, blk: Block, period: tuple[int, int], cfg: dict, out_png: 
         qoq = [header_cells(blk.qoq_col, "QoQ Growth %")[:5]]
         qoq += [[cell(grid, r, 0)] + [cell(grid, r, blk.qoq_col + i) for i in range(1, 5)] for r in rows]
         panels.append(qoq)
+    return panels, rows
 
+
+def draw_panels(panels, rows, period: tuple[int, int], cfg: dict, out_png: Path) -> None:
+    rcfg = cfg["render"]
+    s = rcfg["scale"]
+    font_px = round(rcfg["font_size_pt"] * 96 / 72 * s)
+    regular = load_font(rcfg["font_candidates"], font_px)
+    bold = load_font(rcfg["bold_font_candidates"], font_px)
     pad_x, row_h = 10 * s, round(font_px * 1.55)
     gap, margin = 22 * s, 8 * s
     grid_color, text_color = (212, 212, 212), (0, 0, 0)
@@ -432,7 +561,7 @@ def render_block(grid, blk: Block, period: tuple[int, int], cfg: dict, out_png: 
                 cw = w[ci]
                 is_hl = (rcfg.get("highlight_reported_quarter") and ri > 0 and ci == hl_q
                          and row[0].text == str(hl_year))
-                if is_hl:
+                if is_hl or c.overridden:  # overridden = not from the sheet; always visible
                     draw.rectangle([x, y, x + cw, y + row_h], fill=highlight)
                 draw.rectangle([x, y, x + cw, y + row_h], outline=grid_color, width=max(1, s // 2))
                 if c.text:
@@ -447,7 +576,6 @@ def render_block(grid, blk: Block, period: tuple[int, int], cfg: dict, out_png: 
 
     out_png.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_png, dpi=(96 * s, 96 * s))
-    return [int(cell(grid, r, 0).text) for r in rows]
 
 
 # ----------------------------------------------------------------------------- main
@@ -460,6 +588,10 @@ def main() -> None:
     ap.add_argument("--out-dir", required=True, type=Path)
     ap.add_argument("--ebit-label", help="Exact column-A label to use for the EBIT image (e.g. 'NGAAP EBIT').")
     ap.add_argument("--config", type=Path, default=SKILL_DIR / "config.json")
+    ap.add_argument("--override", action="append", default=[],
+                    help="Reported figure for a cell the sheet doesn't have yet, e.g. revenue:Q3-2026=908.6 "
+                         "or ebit:Q3-2026=42.1. Repeatable. Rendered highlighted; the sheet is not modified.")
+    ap.add_argument("--override-source", default="", help="Where the override figures came from (e.g. the 8-K URL)")
     args = ap.parse_args()
 
     cfg = json.loads(args.config.read_text())
@@ -479,12 +611,19 @@ def main() -> None:
         if period is None:
             sys.exit("Could not detect the latest actual quarter; pass --period.")
 
+    applied = apply_overrides(grid, rev, ebit, [parse_override(o) for o in args.override]) if args.override else []
+
     args.out_dir.mkdir(parents=True, exist_ok=True)
     rev_years = render_block(grid, rev, period, cfg, args.out_dir / "revenue.png")
     ebit_years = render_block(grid, ebit, period, cfg, args.out_dir / "ebit.png")
 
     metrics = build_metrics(grid, rev, ebit, period)
     metrics["ticker"] = args.ticker.upper()
+    if applied:
+        metrics["overrides"] = {"source": args.override_source, "cells": applied,
+                                "note": "Sheet not yet updated for these cells; figures from the company's release. "
+                                        "Highlighted in the images. Update the Research Database and re-run for a clean render."}
+        metrics["warnings"].append(f"{len(applied)} cell(s) overridden from the release; see metrics['overrides'].")
     metrics["blocks"] = {
         "revenue": {"label": rev.label, "sheet_row": rev.label_row + 1, "years_rendered": rev_years},
         "ebit": {"label": ebit.label, "sheet_row": ebit.label_row + 1, "years_rendered": ebit_years},

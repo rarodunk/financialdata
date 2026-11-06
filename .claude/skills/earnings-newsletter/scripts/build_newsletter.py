@@ -95,13 +95,25 @@ def add_quote(doc: Document, quote: str, emphasis: list[str]) -> None:
         p.add_run(text[pos:]).italic = True
 
 
-def build(spec: dict, cfg: dict, out: Path) -> None:
-    dcfg = cfg["docx"]
+def new_document(cfg: dict) -> Document:
     doc = Document()
-    set_base_font(doc, dcfg["font"], dcfg["body_size_pt"])
+    set_base_font(doc, cfg["docx"]["font"], cfg["docx"]["body_size_pt"])
     for s in doc.sections:
         s.left_margin = s.right_margin = Inches(1)
+    return doc
 
+
+def build(spec: dict, cfg: dict, out: Path) -> None:
+    doc = new_document(cfg)
+    add_section(doc, spec, cfg)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(out)
+
+
+def add_section(doc: Document, spec: dict, cfg: dict) -> None:
+    """Append one company's earnings section to `doc` (used for standalone docs and for
+    assembling several sections into a weekly-update copy)."""
+    dcfg = cfg["docx"]
     add_heading3(doc, spec.get("heading") or spec["company"])
 
     if spec.get("intro"):
@@ -133,9 +145,6 @@ def build(spec: dict, cfg: dict, out: Path) -> None:
 
     if spec.get("include_disclaimer", dcfg.get("include_disclaimer_default", False)) and dcfg.get("disclaimer"):
         doc.add_paragraph().add_run(dcfg["disclaimer"]).italic = True
-
-    out.parent.mkdir(parents=True, exist_ok=True)
-    doc.save(out)
 
 
 def lint(spec: dict) -> list[str]:
