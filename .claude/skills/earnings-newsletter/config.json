@@ -1,0 +1,91 @@
+{
+  "research_database": {
+    "spreadsheet_id": "1eVKy68qJQJtL0TXGRjMuqDiYg70rtozYgBr8uCa552w",
+    "title": "Research Database",
+    "owner": "rarodunk13@gmail.com",
+    "fetch_range": "A1:W90",
+    "fetch_fields": [
+      "sheets.properties.title",
+      "sheets.data.startRow",
+      "sheets.data.startColumn",
+      "sheets.data.rowData.values.formattedValue",
+      "sheets.data.rowData.values.effectiveValue",
+      "sheets.data.rowData.values.effectiveFormat.textFormat.bold"
+    ]
+  },
+
+  "weekly_update_docs": [
+    {
+      "id": "1OI7N8fNiTqvTlpaen3PPsiKSwoq4SYBmWzbdMzHztI4",
+      "title": "Girish Weekly",
+      "owner": "rarodunk13@gmail.com",
+      "kind": "weekly updates (Weeks 1-27); primary source for thesis, falsification tests and format"
+    },
+    {
+      "id": "1eUDN_nb_CP5dXqAr8aKu5QnMjC3hvGhgalutiDwNByY",
+      "title": "Q3+Q4 2026 (Ryan/Osman)",
+      "kind": "running chat, newest first; Ryan's post-earnings takes are the lines without a name or prefixed 'Ryan:'"
+    },
+    {
+      "id": "1ckW5XRBZ8Cfjar-tlYwhuOozNQ1h-WgYIPa8H3w-uQo",
+      "title": "June+July 2026 Ryan/Osman",
+      "kind": "running chat, newest first"
+    }
+  ],
+
+  "blocks": {
+    "_comment": "Blocks are found by scanning column A for a label row followed by 4-digit year rows. Patterns are case-insensitive regexes tried in order; the first matching label in sheet order wins within each pattern.",
+    "revenue_patterns": ["^(operating |total |net )?revenue", "revenue", "sales"],
+    "ebit_patterns": ["^ebit\\b(?!da)", "^gaap ebit\\b", "operating income", "^n?gaap ebit\\b", "\\bebit\\b(?!da)", "ebitda"],
+    "ticker_overrides": {
+      "LMND": { "ebit_label": "Adjusted EBITDA" }
+    },
+    "panel_titles": {
+      "revenue": "YoY Growth %",
+      "ebit": "Margin %"
+    }
+  },
+
+  "render": {
+    "years_back": 5,
+    "years_forward": 1,
+    "include_qoq_panel": false,
+    "highlight_reported_quarter": false,
+    "scale": 2,
+    "font_size_pt": 12,
+    "font_candidates": [
+      "/Library/Fonts/Calibri.ttf",
+      "/System/Library/Fonts/Supplemental/Calibri.ttf",
+      "C:/Windows/Fonts/calibri.ttf",
+      "/usr/share/fonts/truetype/crosextra/Carlito-Regular.ttf",
+      "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+      "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    ],
+    "bold_font_candidates": [
+      "/Library/Fonts/Calibri Bold.ttf",
+      "/System/Library/Fonts/Supplemental/Calibri Bold.ttf",
+      "C:/Windows/Fonts/calibrib.ttf",
+      "/usr/share/fonts/truetype/crosextra/Carlito-Bold.ttf",
+      "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+      "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+    ]
+  },
+
+  "transcripts": {
+    "_comment": "stockanalysis.com is on the environment allowlist and serves clean sentence-level HTML. www.fool.com is NOT on the allowlist (only bare fool.com is).",
+    "list_url": "https://stockanalysis.com/stocks/{ticker_lower}/transcripts/",
+    "max_quote_words": 180
+  },
+
+  "docx": {
+    "font": "Calibri",
+    "body_size_pt": 11,
+    "image_width_in": 6.5,
+    "quotes_lead_in": "Quotes from the call:",
+    "my_take_heading": "My Take",
+    "show_speaker": false,
+    "disclaimer": "We confirm that the update doesn't have MNPI, no notes or transcripts from experts less than 6 months removed from the company."
+  },
+
+  "output_dir": "newsletters"
+}
