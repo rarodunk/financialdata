@@ -15,7 +15,9 @@ Turns one company's latest quarter into a .docx in the house format:
 [optional paragraph reading the numbers]
 Quotes from the call:
   *exact quote, key sentence bold italic*   (x3-4)
+  (empty line)
   **comment**
+  (empty line before the next quote)
 My Take                                     (Heading 3)
   1-3 paragraphs: numbers + call + thesis check + valuation math + verdict
 ```
@@ -216,6 +218,8 @@ nothing overflows. Skip this step if LibreOffice isn't installed.
   inline as base64, which is impractical for documents with images. Never edit the user's
   existing weekly doc unless they ask; create a new doc and share it with them (writer).
   Drive's HTML import mangles 4-byte emoji; fix them afterwards with Docs `replaceAllText`.
+  Keep the same layout as the .docx: an empty `<p></p>` between each quote and its comment,
+  and between a comment and the next quote.
 
 ## 8. Deliver
 

@@ -131,10 +131,15 @@ def add_section(doc: Document, spec: dict, cfg: dict) -> None:
         doc.add_paragraph(spec["numbers_paragraph"])
 
     doc.add_paragraph(dcfg["quotes_lead_in"])
-    for sec in spec["sections"]:
+    # House rule (user request, Nov 2026): an empty line between each quote and its comment, and
+    # between a comment and the next quote, so quote/comment pairs never run together.
+    for i, sec in enumerate(spec["sections"]):
+        if i > 0:
+            doc.add_paragraph()
         if dcfg.get("show_speaker") and sec.get("speaker"):
             doc.add_paragraph().add_run(sec["speaker"] + ":").bold = True
         add_quote(doc, sec["quote"], sec.get("emphasis", []))
+        doc.add_paragraph()
         comments = sec["comment"] if isinstance(sec["comment"], list) else [sec["comment"]]
         for c in comments:
             doc.add_paragraph().add_run(c).bold = True

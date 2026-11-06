@@ -82,6 +82,10 @@ Then the **house valuation frame**: realistic earnings or FCF in year N × a rea
 
 End on a **verdict**: add, hold, trim, or wait, with what would change it. "I'll take that any day of the week!" is a verdict. "Time will tell" is not.
 
+## Layout
+
+Always leave an empty line between an earnings-call quote and the comment under it, and between that comment and the next quote. `build_newsletter.py` does this for the .docx; any HTML or Google Docs version must match.
+
 ## Voice
 
 If the `my-writing-voice` skill is available, load it and follow it. Its rules govern. Short version:
