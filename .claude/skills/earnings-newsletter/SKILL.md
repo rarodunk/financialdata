@@ -85,8 +85,26 @@ This writes `revenue.png`, `ebit.png` and `metrics.json`, and prints a summary.
 
 ## 3. Pull prior coverage from the weekly updates
 
+First find the dated weekly updates that mention the company. They live in rarodunk13's
+Drive and are found by search (`config.weekly_update_search`), so new weeks are picked up
+without editing the config:
+
 ```
-mcp__Google_Drive__read_file_content(fileId = <each config.weekly_update_docs id>)
+mcp__Google_Drive__search_files(
+  query = query_template with {name} = ticker, then company name (one search each, or OR them),
+  pageSize = 50, excludeContentSnippets = true)
+```
+
+Read the `max_docs_per_run` most recently modified hits, newest first. If the search returns
+nothing at all for `owner = 'rarodunk13@gmail.com' and mimeType = 'application/vnd.google-apps.document'`,
+the connected Google account can't see rarodunk13's docs: tell the user (they share the folder
+with the connected account, or reconnect Google with rarodunk13) and continue with the fixed
+docs below.
+
+Then read those plus every fixed doc in `config.weekly_update_docs`:
+
+```
+mcp__Google_Drive__read_file_content(fileId = <id>)
 ```
 
 Large docs (Girish Weekly) save to a tool-results file; run the extractor on those paths.

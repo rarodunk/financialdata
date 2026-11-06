@@ -30,8 +30,19 @@
       "id": "1ckW5XRBZ8Cfjar-tlYwhuOozNQ1h-WgYIPa8H3w-uQo",
       "title": "June+July 2026 Ryan/Osman",
       "kind": "running chat, newest first"
+    },
+    {
+      "id": "1Fvy5O4JRRGxkeOgfXhiqC4crQfG_X7DhKclH81gjbfA",
+      "title": "May 2026 (Osman/Ryan)",
+      "kind": "running chat, newest first"
     }
   ],
+
+  "weekly_update_search": {
+    "_comment": "Dated weekly updates live in rarodunk13's Drive. They are found by search, not a fixed list, so new weeks are picked up automatically once that account's docs are visible to the connected Google account. {name} is replaced by each of the ticker/company/CEO names.",
+    "query_template": "owner = 'rarodunk13@gmail.com' and mimeType = 'application/vnd.google-apps.document' and (fullText contains '{name}')",
+    "max_docs_per_run": 12
+  },
 
   "blocks": {
     "_comment": "Blocks are found by scanning column A for a label row followed by 4-digit year rows. Patterns are case-insensitive regexes tried in order; the first matching label in sheet order wins within each pattern.",
