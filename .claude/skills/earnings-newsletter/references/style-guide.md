@@ -84,7 +84,7 @@ End on a **verdict**: add, hold, trim, or wait, with what would change it. "I'll
 
 ## Layout
 
-Always leave an empty line between an earnings-call quote and the comment under it, and between that comment and the next quote. `build_newsletter.py` does this for the .docx; any HTML or Google Docs version must match.
+Always leave an empty line between an earnings-call quote and the comment under it, and between that comment and the next quote (and between any two body paragraphs, as the weekly updates do). All text is plain Normal text (Arial 11, 1.15 line spacing, 0pt above/below) with only bold or italic applied on top: no other spacing or font overrides, so it pastes into a weekly update looking like the writer's own paragraphs. `build_newsletter.py` does this for the .docx and `gdoc_normalize.py` for a Google Doc made by HTML upload.
 
 ## Voice
 

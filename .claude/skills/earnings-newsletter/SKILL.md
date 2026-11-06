@@ -18,7 +18,9 @@ Quotes from the call:
   (empty line)
   **comment**
   (empty line before the next quote)
-My Take                                     (Heading 3)
+My Take
+Everything is plain Normal text (Arial 11, 1.15 line spacing, no space above/below) with only
+bold/italic on top, and paragraphs are separated by one empty line, as in the weekly updates.                                     (Heading 3)
   1-3 paragraphs: numbers + call + thesis check + valuation math + verdict
 ```
 
@@ -218,8 +220,24 @@ nothing overflows. Skip this step if LibreOffice isn't installed.
   inline as base64, which is impractical for documents with images. Never edit the user's
   existing weekly doc unless they ask; create a new doc and share it with them (writer).
   Drive's HTML import mangles 4-byte emoji; fix them afterwards with Docs `replaceAllText`.
-  Keep the same layout as the .docx: an empty `<p></p>` between each quote and its comment,
-  and between a comment and the next quote.
+  The import also gives the doc a 1.0-spaced "Normal text", 12pt space-below overrides, and
+  turns text between two `$` signs into an equation when the second `$` follows a non-space
+  ("$78 billion ($86 billion EV)" renders as "78billion(" in a math font). Text copied from
+  such a doc into a weekly update keeps that spacing, which reads as "weird spacing". So right
+  after every upload, read the doc back and normalize it:
+  ```
+  mcp__Google_Docs__read_doc(documentId=<new id>)            -> saved to a tool-results file
+  python3 scripts/gdoc_normalize.py --doc-json <that file> --source-html <uploaded .html> \
+      --out $WORK/gdoc_requests.json [--blank-lines-from "<first agent-written company>"]
+  mcp__Google_Docs__update_doc(documentId=<new id>, requests=<gdoc_requests.json>,
+      writeControl={"requiredRevisionId": <printed revisionId>})
+  ```
+  That sets every body paragraph to the weekly updates' Normal text (1.15 spacing, no space
+  above/below) and Heading 3 spacing, puts one empty line between paragraphs (quote / blank /
+  comment / blank / quote), and restores any equation to its exact source text. Bold and
+  italic are left alone. Use `--blank-lines-from` when the doc starts with text copied from
+  the user's own doc, so that part keeps its layout. Then export the doc as PDF
+  (`download_file_content`, `exportMimeType="application/pdf"`) and look at a page.
 
 ## 8. Deliver
 

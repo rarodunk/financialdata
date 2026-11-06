@@ -63,17 +63,39 @@ def set_base_font(doc: Document, name: str, size_pt: float) -> None:
             rfonts.attrib.pop(qn(attr), None)
     doc.styles["Normal"].font.size = Pt(size_pt)
     doc.styles["Normal"].font.color.rgb = RGBColor(0, 0, 0)
-    doc.styles["Normal"].paragraph_format.space_after = Pt(8)
+    # Match the weekly updates' Google Docs "Normal text" exactly (1.15 line spacing, no space
+    # before/after; paragraphs are separated by empty lines instead), so anything pasted from
+    # this doc into a weekly update comes in as plain Normal text with only bold/italic on top.
+    normal_pf = doc.styles["Normal"].paragraph_format
+    normal_pf.space_before = Pt(0)
+    normal_pf.space_after = Pt(0)
+    normal_pf.line_spacing = 1.15
     # Google Docs' default Heading 3 as used in the weekly updates: 14pt, dark gray, bold here.
     h3 = doc.styles["Heading 3"]
     h3.font.size = Pt(14)
     h3.font.bold = True
     h3.font.italic = False
     h3.font.color.rgb = RGBColor(0x43, 0x43, 0x43)
+    h3.paragraph_format.space_before = Pt(16)   # Google Docs Heading 3 spacing
+    h3.paragraph_format.space_after = Pt(4)
+    h3.paragraph_format.line_spacing = 1.15
 
 
 def add_heading3(doc: Document, text: str) -> None:
     doc.add_paragraph(text, style="Heading 3")
+
+
+def gap(doc: Document) -> None:
+    """Empty line before the next block, the way the weekly updates separate paragraphs
+    (quote / blank / comment / blank / quote ...). Skipped right after a heading or another
+    empty line, so it never stacks."""
+    if not doc.paragraphs:
+        return
+    last = doc.paragraphs[-1]
+    is_empty = not last.text.strip() and "<w:drawing" not in last._p.xml
+    if is_empty or last.style.name.startswith("Heading"):
+        return
+    doc.add_paragraph()
 
 
 def add_quote(doc: Document, quote: str, emphasis: list[str]) -> None:
@@ -113,7 +135,11 @@ def build(spec: dict, cfg: dict, out: Path) -> None:
 def add_section(doc: Document, spec: dict, cfg: dict) -> None:
     """Append one company's earnings section to `doc` (used for standalone docs and for
     assembling several sections into a weekly-update copy)."""
+    # Layout rule (user request, Nov 2026): every block is plain Normal text with only bold or
+    # italic applied on top, and blocks are separated by one empty line (gap()), including
+    # between each quote and its comment and between a comment and the next quote.
     dcfg = cfg["docx"]
+    gap(doc)                                   # separates companies when sections are stacked
     add_heading3(doc, spec.get("heading") or spec["company"])
 
     if spec.get("intro"):
@@ -123,32 +149,35 @@ def add_section(doc: Document, spec: dict, cfg: dict) -> None:
         img = Path(fig["image"])
         if not img.exists():
             sys.exit(f"Missing image {img}")
+        gap(doc)
         doc.add_picture(str(img), width=Inches(dcfg["image_width_in"]))
         if fig.get("caption"):
             doc.add_paragraph().add_run(fig["caption"]).italic = True
 
     if spec.get("numbers_paragraph"):
+        gap(doc)
         doc.add_paragraph(spec["numbers_paragraph"])
 
+    gap(doc)
     doc.add_paragraph(dcfg["quotes_lead_in"])
-    # House rule (user request, Nov 2026): an empty line between each quote and its comment, and
-    # between a comment and the next quote, so quote/comment pairs never run together.
-    for i, sec in enumerate(spec["sections"]):
-        if i > 0:
-            doc.add_paragraph()
+    for sec in spec["sections"]:
+        gap(doc)
         if dcfg.get("show_speaker") and sec.get("speaker"):
             doc.add_paragraph().add_run(sec["speaker"] + ":").bold = True
         add_quote(doc, sec["quote"], sec.get("emphasis", []))
-        doc.add_paragraph()
         comments = sec["comment"] if isinstance(sec["comment"], list) else [sec["comment"]]
         for c in comments:
+            gap(doc)
             doc.add_paragraph().add_run(c).bold = True
 
+    gap(doc)
     add_heading3(doc, dcfg["my_take_heading"])
     for para in spec["my_take"]:
+        gap(doc)
         doc.add_paragraph(para)
 
     if spec.get("include_disclaimer", dcfg.get("include_disclaimer_default", False)) and dcfg.get("disclaimer"):
+        gap(doc)
         doc.add_paragraph().add_run(dcfg["disclaimer"]).italic = True
 
 
